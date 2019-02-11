@@ -1,0 +1,185 @@
+---
+title: Корзина
+wrapperClass: page-cart
+---
+
+{% extends "layouts/_layout.html" %} {% block content %}
+
+<!-- begin home cart -->
+<main class="main cart">
+
+	<div class="container">
+
+		<div class="section-header cart__title">
+			<h1 class="h1">Корзина</h1>
+		</div>
+
+		<!-- begin cart__wrap -->
+		<div class="cart__wrap">
+
+			<div class="cart__items">
+				{% for i in range(0, 2) %}
+				<div class="product-item product-item--wide cart__item" itemscope itemtype="http://schema.org/Product">
+					<div class="product-item__img">
+						<img src="img/products/atlas/small/1.png" alt="Атлас дюпон" itemprop="image">
+					</div>
+					<div class="product-item__desc">
+						<div class="product-item__title_wrap">
+							<h5 class="h5 product-item__title" itemprop="name">
+								<a href="#">Атлас дюпон
+									<span>white</span>
+								</a>
+							</h5>
+							<span class="product-item__articul">ткани /
+								<span>ac06</span>
+							</span>
+						</div>
+						<div class="product-item__box">
+
+							<div class="product-item__price product-item__price--current">
+								340
+								<span>руб./м</span>
+								<small>-15%</small>
+							</div>
+
+							<!-- begin item-select -->
+							<div class="item-select item-select--count js-item-select">
+								<div class="item-select__value">
+									<div class="item-select__control item-select__control--minus js-item-select-control--minus"></div>
+									<span class="item-select__title">Выбрать</span>
+									<input type="text" class="item-select__input" style="display: none;" spellcheck="false">
+									<div class="item-select__control item-select__control--plus js-item-select-control--plus"></div>
+								</div>
+								<div class="item-select__list">
+									<div class="item-select__item">
+										<span class="item-select__title">1 м</span>
+									</div>
+									<div class="item-select__item">
+										<div class="item-select__title_wrap">
+											<span class="item-select__title">15 м </span>
+										</div>
+									</div>
+									<div class="item-select__item">
+										<div class="item-select__title_wrap">
+											<span class="item-select__title">150 м</span>
+										</div>
+									</div>
+								</div>
+								<span class="item-select__error">Кол-во не выбрано!</span>
+							</div><!-- end item-select -->
+
+							<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+								<meta itemprop="price" content="300.00">
+								<meta itemprop="priceCurrency" content="RUB" /> 29306,25
+								<span>руб.</span>
+							</div>
+
+							<button class="product-item__del" tooltip="Удалить">{{ mixin.icon('trash') }}</button>
+
+
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+
+			<div class="cart__box">
+				<div class="cart__sum">
+					<div class="cart__sum_sale xs-only">В корзине:
+						<span>2</span>
+						<small>товара</small>
+					</div>
+					<div class="cart__sum_sale">Сумма скидки:
+						<span>10533,75 </span>
+						<small>руб.</small>
+					</div>
+					<div class="cart__sum_current">Итого к оплате:
+						<span>33641,25</span>
+						<small>руб.</small>
+					</div>
+				</div>
+			</div>
+
+			<!-- begin cart__form -->
+			<div class="cart__form">
+
+				<div class="section-header">
+					<h2 class="h1">Оформление заказа</h2>
+				</div>
+
+				<form class="form">
+					<div class="form__inner">
+
+						<div class="input form__input">
+							<input type='text' class="input__field" placeholder="Имя">
+							<span class="input__error">*Какая-то ошибочка вышла</span>
+						</div>
+
+						<div class="input form__input">
+							<input type='text' class="input__field" placeholder="Фамилия">
+							<span class="input__error">*Какая-то ошибочка вышла</span>
+						</div>
+
+						<div class="input form__input">
+							<input type='tel' class="input__field js-phone-mask" placeholder="Телефон">
+							<span class="input__error">*Какая-то ошибочка вышла</span>
+						</div>
+
+						<div class="input form__input">
+							<input type='email' class="input__field" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+							<span class="input__error">*Какая-то ошибочка вышла</span>
+						</div>
+
+						<div class="form__box">
+							<div class="input form__input">
+								<input type='text' class="input__field" placeholder="Город">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+							<div class="input form__input">
+								<input type='number' class="input__field" placeholder="Индекс">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+						</div>
+
+						<div class="form__box">
+							<div class="input form__input">
+								<input type='text' class="input__field" placeholder="Улица">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+							<div class="input form__input">
+								<input type='text' class="input__field" placeholder="Дом/корпус">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+						</div>
+
+						<div class="cart__policy">
+							{% include "partials/components/_policy.html" %}
+						</div>
+
+						<div class="cart__box">
+							<button class="button button--default cart__btn">Продолжить</button>
+						</div>
+
+					</div>
+
+					<div class="form-success">
+						<div class="form-success__center">
+							<h3 class="form-success__title">Спасибо за регистрацию!</h3>
+						</div>
+					</div>
+				</form>
+			</div><!-- end cart__form -->
+
+		</div><!-- end cart__wrap -->
+
+		<!-- begin empty -->
+		<div class="empty" style="display: none;">
+			<p>Ваша корзина пуста.</p>
+			<a href="#" class="button button--transparent button--accent card__btn--back">Вернуться к покупкам</a>
+		</div><!-- end empty -->
+
+	</div>
+
+</main><!-- end home cart -->
+
+{% endblock %}

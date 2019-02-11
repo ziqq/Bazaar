@@ -1,0 +1,156 @@
+//Custom Webkit Scroll
+@mixin bz-scroll {
+	@include scroll;
+	@include scrollbar {width: 5px;}
+	@include scrollbar-track {width: 5px;}
+	@include scrollbar-thumb {background-color: $color-bg--dark; border-radius: 100px;}
+}
+
+//Custom Webkit Scroll
+@mixin bz-scroll--light {
+	@include scroll;
+	@include scrollbar {width: 5px;}
+	@include scrollbar-track {width: 5px;}
+	@include scrollbar-thumb {background-color: $color-bg--light; border-radius: 100px;}
+}
+
+@mixin container{
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	@include max-screen(1200){
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@mixin badge{
+	min-width: 20px;
+	height: 20px;
+	color: $color-text;
+	font-family: $f-light;
+	font-size: 11px;
+	vertical-align: middle;
+	border-radius: 500px;
+	background: $color-main;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+@mixin trans($what: all, $time: .35s){
+	transition: $what $time cubic-bezier(.38,.22,.21,.95);
+}
+
+@mixin overlay{
+	position: relative;
+	&::before{
+		display: block;
+		content: '';
+		background-color: rgba(#000, .45);
+		@include tr;
+		@include coverdiv;
+	}
+	& > * {
+		z-index: z(default);
+	}
+	.container{
+		position: relative;
+	}
+}
+
+@mixin listIcon($color){
+	padding-left: 15px;
+	position: relative;
+	&::before{
+		content: '';
+		display: block;
+		width: 8px;
+		height: 2px;
+		background-color: $color;
+		position: absolute;
+		top: 12px;
+		left: 0;
+	}
+}//ul li &::before (-)
+
+@mixin bdt($color){
+	border-top: 1px solid $color;
+	&:first-child{
+		border-top: none;
+	}
+}
+
+@mixin bdb($color){
+	border-bottom: 1px solid $color;
+	&:last-child{
+		border-bottom: none;
+	}
+}
+
+@mixin screenSize{
+	@include respond-to(sm) {
+		max-width: 748px;
+		width: 100%;
+	}
+	@include respond-to(xs) {
+		max-width: 480px;
+	}
+	@include respond-to(i8) {
+		max-width: 414px;
+	}
+	@include respond-to(i7) {
+		max-width: 375px;
+	}
+	@include respond-to(i5) {
+		max-width: 320px;
+	}
+}
+
+%img {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+%textLight{
+	font-family: $f-light;
+	font-weight: 300;
+}
+
+//style input
+%styleInput {
+	width: 100%;
+	padding: 10px 15px;
+	font-family: $f;
+	font-size: 16px;
+	line-height: 1;
+	color: $color-text;
+	border: 1px solid #d9d9d9;
+	border-radius: $border-radius;
+	&:focus{
+		border-color: $color-border;
+	}
+}
+
+%flex{
+	display: flex;
+	justify-content: space-between;
+}
+
+%flexCenter{
+	display: flex;
+	align-items: center;
+}
+
+%flexColumn{
+	display: flex;
+	flex-direction: column;
+}
+
+%box{
+	border-radius: $border-radius;
+	background-color: #fff;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1), 0 0 4px 0 rgba(0,0,0,.1);
+}

@@ -1,0 +1,37 @@
+---
+title: Попап окна на сайте
+headerClass: bg--dark
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+
+	<style>
+		main{padding: 100px 50px;}
+		h1{margin-bottom: 50px;}
+		.popup__list a{display: inline-block; margin-right: 30px; margin-bottom: 15px; color: #2d6cb4;}
+		.popup__list a:hover{color: #2d6cb4;text-decoration: underline;}
+		@media screen and (max-width: 480px){
+			main{margin: 10px;}
+		}
+	</style>
+
+	<!-- begin home -->
+	<main class="main">
+
+		<h1 style="margin-top: 40px;">Попап окна на сайте</h1>
+
+		<div class="container popup__list">
+
+			<a href="#auth-form" data-toggle="modal">Регистрация</a>
+			<a href="#change-city" data-toggle="modal">Выбор города</a>
+			<a href="#logout" data-toggle="modal">Выход</a>
+			<a href="#preview" data-toggle="modal" class="js-preview">Каталог превью</a>
+
+		</div>
+
+	</main>
+	<!-- end home -->
+
+{% endblock %}

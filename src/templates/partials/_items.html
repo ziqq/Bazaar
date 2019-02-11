@@ -1,0 +1,44 @@
+{% import "partials/assets/_mixins.html" as mixin %}
+
+<!--
+<div class="dropdown js-dropdown">
+	наведи сюда
+	<div class="dropdown__list">это появится</div>
+</div>
+-->
+
+{% macro btn(title, class) %}
+<button class="button {{ class }}">{{ title }}</button>
+{% endmacro %}
+<!-- item.btn('Купить', 'button--transparent') -->
+
+{% macro btnLink(title, class, href="#") %}
+<a {{ href }} class="button {{ class }}">{{ title }}</a>
+{% endmacro %}
+<!-- item.btn('Купить', 'button--transparent') -->
+
+{% macro checkbox(title, class, checked) %}
+<label class="checkbox {{class}}">
+	<input type="checkbox" {{checked}}>
+	<span class="checkbox__box"></span>
+	<span class="checkbox__title">{{title}}</span>
+</label>
+{% endmacro %}
+<!-- item.checkbox('мужской', 'checkbox--radio, profile-editor__checkbox') -->
+
+{% macro radio(title, name, class) %}
+<label class="checkbox checkbox--radio {{class}}">
+	<input type="radio" name="{{name}}">
+	<span class="checkbox__box"></span>
+	<span class="checkbox__title">{{title}}</span>
+</label>
+{% endmacro %}
+<!-- item.checkbox('мужской', 'checkbox--radio, profile-editor__checkbox') -->
+
+{% macro button(title, class) %}
+<button class="button-animate js-btn-animate {{class}}">
+	{{title}}
+	<span class="button-animate__hover"></span>
+</button>
+{% endmacro %}
+<!-- item.button('Пригласить', 'invite__btn') -->

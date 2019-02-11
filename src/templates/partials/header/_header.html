@@ -1,0 +1,121 @@
+<!-- begin header -->
+<header class="header {{headerClass}}" itemscope itemtype="http://schema.org/WPHeader">
+
+	<!-- begin header__top-line -->
+	<div class="header__top-line">
+		<div class="header__in">
+
+			<!-- begin city -->
+			<div class="city header__city">
+				<span class="city__text">Ваш город:</span>
+				<a href="#change-city" data-toggle="modal" class="city__link">Саратов</a>
+			</div><!-- end city -->
+
+			<!-- begin conditions -->
+			<div class="conditions header__conditions">
+				<ul class="conditions__list">
+					<li class="conditions__item"><a href="#" class="conditions__link">Условия доставки</a></li>
+					<li class="conditions__item"><a href="#" class="conditions__link">Условия оплаты</a></li>
+				</ul>
+			</div><!-- end conditions -->
+
+			<a href="tel:8 800 707-86-30" class="phone header__phone" itemprop="telephone">8 800 707-86-30</a>
+		</div>
+	</div><!-- end header__top-line -->
+
+	<div class="header-main">
+
+		<!-- begin header__bottom -->
+		<div class="header__bottom">
+			<div class="header__in">
+
+				<!-- begin logo -->
+				<div class="logo header__logo">
+					<a href="home.html" class="logo__link">
+						<img src="img/general/logo.svg" alt="Bazar-TEX Ткани и фурнитура">
+					</a>
+				</div><!-- end logo -->
+
+				<!-- begin search -->
+				<div class="search header__search js-search" tooltip="поиск тканей">
+					<form class="search__form">
+							<input type="text" class="search__field js-search-input" placeholder="Поиск по тканям..." autocomplete="off">
+							<button type="submit" class="search__btn">
+								{{mixin.icon('search', 'search__icon')}}
+							</button>
+							<div class="search__hint" style="display: none;">
+								<div class="search-hint search-hint--cyties">
+									<ul class="search-hint__list">
+										<li class="search-hint__item">
+											<a href="#" class="search-hint__link">
+												<span class="search-hint__bade search-hint__bade--location">Еврофатин LUXE</span>
+												<span class="search-hint__text product-item__title">Атлас дюпон <span>white</span></span>
+											</a>
+										</li>
+										<li class="search-hint__item">
+											<a href="#" class="search-hint__link">
+												<span class="search-hint__bade search-hint__bade--location">Еврофатин LUXE</span>
+												<span class="search-hint__text product-item__title">Атлас дюпон <span>white</span></span>
+											</a>
+										</li>
+										<li class="search-hint__item">
+											<a href="#" class="search-hint__link">
+												<span class="search-hint__bade search-hint__bade--location">Еврофатин LUXE</span>
+												<span class="search-hint__text product-item__title">Атлас дюпон <span>white</span></span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+					</form>
+				</div><!-- end search -->
+
+				<!-- begin user-nav -->
+				<div class="user-nav header__user-nav">
+					<ul class="user-nav__list">
+						<li class="user-nav__item" style="display: none;">
+							<a href="#auth-form" data-toggle="modal" class="user-nav__link sm-hide">
+								<i class="fal fa-user user-nav__icon"></i>
+								<span class="user-nav__text">Войти</span>
+							</a>
+						</li>
+						<li class="user-nav__item dropdown center js-dropdown">
+							<a href="javascript:void(0)" data-toggle="modal" class="user-nav__link sm-hide">
+								<i class="fal fa-user user-nav__icon"></i>
+								<span class="user-nav__text">Александр Марабаев</span>
+							</a>
+							<ul class="user-nav__dropdown dropdown__list">
+								<li><a href="#">Заказы</a></li>
+								<li><a href="#">Избранное</a></li>
+								<li><a href="#">Личные данные</a></li>
+								<li><a href="#">Выход</a></li>
+							</ul>
+						</li>
+						<li class="user-nav__item sm-only">
+							<a href="javascript:void(0);" class="user-nav__link js-mobile-search--show">
+								<i class="fal fa-search user-nav__icon"></i>
+								<span class="user-nav__text">Поиск</span>
+							</a>
+						</li>
+						<li class="user-nav__item">
+							<a href="#" class="user-nav__link">
+								<i class="fal fa-heart user-nav__icon"></i>
+								<span class="user-nav__text">Избранное</span>
+							</a>
+						</li>
+						<li class="user-nav__item user-nav__item--cart" data-cart-counter="8">
+							<a href="cart.html" class="user-nav__link">
+								<i class="fal fa-shopping-cart user-nav__icon"></i>
+								<span class="user-nav__text">Корзина</span>
+							</a>
+						</li>
+					</ul>
+				</div><!-- end user-nav -->
+
+			</div>
+		</div><!-- end header__bottom -->
+
+		{% include "partials/header/_menu.html" %}
+	</div>
+
+</header><!-- end header -->
