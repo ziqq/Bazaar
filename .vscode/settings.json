@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": false,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "eslint.autoFixOnSave": true,
+    "css.lint.emptyRules": "ignore",
+    "scss.lint.emptyRules": "ignore",
+    "css.lint.zeroUnits": "warning",
+    "scss.lint.zeroUnits": "warning",
+    "files.trimTrailingWhitespace": true,
+//     "html.format.wrapAttributes": "force-expand-multiline"
+}

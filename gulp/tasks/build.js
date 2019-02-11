@@ -1,6 +1,6 @@
-var gulp        = require('gulp');
+var gulp = require('gulp');
 var runSequence = require('run-sequence');
-var config      = require('../config');
+var config = require('../config');
 
 function build(cb) {
     runSequence(
@@ -27,7 +27,7 @@ function buildDev(cb) {
         'sass',
         'nunjucks',
         'js:build',
-        'copy',
+        'copy:production',
         'list-pages',
         cb
     );
@@ -44,4 +44,3 @@ gulp.task('build:dev', function(cb) {
     config.logEnv();
     build(cb);
 });
-
