@@ -57,23 +57,3 @@ App.catalog = {
         });
     }
 };
-
-//Catalog Filter Action
-// $('.js-catalog-filter--show').on('click', function() {
-//     $('.js-catalog-filter').addClass('is-visible');
-//     document.documentElement.style.overflow = 'hidden';
-// });
-// $('.js-catalog-filter--hide').on('click', function() {
-//     $('.js-catalog-filter').removeClass('is-visible');
-//     document.documentElement.style = '';
-// });
-
-//Sticky Block https://github.com/abouolia/sticky-sidebar
-// if ($('.js-stiky').length > 0 && $(window).width() > 768) {
-//     var sidebar = new StickySidebar('.js-stiky', {
-//         topSpacing: 85,
-//         bottomSpacing: 20,
-//         containerSelector: '.stiky-content',
-//         innerWrapperSelector: '.stiky-inner'
-//     });
-// }
