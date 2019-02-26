@@ -1,41 +1,94 @@
-.pagination{
+.pagination {
+    @include xs-block() {
+        align-items: center;
+        @include flexColumn;
+        width: 100%;
 
-	&__list{
-		@extend %flexCenter;
-		justify-content: center;
-	}//.pagination__list
+        &__title {
+            text-align: center;
+        }
 
-	&__item{
+        & + .pagination {
+            margin-top: 25px;
+        }
+    }
 
-		& + &{margin-left: 7px;}
+    &__title {
+        display: block;
+        font-family: $f-light;
+        font-size: 13px;
+        margin-bottom: 8px;
+        margin-right: auto;
+        text-align: left;
+        width: 100%;
+    } //.pagination__title
 
-		&:first-child, &:last-child{
-			.pagination__icon{
-				font-size: 18px;
-				line-height: 1;
-			}
-		}
+    &__list {
+        @include flexCenter;
+        justify-content: center;
+    } //.pagination__list
 
-		&.is-active{
-			.pagination__link{
-				color: #fff;
-				background-color: $color-bg--dark;
-			}
-		}
-	}//.pagination__item
+    &__item {
+        border: 1px solid $color-border;
+        border-radius: $border-radius;
 
-	&__link{
-		font-size: 14px;
-		border-radius: $border-radius;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: 30px;
-		height: 30px;
-		&:hover{
+        & + & {
+            margin-left: 7px;
+        }
 
-		}
-	}//.pagination__link
+        &:first-child,
+        &:last-child {
 
-	&__icon{}//.pagination__icon
-}//pagination
+            .pagination__icon {
+                font-size: 18px;
+                line-height: 1;
+            }
+        }
+
+        &:hover {
+
+            &:not(.is-active) {
+                border-color: $color-bg--dark;
+
+                .pagination__link {
+                    color: $color-text;
+                }
+            }
+        }
+
+        &.is-active {
+            border-color: $color-bg--dark;
+
+            .pagination__link {
+                background-color: $color-bg--dark;
+                color: #fff;
+            }
+        }
+    } //.pagination__item
+
+    &__link {
+        align-items: center;
+        background-color: transparent;
+        border: 0;
+        display: inline-flex;
+        font-family: $f2;
+        font-size: 15px;
+        height: 35px;
+        justify-content: center;
+        width: 35px;
+    } //.pagination__link
+
+    &__icon {
+    } //.pagination__icon
+
+    &--right {
+
+        .pagination__title {
+            text-align: right;
+
+            @include xs-block() {
+                text-align: center;
+            }
+        }
+    }
+} //pagination

@@ -1,7 +1,17 @@
 @import "helpers/all";
+@import "generated/all";
+@import "base/all";
+
+@import "_lib/fontawesome";
+@import "_lib/slick-theme";
+@import "_lib/slick";
+@import "_lib/_bootstrap-modal";
+@import '../../node_modules/select2/dist/css/select2';
+@import '../../node_modules/nouislider/distribute/nouislider';
+@import '../../node_modules/swiper/dist/css/swiper.min';
+
 @import "custom";
 @import "base/all";
-@import "generated/all";
 @import "components/all";
 @import "main";
 @import "layout/all";

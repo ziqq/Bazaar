@@ -1,46 +1,62 @@
 //base style
+
 html {
-	height: 100%;
-	overflow-x: hidden;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 body {
-	min-width: 320px;
-	font-family: $font-family-base;
-	font-size: $font-size-base;
-	color: $color-text;
-	line-height: $line-height-base;
-	background-color: #fff;
-	position: relative;
-	scroll-behavior: smooth;
-	@include smooth-font;
-	overflow-x: hidden;
-	@include scroll;
-	@include min-screen(481) {		
-		@include bz-scroll;
-	}
+    min-width: 320px;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-text;
+    line-height: $line-height-base;
+    background-color: #fff;
+    position: relative;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    @include smooth-font;
+    @include scroll;
+
+    &.loading {
+
+        .preloader {
+            display: block;
+        }
+    }
+
+    &.modal-open {
+        padding-right: 0 !important;
+        // padding-right: 5px !important;
+        position: fixed;
+        width: 100%;
+    }
 }
 
 // упразднить стили для плейсхолдера
-input, textarea, select {
-	@extend %styleInput;
-	outline: none;
-	appearance: none;
-	-webkit-appearance: none;
-	box-shadow: none;
-	background-color: transparent;
-	&:-webkit-autofill {
-		-webkit-box-shadow: 0 0 0 30px white inset;
-	}
-	@include placeholder{
-		font-family: $f-light;
-		// font-size: 14px;
-		color: $color-placeholder;
-	}
+
+input,
+textarea,
+select {
+    @extend %styleInput;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    background-color: transparent;
+
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px white inset;
+    }
+    @include placeholder {
+        font-family: $f-light;
+        // font-size: 14px;
+        color: $color-placeholder;
+    }
 }
 
 /*
- * disable auto-zoom on iphone input field focus 
+ * disable auto-zoom on iphone input field focus
 */
 // input[type='text']:focus,
 // input[type='number']:focus,
@@ -55,53 +71,117 @@ input, textarea, select {
 // 	}
 // }
 
+input[type='num'],
+input[type='number'],
+input[type='tel'],
+input[type='time'],
+input[type='date'] {
+    font-family: $f2-bold;
+    letter-spacing: 0.5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
 
-input[type="num"], input[type="number"], input[type="tel"], input[type="time"], input[type="date"]{
-	font-family: $f2-bold;
-	letter-spacing: .5px;
-	appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance:textfield;
-	&::-webkit-outer-spin-button,
-	&::-webkit-inner-spin-button{
-		appearance: none;
-	}
-}
-
-select{width: 100%;}
-
-//HELPER CLASSES
-.is-hidden{display: none !important;}
-.hidden{display: none;}
-.lg-only, .md-only, .sm-only, .xs-only {display: none;}
-@include max-screen(1200) {
-	.lg-only {display: block;}
-	.lg-hide {display: none;}
-}
-@include max-screen(1024) {
-	.md-only{display: block;}
-	.md-hide {display: none;}
-}
-@include max-screen(768) {
-	.sm-only{display: block;}
-	.sm-hide {display: none;}
-}
-@include max-screen(480) {
-	.xs-only{display: block;}
-	.xs-hide {display: none !important;}
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        appearance: none;
+    }
 }
 
-@for $i from 1 through 30 {
-	.mb-#{$i}{
-		margin-bottom: $i + px;
-	}	
-	.mt-#{$i}{
-		margin-top: $i + px;
-	}
-	.pb-#{$i}{
-		padding-bottom: $i + px;
-	}	
-	.pt-#{$i}{
-		padding-bottom: $i + px;
-	}
+select {
+    width: 100%;
 }
+
+.icon {
+    fill: $gray--darken;
+}
+
+.wrapper {
+    min-height: 100vh;
+    @include flexColumn;
+} //.wrapper
+
+.main {
+    @include flexColumn;
+    flex: 1;
+
+    &.rules {
+
+        .h1 {
+            margin: 40px 0;
+            @include respond-to(xs) {
+                margin: 20px 0;
+            }
+        }
+    }
+}
+
+.container {
+    @include container;
+}
+
+.overlay {
+    display: none;
+    background-color: rgba(#000, 0.4);
+    cursor: pointer;
+    @include coverdiv;
+    z-index: z(overlay);
+
+    &.is-active {
+        display: block;
+    } //.overlay.is-active
+
+    &--transparent {
+        display: block;
+        background-color: rgba(#fff, 0);
+    } //.overlay--transparent
+} //.overlay
+
+.text-color {
+    @each $theme, $color in $button-colors {
+
+        &--#{$theme} {
+            color: $color;
+        }
+    }
+}//.text-color
+
+.bg-color {
+    @each $theme, $color in $button-colors {
+
+        &--#{$theme} {
+            background-color: $color;
+        }
+    }
+}//.bg-color
+
+.preloader {
+    display: none;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+
+    &__inner {
+        display: block;
+        width: 32px;
+        height: 32px;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 32px;
+            background: url('../img/general/loader.gif') center center no-repeat;
+            position: fixed;
+            top: 50%;
+            left: 60.5%;
+            margin-left: -16px;
+            margin-top: -16px;
+        }
+    } //preloader__inner
+} //preloader

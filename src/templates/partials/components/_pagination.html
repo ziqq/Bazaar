@@ -1,19 +1,22 @@
 <!-- begin pagination -->
-<div class="pagination">
-	<ul class="pagination__list">
+<div class="pagination pagination--right">
+	<span class="pagination__title">страница 2 из 88</span>
+	<ul class="pagination__list js-toggle-list">
 		<li class="pagination__item">
 			<a class="pagination__link" href="#">
 				<i class="fal fa-angle-left pagination__icon"></i>
 			</a>
 		</li>
+		{% for i in range(1, 5) %}
 		<li class="pagination__item">
-			<a class="pagination__link" href="#">1</a>
+			<a class="pagination__link" href="#">{{ i }}</a>
 		</li>
-		<li class="pagination__item is-active">
-			<a class="pagination__link" href="#">2</a>
+		{% endfor %}
+		<li class="pagination__item">
+			<a class="pagination__link" href="#">...</a>
 		</li>
 		<li class="pagination__item">
-			<a class="pagination__link" href="#">3</a>
+			<a class="pagination__link" href="#">88</a>
 		</li>
 		<li class="pagination__item">
 			<a class="pagination__link" href="#">

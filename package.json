@@ -1,5 +1,5 @@
 {
-  "name": "_beautyBox_kung-fu",
+  "name": "_bazaar_kung-fu",
   "version": "0.0.1",
   "sasslintConfig": ".sass-lint.yaml",
   "scripts": {
@@ -10,7 +10,7 @@
     "eslint": "eslint --ignore-pattern 'src/js/dev/ src/js/assets/' --cache --format=node_modules/eslint-formatter-pretty src/js/",
     "eslint-fix": "npm run eslint -- --fix",
     "lint:sass": "sass-lint -c .sass-lint.yml '**/*.scss' -v -q",
-    "lint:sass:fix": "sass-lint -c .sass-lint.yml '**/*.scss' --fix"
+    "lint:sass:fix": "sass-lint-auto-fix -c .sass-lint.yml"
   },
   "lint-staged": {
     "src/templates/**/*.html": [
@@ -78,6 +78,7 @@
     "require-yaml": "^0.0.1",
     "run-sequence": "^2.2.1",
     "sass-lint": "^1.12.1",
+    "sass-lint-auto-fix": "^0.15.2",
     "stylelint": "^9.2.0",
     "stylelint-selector-bem-pattern": "^2.0.0",
     "through2": "^2.0.1",
@@ -102,6 +103,7 @@
     "smart-grid": "^2.1.2",
     "sticky-kit": "^1.1.3",
     "sticky-sidebar": "^3.3.1",
+    "swiper": "^4.4.6",
     "wowjs": "^1.1.3"
   }
 }

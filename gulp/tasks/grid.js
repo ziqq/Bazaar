@@ -1,9 +1,5 @@
-var gulp = require('gulp');
 var config = require('../config');
-var rename = require('gulp-rename');
 var smartgrid = require('smart-grid');
-var browserSync = require('browser-sync');
-reload = browserSync.reload;
 
 /* It's principal settings in smart grid project */
 var settings = {
@@ -15,9 +11,10 @@ var settings = {
         maxWidth: '1200px' /* max-width оn very large screen */,
         fields: '20px' /* side fields */
     },
+    filename: '_smart-grid',
     breakPoints: {
         lg: {
-            width: '1200px' /* -> @media (max-width: 1100px) */
+            width: '1366px' /* -> @media (max-width: 1100px) */
         },
         md: {
             width: '1024px'
@@ -35,9 +32,6 @@ var settings = {
         i7: {
             width: '375px'
         },
-        s: {
-            width: '360px'
-        },
         i5: {
             width: '320px'
         }
@@ -53,4 +47,4 @@ var settings = {
     }
 };
 
-smartgrid(config.src.libs, settings);
+smartgrid(config.src.sassGen, settings);

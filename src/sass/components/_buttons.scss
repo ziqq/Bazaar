@@ -1,119 +1,233 @@
-%button{
-	display: inline-block;
-	min-width: 200px;
-	height: 40px;
-	line-height: 38px;
-	font-family: $f-medium;
-	text-align: center;
-	font-size: 14px;
-	letter-spacing: 0.3px;
-	color: $color-text;
-	text-decoration: none;
-	border: none;
-	box-shadow: 0 2px 12px 0 rgba(0,0,0,.2);
-	border-radius: $border-radius;
-	outline: none;
-	cursor: pointer;
-	position: relative;
-	@include tr;
+%button {
+    border: 0;
+    border-radius: $border-radius;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+    color: $color-text;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $f-medium;
+    font-size: 14px;
+    height: 40px;
+    letter-spacing: 0.3px;
+    line-height: 38px;
+    min-width: 200px;
+    outline: none;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    @include tr;
 }
 
 @mixin btnBig {
-	height: 45px;
-    line-height: 44px;
     font-size: 16px;
+    height: 45px;
+    line-height: 44px;
 }
 
 .button {
-	@extend %button;
-	@each $theme, $color in $button-colors{
-		&--#{$theme} {
-			color: #fff;
-			background-color: $color;
-		}
-		&--#{$theme}:hover,
-		&--#{$theme}:focus{
-			color: #fff;
-			background-color: lighten($color, 6%);
-		}
-		&--#{$theme}:active, {
-			color: #fff;
-			background-color: lighten($color, 4%);
-			box-shadow: none;
-		}
-	}
+    @extend %button;
+    @each $theme, $color in $button-colors {
 
-	&--transparent{
-		box-shadow: none;
-		background-color: transparent;
+        &--#{$theme} {
+            background-color: $color;
+            color: #fff;
+        }
 
-		@each $theme, $color in $button-colors{
-			&.button--#{$theme}{
-				color: darken($color, 10%);
-				background-color: transparent;
-				border: 1px solid $color;
-			}
-			&.button--#{$theme}:hover,
-			&.button--#{$theme}:focus,
-			&.button--#{$theme}:active{
-				background-color: $color;
-				font-size: 14px;
-				color: #fff;
-			}
-		}
-	}//.button--transparent
+        &--#{$theme}:hover,
+        &--#{$theme}:focus {
+            background-color: lighten($color, 6%);
+            color: #fff;
+        }
 
-	&--yellow{
-		color: $color-text;
-		&:hover, &:focus, &:active {color: $color-text;}
-	}//.button--yellow
+        &--#{$theme}:active {
+            background-color: lighten($color, 4%);
+            box-shadow: none;
+            color: #fff;
+        }
+    }
 
-	&--muted{
-		&:hover{
-			color: #fff;
-		}
-	}//.button--muted
+    &--transparent {
+        background-color: transparent;
+        box-shadow: none;
 
-	&--link{
-		min-width: auto;
-		padding: 0;
-		letter-spacing: 0;
-		font-family: $f;
-		color: $color-accent;
-		text-transform: initial;
-		background-color: transparent;
-		box-shadow: none;
-		border: 0;
-	}//.button--link
-}//.button
+        @each $theme, $color in $button-colors {
 
-.button-icon{
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-	padding: 0;
-	border: 0;
-	background-color: transparent;
-	outline: none;
-	position: relative;
+            &.button--#{$theme} {
+                background-color: transparent;
+                border: 1px solid $color;
+                color: darken($color, 10%);
+            }
 
-	&--fav{
-		&::before{
-			content: '\f004';
-			font-family: faL;
-			font-size: 25px;
-			@include vcenter;
-		}
-		&:hover{
-			&::before{
-				color: $color-third;
-			}
-		}
-		&.is-checked{
-			&::before{
-				font-family: faS;
-				color: $color-third;
-			}
-		}
-	}
-}//.button-icon
+            &.button--#{$theme}:hover,
+            &.button--#{$theme}:focus,
+            &.button--#{$theme}:active {
+                background-color: $color;
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+    } //.button--transparent
+
+    &--yellow {
+        color: $color-text;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $color-text;
+        }
+    } //.button--yellow
+
+    &--muted {
+
+        &:hover {
+            color: #fff;
+        }
+    } //.button--muted
+
+    &--link {
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        color: $color-accent;
+        font-family: $f;
+        letter-spacing: 0;
+        min-width: auto;
+        padding: 0;
+        text-transform: initial;
+    } //.button--link
+} //.button
+
+.button-icon {
+    background-color: transparent;
+    border: 0;
+    display: inline-block;
+    height: 32px;
+    outline: none;
+    padding: 0;
+    position: relative;
+    width: 32px;
+
+    &--fav {
+
+        &::before {
+            color: $gray--darken;
+            @include fa('solid');
+            content: '\f004';
+            font-size: 35px;
+            @include vcenter;
+        }
+
+        &::after {
+            content: '\f004';
+            @include fa('solid');
+            font-size: 32px;
+            @include vcenter;
+        }
+
+        // &:hover {
+
+        //     &::before {
+        //         color: $color-third;
+        //     }
+        // }
+
+        &.is-checked {
+
+            &::before,
+            &::after {
+                color: $color-accent;
+                font-family: faS;
+            }
+        } //.button-icon--fav.is-checked
+    } //.button-icon--fav
+} //.button-icon
+
+.button-box {
+    justify-content: space-between;
+    @include flexCenter;
+    text-align: center;
+
+    @include xs-block() {
+        flex-wrap: wrap;
+    }
+
+    &__text {
+        color: #fff;
+        display: block;
+        font-size: 13px;
+        @extend %textLight;
+        margin-top: 10px;
+        text-align: center;
+    } //.buttons-box__text
+
+    &--column {
+        @include flexColumn;
+        align-items: center;
+
+        .button-animate {
+            margin-bottom: 5px;
+        }
+    } //.buttons-box--column
+
+    &--center {
+        display: flex;
+        justify-content: center;
+    } //.buttons-box---center
+
+    .button-animate {
+        @include respond-to(xs) {
+            width: 80%;
+        }
+
+        & + .button-animate {
+            margin-left: 30px;
+
+            @include respond-to(xs) {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    } //.buttons-box .button-animate
+} //.buttons-box
+
+.go-top {
+    background-color: $color-bg--light;
+    border-radius: 50%;
+    bottom: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    height: 52px;
+    justify-content: center;
+    left: 200%;
+    padding-top: 5px;
+    position: fixed;
+    text-transform: uppercase;
+    width: 52px;
+    @include trans(right);
+    @include flexCenter;
+    z-index: z(absolute);
+    @include tr;
+
+    &::before {
+        content: '\f106';
+        font-family: fal;
+        font-size: 20px;
+        line-height: 1;
+        @include vx;
+        top: 4px;
+        @include tr;
+    }
+
+    &:hover {
+        color: #000;
+
+        &::before {
+            color: #000;
+        }
+    }
+
+    &.is-visible {
+        left: 10px;
+    }
+} //.go-top

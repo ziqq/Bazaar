@@ -30,12 +30,14 @@ h1,.h1,h2,.h2{
 
 h1,.h1 {
 	font-size: 28px;
-	line-height: 1.05em;
-	@include max-screen(1024) {
+    line-height: 1.05em;
+
+	@include md-block() {
 		font-size: 26px;
 		line-height: 1.125em;
-	}
-	@include max-screen(480) {
+    }
+
+	@include xs-block() {
 		font-size: 24px;
 	}
 }
@@ -44,12 +46,14 @@ h2,.h2 {
 	line-height: 1.25em;
 	font-weight: 400;
 	text-transform: uppercase;
-	letter-spacing: 0.29px;
-	@include max-screen(1024) {
+    letter-spacing: 0.29px;
+
+	@include md-block() {
 		font-size: 20px;
 		line-height: 1.25em;
-	}
-	@include max-screen(768) {
+    }
+
+	@include sm-block() {
 		font-size: 18px;
 		line-height: 1.15384615em;
 	}
@@ -58,11 +62,13 @@ h3,.h3 {
 	font-family: $f2-bold;
 	font-weight: 500;
 	font-size: 28px;
-	line-height: 1.25em;
-	@include max-screen(1024) {
+    line-height: 1.25em;
+
+	@include md-block() {
 		font-size: 24px;
-	}
-	@include max-screen(768) {
+    }
+
+	@include sm-block() {
 		font-size: 22px;
 		line-height: 1.13636364em;
 	}
@@ -72,8 +78,9 @@ h4,.h4,h5,.h5, h6,.h6{
 	letter-spacing: 1px;
 	font-weight: 500;
 	text-transform: uppercase;
-	margin-bottom: $base-indent;
-	@include max-screen(768) {
+    margin-bottom: $base-indent;
+
+	@include sm-block() {
 		line-height: 1.11111111em;
 	}
 }

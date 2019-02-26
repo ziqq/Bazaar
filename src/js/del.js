@@ -40,15 +40,15 @@ $(document).ready(function() {
 
     //Search Hint
     if ($('.js-search-input').length > 0) {
-        var searchInput = $('.js-search-input');
-        searchInput.on('keyup', function() {
-            var hint = $(this)
+        var $searchInput = $('.js-search-input');
+        $searchInput.on('keyup', function() {
+            var $hint = $(this)
                 .closest('.js-search')
                 .find('.search__hint');
             if ($(this).val() !== '') {
-                hint.removeAttr('style');
+                $hint.show();
             } else {
-                hint.css('display', 'none');
+                $hint.hide();
             }
         });
     }

@@ -23,6 +23,8 @@ advantages:
 <!-- begin home -->
 <main class="main home">
 
+	{% include "partials/_page-banner.html" %}
+
 	<!-- begin home-slider -->
 	<section class="promo">
 		<div class="container">
@@ -31,18 +33,21 @@ advantages:
 				<div class="bz-slider__arrow bz-slider__arrow--prev bz-slider-promo__arrow--prev"></div>
 				<div class="bz-slider__arrow bz-slider__arrow--next bz-slider-promo__arrow--next"></div>
 				<div class="bz-slider__slides js-bz-slider--promo">
-					{% for i in range(1, 4) %}
 					<div class="promo-gallery__item">
 						<div class="promo-gallery__img">
-							<a class="promo-gallery__link" href="#">
+							<a class="promo-gallery__link" href="catalog.html">
 								<picture>
-									<source media="(max-width: 480px)" srcset="img/promo/mobile/{{i}}.jpg">
-									<img src="img/promo/desktop/{{i}}.jpg" alt="alt">
+									<source media="(max-width: 480px)" srcset="img/promo/mobile/1.jpg">
+									<img
+										class="lazy"
+										data-src="img/promo/desktop/1.jpg"
+										src="img/general/loading.gif"
+										alt="alt"
+									>
 								</picture>
 							</a>
 						</div>
 					</div>
-					{% endfor %}
 				</div>
 			</div>
 
@@ -57,17 +62,9 @@ advantages:
 				<h2 class="h2">Новинки</h2>
 			</div>
 
-			<div class="bz-slider bz-slider--new">
-				<div class="bz-slider__arrow bz-slider__arrow--prev"></div>
-				<div class="bz-slider__arrow bz-slider__arrow--next"></div>
-				<div class="bz-slider__slides js-bz-slider--new">
-					{% for i in range(0, 6) %}
-						{% include "partials/product/_product-small.html" %}
-					{% endfor %}
-				</div>
-			</div>
+			{% include "partials/product/_product-slider.html" %}
 
-			<div class="bz-grid">
+			<!-- <div class="bz-grid">
 				<div class="bz-grid-in">
 					<div class="bz-grid-col bz-grid-col-3 bz-grid-col-sm-2">
 						<div class="bz-grid-row">
@@ -157,13 +154,113 @@ advantages:
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 		</div>
 	</section><!-- end new -->
 
+	<section class="bz-section">
+		<div class="container">
+			<h2 class="h2 title">Unsere Klassiker</h2>
+
+			<div class="row">
+				<div class="col-6 col-xs-12 xs-mb-10">
+					<img
+						class="lazy"
+						data-src="img/promo/690x300/1.jpg"
+						src="img/general/loading.gif"
+						alt="alt"
+					>
+				</div>
+				<div class="col-6 col-xs-12">
+					<img
+						class="lazy"
+						data-src="img/promo/690x300/2.jpg"
+						src="img/general/loading.gif"
+						alt="alt"
+					>
+				</div>
+			</div>
+
+			<div class="section-header">
+				<h2 class="h2">Neu eingetroffen</h2>
+			</div>
+
+			{% include "partials/product/_product-slider.html" %}
+		</div>
+	</section>
+
+	<section class="bz-section">
+		<div class="container">
+			<h2 class="h2 title">Zum Basteln und Gestalten</h2>
+
+			<div class="row">
+				<div class="col-12">
+					<picture>
+						<source media="(max-width: 480px)" srcset="img/promo/mobile/3.jpg">
+						<img
+							class="lazy"
+							data-src="img/promo/desktop/3.jpg"
+							src="img/general/loading.gif"
+							alt="alt"
+						>
+					</picture>
+				</div>
+			</div>
+
+			<div class="section-header">
+				<h2 class="h2">Textiles Gestalten</h2>
+			</div>
+
+			{% include "partials/product/_product-slider.html" %}
+		</div>
+	</section>
+
+	<section class="bz-section pos-xs-5">
+		<div class="container">
+			<h2 class="h2 title">traumhafte Winterqualitäten</h2>
+
+			<div class="row">
+				{% for i in range(0, 4) %}
+				<div class="col-3 col-sm-6 col-xs-12">
+					<img
+						class="lazy xs-mb-10"
+						data-src="img/promo/540x264/{{ i + 1 }}.jpg"
+						alt="alt"
+					>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section class="bz-section">
+		<div class="container">
+			<h2 class="h2 title">süße Kinderstoffe</h2>
+
+			<div class="row">
+				<div class="col-12">
+					<picture>
+						<source media="(max-width: 480px)" srcset="img/promo/mobile/4.jpg">
+						<img
+							class="lazy"
+							data-src="img/promo/desktop/4.jpg"
+							alt="alt"
+						>
+					</picture>
+				</div>
+			</div>
+
+			<div class="section-header">
+				<h2 class="h2">Traumhafte Kinderstoffe</h2>
+			</div>
+
+			{% include "partials/product/_product-slider.html" %}
+		</div>
+	</section>
+
 	<!-- begin why-we -->
-	<section class="bz-section why-we">
+	<section class="bz-section why-we is-hidden">
 		<div class="container">
 
 			<div class="why-we__title">Почему выбирают нас?</div>
@@ -173,7 +270,7 @@ advantages:
 	</section><!-- end why-we -->
 
 	<!-- begin advantages -->
-	<section class="bz-section advantages">
+	<section class="bz-section advantages is-hidden">
 		<div class="container">
 
 			<div class="section-header">

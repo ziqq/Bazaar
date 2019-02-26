@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Каталог</title>
+    <title>Остатки тканей в балаково</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -40,6 +40,7 @@
             <a href="tel:8 800 707-86-30" class="phone header__phone" itemprop="telephone">8 800 707-86-30</a>
           </div>
         </div><!-- end header__top-line -->
+        <!-- begin header-main -->
         <div class="header-main">
           <!-- begin header__bottom -->
           <div class="header__bottom">
@@ -51,7 +52,7 @@
                 </a>
               </div><!-- end logo -->
               <!-- begin search -->
-              <div class="search header__search js-search" tooltip="поиск тканей">
+              <div class="search header__search js-search">
                 <form class="search__form">
                   <input type="text" class="search__field js-search-input" placeholder="Поиск по тканям..." autocomplete="off">
                   <button type="submit" class="search__btn">
@@ -137,26 +138,25 @@
               <a href="tel:8 800 707-86-30" class="phone nav-main__phone" itemprop="telephone">8 800 707-86-30</a>
             </div>
             <!-- begin hamburger -->
-            <div class="nav-main__btn--close"><button class="hamburger js-hamburger"><span></span></button></div><!-- end hamburger -->
-            <ul class="nav-main__list">
+            <div class="nav-main__btn--close">
+              <button class="hamburger js-hamburger"><span></span></button>
+              <span>меню</span>
+            </div><!-- end hamburger -->
+            <ul class="nav-main__list" data-accordeon>
               <li class="nav-main__item nav-main__item--lk xs-only" style="display: none;">
-                <a href="#auth-form" data-toggle="modal" class="nav-main__link">
+                <a href="#auth-form" data-toggle="modal" class="nav-main__link bg-color--accent">
                   <i class="fal fa-user nav-main__icon"></i>
                   <span class="nav-main__text">Войти / Зарегистрироваться</span>
                 </a>
               </li>
-              <li class="nav-main__item nav-main__item--lk xs-only">
-                <a href="#" class="nav-main__link js-main-nav-link--forward">
+              <li class="nav-main__item nav-main__item--lk xs-only" data-accordeon-item>
+                <a href="#" class="nav-main__link bg-color--accent" data-accordeon-title>
                   <i class="fal fa-user nav-main__icon"></i>
                   <span class="nav-main__text">Личный кабинет</span>
-                  <i class="fal fa-angle-right"></i>
                 </a>
-                <ul class="nav-dropdown nav-main__dropdown">
+                <ul class="nav-dropdown nav-main__dropdown" data-accordeon-content>
                   <div class="nav-dropdown__items">
                     <div class="nav-dropdown__columns">
-                      <li class="nav-dropdown__item">
-                        <a href="javascript:void(0);" class="nav-dropdown__title nav-dropdown__title--back js-main-nav-link--forward">Назад</a>
-                      </li>
                       <li class="nav-dropdown__item">
                         <a href="#" class="nav-dropdown__title nav-dropdown__title--order">Заказы</a>
                       </li>
@@ -173,680 +173,89 @@
                   </div>
                 </ul>
               </li>
-              <li class="nav-main__item is-active">
-                <a href="#" class="nav-main__link js-main-nav-link--forward">
-                  <svg class="icon icon-cloth nav-main__icon">
-                    <use xlink:href="img/sprite.svg#cloth"></use>
-                  </svg>
-                  <span class="nav-main__text">Ткани</span>
-                  <i class="fal fa-angle-right"></i>
-                </a>
-                <ul class="nav-dropdown nav-main__dropdown">
-                  <div class="nav-dropdown__items">
-                    <div class="nav-dropdown__columns">
-                      <li class="nav-dropdown__item">
-                        <a href="javascript:void(0);" class="nav-dropdown__title nav-dropdown__title--link js-main-nav-link--forward">Назад</a>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li> ﻿
-                    </div>
-                  </div>
-                </ul>
-              </li>
-              <li class="nav-main__item ">
-                <a href="#" class="nav-main__link js-main-nav-link--forward">
-                  <svg class="icon icon-furniture nav-main__icon">
-                    <use xlink:href="img/sprite.svg#furniture"></use>
-                  </svg>
-                  <span class="nav-main__text">Швейная фурнитура</span>
-                  <i class="fal fa-angle-right"></i>
-                </a>
-                <ul class="nav-dropdown nav-main__dropdown">
-                  <div class="nav-dropdown__items">
-                    <div class="nav-dropdown__columns">
-                      <li class="nav-dropdown__item">
-                        <a href="javascript:void(0);" class="nav-dropdown__title nav-dropdown__title--link js-main-nav-link--forward">Назад</a>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li> ﻿
-                    </div>
-                  </div>
-                </ul>
-              </li>
-              <li class="nav-main__item nav-main__item--empty">
-                <a href="#" class="nav-main__link js-main-nav-link--forward">
-                  <svg class="icon icon-leavings nav-main__icon">
-                    <use xlink:href="img/sprite.svg#leavings"></use>
-                  </svg>
-                  <span class="nav-main__text">Остатки тканей</span>
-                  <i class="fal fa-angle-right"></i>
-                </a>
-                <ul class="nav-dropdown nav-main__dropdown">
-                  <div class="nav-dropdown__items">
-                    <div class="nav-dropdown__columns">
-                      <li class="nav-dropdown__item">
-                        <a href="javascript:void(0);" class="nav-dropdown__title nav-dropdown__title--link js-main-nav-link--forward">Назад</a>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li> ﻿
-                    </div>
-                  </div>
-                </ul>
-              </li>
-              <li class="nav-main__item nav-main__item--empty">
-                <a href="#" class="nav-main__link js-main-nav-link--forward">
-                  <svg class="icon icon-sale nav-main__icon">
-                    <use xlink:href="img/sprite.svg#sale"></use>
-                  </svg>
-                  <span class="nav-main__text">Распродажа</span>
-                  <i class="fal fa-angle-right"></i>
-                </a>
-                <ul class="nav-dropdown nav-main__dropdown">
-                  <div class="nav-dropdown__items">
-                    <div class="nav-dropdown__columns">
-                      <li class="nav-dropdown__item">
-                        <a href="javascript:void(0);" class="nav-dropdown__title nav-dropdown__title--link js-main-nav-link--forward">Назад</a>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li> ﻿
-                    </div>
-                  </div>
-                </ul>
-              </li>
-              <li class="nav-main__item nav-main__item--empty">
-                <a href="#" class="nav-main__link js-main-nav-link--forward">
+              <li class="nav-main__item is-active ">
+                <a href="javascript:void(0);" class="nav-main__link">
                   <svg class="icon icon-new nav-main__icon">
                     <use xlink:href="img/sprite.svg#new"></use>
                   </svg>
                   <span class="nav-main__text">Новинки</span>
-                  <i class="fal fa-angle-right"></i>
+                  <!-- <i class="fal fa-angle-right"></i> -->
                 </a>
-                <ul class="nav-dropdown nav-main__dropdown">
+              </li>
+              <li class="nav-main__item  nav-main__item--dropdown" data-accordeon-item>
+                <a href="javascript:void(0);" class="nav-main__link" data-accordeon-title>
+                  <svg class="icon icon-cloth nav-main__icon">
+                    <use xlink:href="img/sprite.svg#cloth"></use>
+                  </svg>
+                  <span class="nav-main__text">Ткани</span>
+                  <!-- <i class="fal fa-angle-right"></i> -->
+                </a>
+                <ul class="nav-dropdown nav-main__dropdown" data-accordeon-content>
                   <div class="nav-dropdown__items">
-                    <div class="nav-dropdown__columns">
-                      <li class="nav-dropdown__item">
-                        <a href="javascript:void(0);" class="nav-dropdown__title nav-dropdown__title--link js-main-nav-link--forward">Назад</a>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
+                    <div class="nav-dropdown__columns" data-accordeon>
+                      <!-- <li class="nav-dropdown__item nav-dropdown__item--link">
+								<a href="javascript:void(0);" class="nav-dropdown__title nav-dropdown__title--link js-main-nav-link--forward">Назад</a>
+							</li> -->
+                      <li class="nav-dropdown__item" data-accordeon-item>
+                        <a href="javascript:void(0);" class="nav-dropdown__title" data-accordeon-title>Атлас</a>
+                        <ul class="nav-dropdown--sub" data-accordeon-content>
                           <li><a href="#">Еврофатин luxe</a></li>
                           <li><a href="#">Еврофатин life</a></li>
                           <li><a href="#">Средней жесткости</a></li>
                           <li><a href="#">Матовый</a></li>
                           <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
                         </ul>
                       </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
+                      <li class="nav-dropdown__item" data-accordeon-item>
+                        <a href="javascript:void(0);" class="nav-dropdown__title" data-accordeon-title>Атлас</a>
+                        <ul class="nav-dropdown--sub" data-accordeon-content>
                           <li><a href="#">Еврофатин luxe</a></li>
                           <li><a href="#">Еврофатин life</a></li>
                           <li><a href="#">Средней жесткости</a></li>
                           <li><a href="#">Матовый</a></li>
                           <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
                         </ul>
                       </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
+                      <li class="nav-dropdown__item" data-accordeon-item>
+                        <a href="javascript:void(0);" class="nav-dropdown__title" data-accordeon-title>Атлас</a>
+                        <ul class="nav-dropdown--sub" data-accordeon-content>
                           <li><a href="#">Еврофатин luxe</a></li>
                           <li><a href="#">Еврофатин life</a></li>
                           <li><a href="#">Средней жесткости</a></li>
                           <li><a href="#">Матовый</a></li>
                           <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
                         </ul>
                       </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-dropdown__item">
-                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-                        <ul class="nav-dropdown--sub">
-                          <li><a href="#">Еврофатин luxe</a></li>
-                          <li><a href="#">Еврофатин life</a></li>
-                          <li><a href="#">Средней жесткости</a></li>
-                          <li><a href="#">Матовый</a></li>
-                          <li><a href="#">Набивной</a></li>
-                          <li><a href="#">Стрейч-фатин</a></li>
-                          <li><a href="#">Свадебный</a></li>
-                          <li><a href="#">Для вышевки</a></li>
-                        </ul>
-                      </li> ﻿
                     </div>
                   </div>
                 </ul>
+              </li>
+              <li class="nav-main__item  ">
+                <a href="javascript:void(0);" class="nav-main__link">
+                  <svg class="icon icon-furniture nav-main__icon">
+                    <use xlink:href="img/sprite.svg#furniture"></use>
+                  </svg>
+                  <span class="nav-main__text">Швейная фурнитура</span>
+                  <!-- <i class="fal fa-angle-right"></i> -->
+                </a>
+              </li>
+              <li class="nav-main__item  ">
+                <a href="javascript:void(0);" class="nav-main__link">
+                  <svg class="icon icon-leavings nav-main__icon">
+                    <use xlink:href="img/sprite.svg#leavings"></use>
+                  </svg>
+                  <span class="nav-main__text">Остатки тканей</span>
+                  <!-- <i class="fal fa-angle-right"></i> -->
+                </a>
+              </li>
+              <li class="nav-main__item  ">
+                <a href="javascript:void(0);" class="nav-main__link">
+                  <svg class="icon icon-sale nav-main__icon">
+                    <use xlink:href="img/sprite.svg#sale"></use>
+                  </svg>
+                  <span class="nav-main__text">Распродажа</span>
+                  <!-- <i class="fal fa-angle-right"></i> -->
+                </a>
               </li>
             </ul>
             <ul class="nav-main__list nav-main__list--sub">
@@ -856,237 +265,298 @@
               <li class="nav-main__item"><a href="#" class="nav-main__link">Контакты</a></li>
             </ul>
           </nav><!-- end nav-main -->
-        </div>
+        </div><!-- end header-main -->
       </header><!-- end header -->
       <!-- begin home -->
       <main class="main catalog">
+        <!-- begin page-banner -->
+        <div class="page-banner" style="background-color: #f8dcd2">
+          <a class="page-banner__link" href="sale.html">
+            <div id="page-banner__content">
+              <p class="text-center">
+                <strong>Предложение на выходные:</strong> скидка 10% на остатки тканей - <strong>Посмотреть</strong>
+              </p>
+            </div>
+          </a>
+        </div>
+        <!-- end page-banner -->
         <div class="container">
+          <div class="catalog__title">
+            <a class="catalog__back" href="#"><i class="far fa-angle-left"></i></a>
+            <h1 class="h1" itemprop="headline">Остатки тканей в балаково</h1>
+          </div>
           <!-- begin catalog__wrap -->
           <div class="catalog__wrap">
             <!-- begin catalog-filter -->
             <div class="catalog-filter catalog__filter js-catalog-filter js-stiky">
-              <div class="catalog-filter__in stiky__inner">
-                <div class="catalog-filter__header">
-                  <div class="catalog-filter__title">Фильтр</div>
-                  <button class="button button button--link">Сбросить</button>
-                </div>
-                <div class="catalog-filter__body accordeon accordeon--other js-accordeon">
-                  <div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
-                    <div class="catalog-filter__subtitle accordeon__title">Цвет</div>
-                    <div class="catalog-filter__content accordeon__content js-scroll">
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform js-checkbox">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">белый</span>
-                        </label>
-                        <span class="catalog-filter__color" data-filter-color="#fff"></span>
-                      </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform js-checkbox">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">кремовый</span>
-                        </label>
-                        <span class="catalog-filter__color" data-filter-color="#e4d8cb"></span>
-                      </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform js-checkbox">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">синий</span>
-                        </label>
-                        <span class="catalog-filter__color" data-filter-color="#46358d"></span>
-                      </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform js-checkbox">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">зеленый</span>
-                        </label>
-                        <span class="catalog-filter__color" data-filter-color="#233e23"></span>
-                      </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform js-checkbox">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">белый</span>
-                        </label>
-                        <span class="catalog-filter__color" data-filter-color="#fff"></span>
-                      </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform js-checkbox">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">кремовый</span>
-                        </label>
-                        <span class="catalog-filter__color" data-filter-color="#e4d8cb"></span>
-                      </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform js-checkbox">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">синий</span>
-                        </label>
-                        <span class="catalog-filter__color" data-filter-color="#46358d"></span>
-                      </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform js-checkbox">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">зеленый</span>
-                        </label>
-                        <span class="catalog-filter__color" data-filter-color="#233e23"></span>
-                      </div>
-                    </div>
+              <div class="catalog-filter__inner stiky-inner">
+                <div class="catalog-filter__in">
+                  <div class="catalog-filter__header">
+                    <div class="catalog-filter__title">Фильтр</div>
+                    <button class="button button button--link">Сбросить</button>
                   </div>
-                  <div class="catalog-filter__item js-catalog-filter-item accordeon__item">
-                    <div class="catalog-filter__subtitle accordeon__title">Плотность ткани</div>
-                    <div class="catalog-filter__content accordeon__content js-scroll">
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">110</span>
-                        </label>
-                      </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">135</span>
-                        </label>
-                      </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">150</span>
-                        </label>
-                      </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">180</span>
-                        </label>
-                      </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">220</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="catalog-filter__item js-catalog-filter-item accordeon__item">
-                    <div class="catalog-filter__subtitle accordeon__title">Цена</div>
-                    <div class="catalog-filter__content accordeon__content js-scroll">
-                      <div class="catalog-filter__item_price js-catalog-filter-item-price">
-                        <div class="catalog-filter__range range">
-                          <div class="range__slider" id="js-catalog-filter-slider" data-start="350" data-end="680"></div>
+                  <div class="catalog-filter__body accordeon accordeon--other js-accordeon">
+                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
+                      <div class="catalog-filter__subtitle accordeon__title">Цвет</div>
+                      <div class="catalog-filter__content accordeon__content js-scroll">
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">белый</span>
+                          </label>
+                          <span class="catalog-filter__color" data-filter-color="#fff"></span>
                         </div>
-                        <div class="range__diapazon">
-                          <div class="range__from">
-                            <input id="jsPriceStart">
-                            <i class="fal-rub"></i>
-                          </div>
-                          <div class="range__to">
-                            <input id="jsPriceEnd">
-                            <i class="fal-rub"></i>
-                          </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">кремовый</span>
+                          </label>
+                          <span class="catalog-filter__color" data-filter-color="#e4d8cb"></span>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">синий</span>
+                          </label>
+                          <span class="catalog-filter__color" data-filter-color="#46358d"></span>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">зеленый</span>
+                          </label>
+                          <span class="catalog-filter__color" data-filter-color="#233e23"></span>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">белый</span>
+                          </label>
+                          <span class="catalog-filter__color" data-filter-color="#fff"></span>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">кремовый</span>
+                          </label>
+                          <span class="catalog-filter__color" data-filter-color="#e4d8cb"></span>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">синий</span>
+                          </label>
+                          <span class="catalog-filter__color" data-filter-color="#46358d"></span>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">зеленый</span>
+                          </label>
+                          <span class="catalog-filter__color" data-filter-color="#233e23"></span>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="catalog-filter__item js-catalog-filter-item accordeon__item">
-                    <div class="catalog-filter__subtitle accordeon__title">Производитель</div>
-                    <div class="catalog-filter__content accordeon__content js-scroll">
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">Турция</span>
-                        </label>
+                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
+                      <div class="catalog-filter__subtitle accordeon__title">Плотность ткани</div>
+                      <div class="catalog-filter__content accordeon__content js-scroll">
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">110</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">135</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">150</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">180</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">110</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">135</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">150</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">180</span>
+                          </label>
+                        </div>
                       </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">Китай</span>
-                        </label>
+                    </div>
+                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
+                      <div class="catalog-filter__subtitle accordeon__title">Цена</div>
+                      <div class="catalog-filter__content accordeon__content">
+                        <div class="catalog-filter__item_price js-catalog-filter-item-price">
+                          <div class="catalog-filter__range range">
+                            <div class="range__slider" id="js-catalog-filter-slider" data-end="680" data-start="350"></div>
+                          </div>
+                          <div class="range__diapazon">
+                            <div class="range__from">
+                              <input id="jsPriceStart">
+                              <i class="fal-rub"></i>
+                            </div>
+                            <div class="range__to">
+                              <input id="jsPriceEnd">
+                              <i class="fal-rub"></i>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">Россия</span>
-                        </label>
-                      </div>
-                      <div class="catalog-filter__subitem">
-                        <label class="checkbox checkbox--transform">
-                          <input type="checkbox">
-                          <span class="checkbox__box"></span>
-                          <span class="checkbox__title">Корея</span>
-                        </label>
+                    </div>
+                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
+                      <div class="catalog-filter__subtitle accordeon__title">Производитель</div>
+                      <div class="catalog-filter__content accordeon__content js-scroll">
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">Турция</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">Китай</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">Россия</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">Корея</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">Турция</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">Китай</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">Россия</span>
+                          </label>
+                        </div>
+                        <div class="catalog-filter__subitem">
+                          <label class="checkbox checkbox--transform js-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__box"></span>
+                            <span class="checkbox__title">Корея</span>
+                          </label>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div class="catalog-filter__footer">
+                    <a class="catalog-filter__btn catalog-filter__btn--close js-catalog-filter--hide" href="javascript:void(0)">Закрыть</a>
+                    <a class="catalog-filter__btn catalog-filter__btn--aply js-catalog-filter--hide" href="javascript:void(0)">Применить</a>
+                  </div>
                 </div>
-                <div class="catalog-filter__footer">
-                  <a href="javascript:void(0)" class="catalog-filter__btn catalog-filter__btn--close js-catalog-filter--hide">Закрыть</a>
-                  <a href="javascript:void(0)" class="catalog-filter__btn catalog-filter__btn--aply js-catalog-filter--hide">Применить</a>
-                </div>
+                <!-- begin catalog-filter__cloth -->
+                <div class="catalog-filter__cloth cloth">
+                  <h3 class="h3 cloth__title">Тип ткани</h3>
+                  <div class="cloth__item">
+                    <a class="cloth__subtitle" href="#">Атлас <span class="cloth__count">1100</span>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="#">Дюпон</a>
+                      </li>
+                      <li>
+                        <a href="#">Матовый</a>
+                      </li>
+                      <li>
+                        <a href="#">Тонкий</a>
+                      </li>
+                      <li>
+                        <a href="#">Стрейч</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="cloth__item">
+                    <a class="cloth__subtitle" href="#">Бархат <span class="cloth__count">800</span>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="#">Стрейч</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div><!-- end catalog-filter__cloth -->
               </div>
-              <!-- begin catalog-filter__cloth -->
-              <div class="catalog-filter__cloth cloth">
-                <h3 class="h3 cloth__title">Тип ткани</h3>
-                <div class="cloth__item">
-                  <a href="#" class="cloth__subtitle">Атлас <span class="cloth__count">1100</span>
-                  </a>
-                  <ul>
-                    <li>
-                      <a href="#">Дюпон</a>
-                    </li>
-                    <li>
-                      <a href="#">Матовый</a>
-                    </li>
-                    <li>
-                      <a href="#">Тонкий</a>
-                    </li>
-                    <li>
-                      <a href="#">Стрейч</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="cloth__item">
-                  <a href="#" class="cloth__subtitle">Бархат <span class="cloth__count">800</span>
-                  </a>
-                  <ul>
-                    <li>
-                      <a href="#">Стрейч</a>
-                    </li>
-                  </ul>
-                </div>
-              </div><!-- end catalog-filter__cloth -->
             </div><!-- end catalog-filter -->
             <!-- begin catalog-content -->
             <div class="catalog-content catalog__content stiky-content">
               <!-- begin catalog__top-line -->
               <div class="catalog__top-line">
-                <div class="catalog__title">
-                  <a class="catalog__back" href="#"><i class="far fa-angle-left"></i></a>
-                  <h1 class="h1" itemprop="headline">Остатки тканей в балаково</h1>
-                  <span class="catalog__count">350 товаров на складе</span>
-                </div>
+                <span class="catalog__count">350 товаров на складе</span>
                 <div class="catalog__sorting sorting bz-select--dark">
                   <span class="sorting__title">Сортировать по:</span>
                   <select class="js-select select-with-icon">
-                    <option value="По умолчанию" data-image="default">По умолчанию</option>
                     <option value="По возрастанию цены" data-image="top">По возрастанию цены</option>
                     <option value="По убыванию цены" data-image="down">По убыванию цены</option>
-                    <option value="В начале новинки" data-image="new">В начале новинки</option>
+                    <option value="В начале новинки">В начале новинки</option>
                   </select>
                 </div>
               </div><!-- end catalog__top-line -->
@@ -1100,22 +570,37 @@
                     </a>
                   </li>
                   <li class="changer__item ">
-                    <a class="changer__link" href="#"> Дюпон <span class="changer__counter">200</span>
+                    <a class="changer__link" href="#"> Еврофатин LUXE <span class="changer__counter">200</span>
                       <div class="changer__reset"><i class="fal fa-times"></i></div>
                     </a>
                   </li>
                   <li class="changer__item ">
-                    <a class="changer__link" href="#"> Матовый <span class="changer__counter">350</span>
+                    <a class="changer__link" href="#"> Еврофатин LIFE <span class="changer__counter">350</span>
                       <div class="changer__reset"><i class="fal fa-times"></i></div>
                     </a>
                   </li>
                   <li class="changer__item ">
-                    <a class="changer__link" href="#"> Тонкий <span class="changer__counter">150</span>
+                    <a class="changer__link" href="#"> Стрейч-фатин <span class="changer__counter">150</span>
                       <div class="changer__reset"><i class="fal fa-times"></i></div>
                     </a>
                   </li>
                   <li class="changer__item ">
-                    <a class="changer__link" href="#"> Стрейч <span class="changer__counter"></span>
+                    <a class="changer__link" href="#"> Свадебный еврофатин <span class="changer__counter">183</span>
+                      <div class="changer__reset"><i class="fal fa-times"></i></div>
+                    </a>
+                  </li>
+                  <li class="changer__item ">
+                    <a class="changer__link" href="#"> Еврофатин для вышевки <span class="changer__counter">72</span>
+                      <div class="changer__reset"><i class="fal fa-times"></i></div>
+                    </a>
+                  </li>
+                  <li class="changer__item ">
+                    <a class="changer__link" href="#"> Фатин с бусинами <span class="changer__counter">88</span>
+                      <div class="changer__reset"><i class="fal fa-times"></i></div>
+                    </a>
+                  </li>
+                  <li class="changer__item ">
+                    <a class="changer__link" href="#"> Фатин с Омбре <span class="changer__counter">12</span>
                       <div class="changer__reset"><i class="fal fa-times"></i></div>
                     </a>
                   </li>
@@ -1124,34 +609,30 @@
               <!-- begin product-item -->
               <div class="product-item__wrap">
                 <!-- begin product-item -->
-                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
-                  <div class="badge__wrap product-item__badge">
-                    <span class="badge sale">-32%</span>
-                    <span class="badge new">New</span>
-                    <span class="badge hit">Хит</span>
-                  </div>
+                <a class="product-item js-product-item" href="card.html" itemscope itemtype="http://schema.org/Product">
                   <!-- begin product-item__img -->
                   <div class="product-item__img">
-                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <img class="product-item__image lazy" data-src="img/products/BlusenstoffMillefleurs/250x250/1.jpg" src="img/general/loading.gif" alt="Атлас дюпон" itemprop="image">
                     <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                    <div class="badge__wrap product-item__badge">
+                      <span class="badge badge--sale">-32%</span>
+                      <span class="badge badge--new"></span>
+                      <!-- <span class="badge badge--hit">Хит</span> -->
+                    </div>
                   </div><!-- end product-item__img -->
                   <!-- begin product-slider -->
                   <div class="product-slider">
                     <ul class="product-slider__list">
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/1.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/2.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/2.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/4.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/3.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item product-slider__item--last">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/4.jpg)"></div>
                         <div class="product-slider__more"> Ещё<br>5 цветов </div>
                       </li>
                     </ul>
@@ -1159,68 +640,47 @@
                   <!-- begin product-item__desc -->
                   <div class="product-item__desc">
                     <div class="product-item__box">
-                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон <span>white</span>
-                      </h5>
-                      <span class="product-item__articul">ам07</span>
+                      <h5 class="h5 product-item__title" itemprop="name"> Косая бейка "Серый нейтральный" </h5>
                     </div>
                     <div class="product-item__box">
-                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <meta itemprop="price" content="300.00">
-                        <meta itemprop="priceCurrency" content="RUB" /> 300 <i class="fal fa-ruble-sign"></i>
+                      <div class="product-item__price product-item__price--discount" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="RUB">
+                        <meta itemprop="price" content="300.00"> 300 <span>₽/м</span>
                       </div>
-                      <div class="product-item__color-count color-count">18 цветов</div>
-                    </div>
-                    <div class="product-item__more">
-                      <div class="product-item__color color">
-                        <ul class="color__list">
-                          <li class="color__item js-color-item" data-color="img/products/atlas/1.png">
-                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/2.png">
-                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/3.png">
-                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/4.png">
-                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
-                          </li>
-                        </ul>
+                      <div class="product-item__price text-color--error"> 278 <span>₽/м</span>
                       </div>
-                      <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();">Добавить в корзину</button>
-                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div><!-- end product-item__desc -->
+                  <div class="product-item__more">
+                    <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();"> Добавить в корзину </button>
+                    <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                  </div>
                 </a><!-- end product-item -->
                 <!-- begin product-item -->
-                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
-                  <div class="badge__wrap product-item__badge">
-                    <span class="badge sale">-32%</span>
-                    <span class="badge new">New</span>
-                    <span class="badge hit">Хит</span>
-                  </div>
+                <a class="product-item js-product-item" href="card.html" itemscope itemtype="http://schema.org/Product">
                   <!-- begin product-item__img -->
                   <div class="product-item__img">
-                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <img class="product-item__image lazy" data-src="img/products/BlusenstoffMillefleurs/250x250/1.jpg" src="img/general/loading.gif" alt="Атлас дюпон" itemprop="image">
                     <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                    <div class="badge__wrap product-item__badge">
+                      <span class="badge badge--sale">-32%</span>
+                      <span class="badge badge--new"></span>
+                      <!-- <span class="badge badge--hit">Хит</span> -->
+                    </div>
                   </div><!-- end product-item__img -->
                   <!-- begin product-slider -->
                   <div class="product-slider">
                     <ul class="product-slider__list">
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/1.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/2.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/2.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/4.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/3.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item product-slider__item--last">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/4.jpg)"></div>
                         <div class="product-slider__more"> Ещё<br>5 цветов </div>
                       </li>
                     </ul>
@@ -1228,68 +688,47 @@
                   <!-- begin product-item__desc -->
                   <div class="product-item__desc">
                     <div class="product-item__box">
-                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон <span>white</span>
-                      </h5>
-                      <span class="product-item__articul">ам07</span>
+                      <h5 class="h5 product-item__title" itemprop="name"> Косая бейка "Серый нейтральный" </h5>
                     </div>
                     <div class="product-item__box">
-                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <meta itemprop="price" content="300.00">
-                        <meta itemprop="priceCurrency" content="RUB" /> 300 <i class="fal fa-ruble-sign"></i>
+                      <div class="product-item__price product-item__price--discount" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="RUB">
+                        <meta itemprop="price" content="300.00"> 300 <span>₽/м</span>
                       </div>
-                      <div class="product-item__color-count color-count">18 цветов</div>
-                    </div>
-                    <div class="product-item__more">
-                      <div class="product-item__color color">
-                        <ul class="color__list">
-                          <li class="color__item js-color-item" data-color="img/products/atlas/1.png">
-                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/2.png">
-                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/3.png">
-                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/4.png">
-                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
-                          </li>
-                        </ul>
+                      <div class="product-item__price text-color--error"> 278 <span>₽/м</span>
                       </div>
-                      <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();">Добавить в корзину</button>
-                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div><!-- end product-item__desc -->
+                  <div class="product-item__more">
+                    <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();"> Добавить в корзину </button>
+                    <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                  </div>
                 </a><!-- end product-item -->
                 <!-- begin product-item -->
-                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
-                  <div class="badge__wrap product-item__badge">
-                    <span class="badge sale">-32%</span>
-                    <span class="badge new">New</span>
-                    <span class="badge hit">Хит</span>
-                  </div>
+                <a class="product-item js-product-item" href="card.html" itemscope itemtype="http://schema.org/Product">
                   <!-- begin product-item__img -->
                   <div class="product-item__img">
-                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <img class="product-item__image lazy" data-src="img/products/BlusenstoffMillefleurs/250x250/1.jpg" src="img/general/loading.gif" alt="Атлас дюпон" itemprop="image">
                     <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                    <div class="badge__wrap product-item__badge">
+                      <span class="badge badge--sale">-32%</span>
+                      <span class="badge badge--new"></span>
+                      <!-- <span class="badge badge--hit">Хит</span> -->
+                    </div>
                   </div><!-- end product-item__img -->
                   <!-- begin product-slider -->
                   <div class="product-slider">
                     <ul class="product-slider__list">
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/1.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/2.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/2.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/4.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/3.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item product-slider__item--last">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/4.jpg)"></div>
                         <div class="product-slider__more"> Ещё<br>5 цветов </div>
                       </li>
                     </ul>
@@ -1297,68 +736,47 @@
                   <!-- begin product-item__desc -->
                   <div class="product-item__desc">
                     <div class="product-item__box">
-                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон <span>white</span>
-                      </h5>
-                      <span class="product-item__articul">ам07</span>
+                      <h5 class="h5 product-item__title" itemprop="name"> Косая бейка "Серый нейтральный" </h5>
                     </div>
                     <div class="product-item__box">
-                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <meta itemprop="price" content="300.00">
-                        <meta itemprop="priceCurrency" content="RUB" /> 300 <i class="fal fa-ruble-sign"></i>
+                      <div class="product-item__price product-item__price--discount" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="RUB">
+                        <meta itemprop="price" content="300.00"> 300 <span>₽/м</span>
                       </div>
-                      <div class="product-item__color-count color-count">18 цветов</div>
-                    </div>
-                    <div class="product-item__more">
-                      <div class="product-item__color color">
-                        <ul class="color__list">
-                          <li class="color__item js-color-item" data-color="img/products/atlas/1.png">
-                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/2.png">
-                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/3.png">
-                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/4.png">
-                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
-                          </li>
-                        </ul>
+                      <div class="product-item__price text-color--error"> 278 <span>₽/м</span>
                       </div>
-                      <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();">Добавить в корзину</button>
-                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div><!-- end product-item__desc -->
+                  <div class="product-item__more">
+                    <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();"> Добавить в корзину </button>
+                    <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                  </div>
                 </a><!-- end product-item -->
                 <!-- begin product-item -->
-                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
-                  <div class="badge__wrap product-item__badge">
-                    <span class="badge sale">-32%</span>
-                    <span class="badge new">New</span>
-                    <span class="badge hit">Хит</span>
-                  </div>
+                <a class="product-item js-product-item" href="card.html" itemscope itemtype="http://schema.org/Product">
                   <!-- begin product-item__img -->
                   <div class="product-item__img">
-                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <img class="product-item__image lazy" data-src="img/products/BlusenstoffMillefleurs/250x250/1.jpg" src="img/general/loading.gif" alt="Атлас дюпон" itemprop="image">
                     <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                    <div class="badge__wrap product-item__badge">
+                      <span class="badge badge--sale">-32%</span>
+                      <span class="badge badge--new"></span>
+                      <!-- <span class="badge badge--hit">Хит</span> -->
+                    </div>
                   </div><!-- end product-item__img -->
                   <!-- begin product-slider -->
                   <div class="product-slider">
                     <ul class="product-slider__list">
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/1.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/2.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/2.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/4.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/3.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item product-slider__item--last">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/4.jpg)"></div>
                         <div class="product-slider__more"> Ещё<br>5 цветов </div>
                       </li>
                     </ul>
@@ -1366,68 +784,47 @@
                   <!-- begin product-item__desc -->
                   <div class="product-item__desc">
                     <div class="product-item__box">
-                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон <span>white</span>
-                      </h5>
-                      <span class="product-item__articul">ам07</span>
+                      <h5 class="h5 product-item__title" itemprop="name"> Косая бейка "Серый нейтральный" </h5>
                     </div>
                     <div class="product-item__box">
-                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <meta itemprop="price" content="300.00">
-                        <meta itemprop="priceCurrency" content="RUB" /> 300 <i class="fal fa-ruble-sign"></i>
+                      <div class="product-item__price product-item__price--discount" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="RUB">
+                        <meta itemprop="price" content="300.00"> 300 <span>₽/м</span>
                       </div>
-                      <div class="product-item__color-count color-count">18 цветов</div>
-                    </div>
-                    <div class="product-item__more">
-                      <div class="product-item__color color">
-                        <ul class="color__list">
-                          <li class="color__item js-color-item" data-color="img/products/atlas/1.png">
-                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/2.png">
-                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/3.png">
-                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/4.png">
-                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
-                          </li>
-                        </ul>
+                      <div class="product-item__price text-color--error"> 278 <span>₽/м</span>
                       </div>
-                      <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();">Добавить в корзину</button>
-                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div><!-- end product-item__desc -->
+                  <div class="product-item__more">
+                    <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();"> Добавить в корзину </button>
+                    <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                  </div>
                 </a><!-- end product-item -->
                 <!-- begin product-item -->
-                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
-                  <div class="badge__wrap product-item__badge">
-                    <span class="badge sale">-32%</span>
-                    <span class="badge new">New</span>
-                    <span class="badge hit">Хит</span>
-                  </div>
+                <a class="product-item js-product-item" href="card.html" itemscope itemtype="http://schema.org/Product">
                   <!-- begin product-item__img -->
                   <div class="product-item__img">
-                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <img class="product-item__image lazy" data-src="img/products/BlusenstoffMillefleurs/250x250/1.jpg" src="img/general/loading.gif" alt="Атлас дюпон" itemprop="image">
                     <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                    <div class="badge__wrap product-item__badge">
+                      <span class="badge badge--sale">-32%</span>
+                      <span class="badge badge--new"></span>
+                      <!-- <span class="badge badge--hit">Хит</span> -->
+                    </div>
                   </div><!-- end product-item__img -->
                   <!-- begin product-slider -->
                   <div class="product-slider">
                     <ul class="product-slider__list">
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/1.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/2.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/2.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/4.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/3.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item product-slider__item--last">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/4.jpg)"></div>
                         <div class="product-slider__more"> Ещё<br>5 цветов </div>
                       </li>
                     </ul>
@@ -1435,68 +832,47 @@
                   <!-- begin product-item__desc -->
                   <div class="product-item__desc">
                     <div class="product-item__box">
-                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон <span>white</span>
-                      </h5>
-                      <span class="product-item__articul">ам07</span>
+                      <h5 class="h5 product-item__title" itemprop="name"> Косая бейка "Серый нейтральный" </h5>
                     </div>
                     <div class="product-item__box">
-                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <meta itemprop="price" content="300.00">
-                        <meta itemprop="priceCurrency" content="RUB" /> 300 <i class="fal fa-ruble-sign"></i>
+                      <div class="product-item__price product-item__price--discount" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="RUB">
+                        <meta itemprop="price" content="300.00"> 300 <span>₽/м</span>
                       </div>
-                      <div class="product-item__color-count color-count">18 цветов</div>
-                    </div>
-                    <div class="product-item__more">
-                      <div class="product-item__color color">
-                        <ul class="color__list">
-                          <li class="color__item js-color-item" data-color="img/products/atlas/1.png">
-                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/2.png">
-                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/3.png">
-                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/4.png">
-                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
-                          </li>
-                        </ul>
+                      <div class="product-item__price text-color--error"> 278 <span>₽/м</span>
                       </div>
-                      <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();">Добавить в корзину</button>
-                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div><!-- end product-item__desc -->
+                  <div class="product-item__more">
+                    <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();"> Добавить в корзину </button>
+                    <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                  </div>
                 </a><!-- end product-item -->
                 <!-- begin product-item -->
-                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
-                  <div class="badge__wrap product-item__badge">
-                    <span class="badge sale">-32%</span>
-                    <span class="badge new">New</span>
-                    <span class="badge hit">Хит</span>
-                  </div>
+                <a class="product-item js-product-item" href="card.html" itemscope itemtype="http://schema.org/Product">
                   <!-- begin product-item__img -->
                   <div class="product-item__img">
-                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <img class="product-item__image lazy" data-src="img/products/BlusenstoffMillefleurs/250x250/1.jpg" src="img/general/loading.gif" alt="Атлас дюпон" itemprop="image">
                     <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                    <div class="badge__wrap product-item__badge">
+                      <span class="badge badge--sale">-32%</span>
+                      <span class="badge badge--new"></span>
+                      <!-- <span class="badge badge--hit">Хит</span> -->
+                    </div>
                   </div><!-- end product-item__img -->
                   <!-- begin product-slider -->
                   <div class="product-slider">
                     <ul class="product-slider__list">
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/1.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/2.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/2.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/4.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/3.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item product-slider__item--last">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/4.jpg)"></div>
                         <div class="product-slider__more"> Ещё<br>5 цветов </div>
                       </li>
                     </ul>
@@ -1504,68 +880,47 @@
                   <!-- begin product-item__desc -->
                   <div class="product-item__desc">
                     <div class="product-item__box">
-                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон <span>white</span>
-                      </h5>
-                      <span class="product-item__articul">ам07</span>
+                      <h5 class="h5 product-item__title" itemprop="name"> Косая бейка "Серый нейтральный" </h5>
                     </div>
                     <div class="product-item__box">
-                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <meta itemprop="price" content="300.00">
-                        <meta itemprop="priceCurrency" content="RUB" /> 300 <i class="fal fa-ruble-sign"></i>
+                      <div class="product-item__price product-item__price--discount" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="RUB">
+                        <meta itemprop="price" content="300.00"> 300 <span>₽/м</span>
                       </div>
-                      <div class="product-item__color-count color-count">18 цветов</div>
-                    </div>
-                    <div class="product-item__more">
-                      <div class="product-item__color color">
-                        <ul class="color__list">
-                          <li class="color__item js-color-item" data-color="img/products/atlas/1.png">
-                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/2.png">
-                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/3.png">
-                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/4.png">
-                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
-                          </li>
-                        </ul>
+                      <div class="product-item__price text-color--error"> 278 <span>₽/м</span>
                       </div>
-                      <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();">Добавить в корзину</button>
-                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div><!-- end product-item__desc -->
+                  <div class="product-item__more">
+                    <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();"> Добавить в корзину </button>
+                    <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                  </div>
                 </a><!-- end product-item -->
                 <!-- begin product-item -->
-                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
-                  <div class="badge__wrap product-item__badge">
-                    <span class="badge sale">-32%</span>
-                    <span class="badge new">New</span>
-                    <span class="badge hit">Хит</span>
-                  </div>
+                <a class="product-item js-product-item" href="card.html" itemscope itemtype="http://schema.org/Product">
                   <!-- begin product-item__img -->
                   <div class="product-item__img">
-                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <img class="product-item__image lazy" data-src="img/products/BlusenstoffMillefleurs/250x250/1.jpg" src="img/general/loading.gif" alt="Атлас дюпон" itemprop="image">
                     <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                    <div class="badge__wrap product-item__badge">
+                      <span class="badge badge--sale">-32%</span>
+                      <span class="badge badge--new"></span>
+                      <!-- <span class="badge badge--hit">Хит</span> -->
+                    </div>
                   </div><!-- end product-item__img -->
                   <!-- begin product-slider -->
                   <div class="product-slider">
                     <ul class="product-slider__list">
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/1.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/2.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/2.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/4.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/3.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item product-slider__item--last">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/4.jpg)"></div>
                         <div class="product-slider__more"> Ещё<br>5 цветов </div>
                       </li>
                     </ul>
@@ -1573,68 +928,47 @@
                   <!-- begin product-item__desc -->
                   <div class="product-item__desc">
                     <div class="product-item__box">
-                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон <span>white</span>
-                      </h5>
-                      <span class="product-item__articul">ам07</span>
+                      <h5 class="h5 product-item__title" itemprop="name"> Косая бейка "Серый нейтральный" </h5>
                     </div>
                     <div class="product-item__box">
-                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <meta itemprop="price" content="300.00">
-                        <meta itemprop="priceCurrency" content="RUB" /> 300 <i class="fal fa-ruble-sign"></i>
+                      <div class="product-item__price product-item__price--discount" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="RUB">
+                        <meta itemprop="price" content="300.00"> 300 <span>₽/м</span>
                       </div>
-                      <div class="product-item__color-count color-count">18 цветов</div>
-                    </div>
-                    <div class="product-item__more">
-                      <div class="product-item__color color">
-                        <ul class="color__list">
-                          <li class="color__item js-color-item" data-color="img/products/atlas/1.png">
-                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/2.png">
-                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/3.png">
-                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/4.png">
-                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
-                          </li>
-                        </ul>
+                      <div class="product-item__price text-color--error"> 278 <span>₽/м</span>
                       </div>
-                      <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();">Добавить в корзину</button>
-                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div><!-- end product-item__desc -->
+                  <div class="product-item__more">
+                    <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();"> Добавить в корзину </button>
+                    <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                  </div>
                 </a><!-- end product-item -->
                 <!-- begin product-item -->
-                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
-                  <div class="badge__wrap product-item__badge">
-                    <span class="badge sale">-32%</span>
-                    <span class="badge new">New</span>
-                    <span class="badge hit">Хит</span>
-                  </div>
+                <a class="product-item js-product-item" href="card.html" itemscope itemtype="http://schema.org/Product">
                   <!-- begin product-item__img -->
                   <div class="product-item__img">
-                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <img class="product-item__image lazy" data-src="img/products/BlusenstoffMillefleurs/250x250/1.jpg" src="img/general/loading.gif" alt="Атлас дюпон" itemprop="image">
                     <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                    <div class="badge__wrap product-item__badge">
+                      <span class="badge badge--sale">-32%</span>
+                      <span class="badge badge--new"></span>
+                      <!-- <span class="badge badge--hit">Хит</span> -->
+                    </div>
                   </div><!-- end product-item__img -->
                   <!-- begin product-slider -->
                   <div class="product-slider">
                     <ul class="product-slider__list">
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/1.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/2.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/2.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/4.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/3.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item product-slider__item--last">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/4.jpg)"></div>
                         <div class="product-slider__more"> Ещё<br>5 цветов </div>
                       </li>
                     </ul>
@@ -1642,68 +976,47 @@
                   <!-- begin product-item__desc -->
                   <div class="product-item__desc">
                     <div class="product-item__box">
-                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон <span>white</span>
-                      </h5>
-                      <span class="product-item__articul">ам07</span>
+                      <h5 class="h5 product-item__title" itemprop="name"> Косая бейка "Серый нейтральный" </h5>
                     </div>
                     <div class="product-item__box">
-                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <meta itemprop="price" content="300.00">
-                        <meta itemprop="priceCurrency" content="RUB" /> 300 <i class="fal fa-ruble-sign"></i>
+                      <div class="product-item__price product-item__price--discount" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="RUB">
+                        <meta itemprop="price" content="300.00"> 300 <span>₽/м</span>
                       </div>
-                      <div class="product-item__color-count color-count">18 цветов</div>
-                    </div>
-                    <div class="product-item__more">
-                      <div class="product-item__color color">
-                        <ul class="color__list">
-                          <li class="color__item js-color-item" data-color="img/products/atlas/1.png">
-                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/2.png">
-                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/3.png">
-                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/4.png">
-                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
-                          </li>
-                        </ul>
+                      <div class="product-item__price text-color--error"> 278 <span>₽/м</span>
                       </div>
-                      <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();">Добавить в корзину</button>
-                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div><!-- end product-item__desc -->
+                  <div class="product-item__more">
+                    <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();"> Добавить в корзину </button>
+                    <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                  </div>
                 </a><!-- end product-item -->
                 <!-- begin product-item -->
-                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
-                  <div class="badge__wrap product-item__badge">
-                    <span class="badge sale">-32%</span>
-                    <span class="badge new">New</span>
-                    <span class="badge hit">Хит</span>
-                  </div>
+                <a class="product-item js-product-item" href="card.html" itemscope itemtype="http://schema.org/Product">
                   <!-- begin product-item__img -->
                   <div class="product-item__img">
-                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <img class="product-item__image lazy" data-src="img/products/BlusenstoffMillefleurs/250x250/1.jpg" src="img/general/loading.gif" alt="Атлас дюпон" itemprop="image">
                     <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                    <div class="badge__wrap product-item__badge">
+                      <span class="badge badge--sale">-32%</span>
+                      <span class="badge badge--new"></span>
+                      <!-- <span class="badge badge--hit">Хит</span> -->
+                    </div>
                   </div><!-- end product-item__img -->
                   <!-- begin product-slider -->
                   <div class="product-slider">
                     <ul class="product-slider__list">
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/1.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/2.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/2.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/4.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/3.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item product-slider__item--last">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/4.jpg)"></div>
                         <div class="product-slider__more"> Ещё<br>5 цветов </div>
                       </li>
                     </ul>
@@ -1711,68 +1024,47 @@
                   <!-- begin product-item__desc -->
                   <div class="product-item__desc">
                     <div class="product-item__box">
-                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон <span>white</span>
-                      </h5>
-                      <span class="product-item__articul">ам07</span>
+                      <h5 class="h5 product-item__title" itemprop="name"> Косая бейка "Серый нейтральный" </h5>
                     </div>
                     <div class="product-item__box">
-                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <meta itemprop="price" content="300.00">
-                        <meta itemprop="priceCurrency" content="RUB" /> 300 <i class="fal fa-ruble-sign"></i>
+                      <div class="product-item__price product-item__price--discount" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="RUB">
+                        <meta itemprop="price" content="300.00"> 300 <span>₽/м</span>
                       </div>
-                      <div class="product-item__color-count color-count">18 цветов</div>
-                    </div>
-                    <div class="product-item__more">
-                      <div class="product-item__color color">
-                        <ul class="color__list">
-                          <li class="color__item js-color-item" data-color="img/products/atlas/1.png">
-                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/2.png">
-                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/3.png">
-                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/4.png">
-                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
-                          </li>
-                        </ul>
+                      <div class="product-item__price text-color--error"> 278 <span>₽/м</span>
                       </div>
-                      <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();">Добавить в корзину</button>
-                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div><!-- end product-item__desc -->
+                  <div class="product-item__more">
+                    <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();"> Добавить в корзину </button>
+                    <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                  </div>
                 </a><!-- end product-item -->
                 <!-- begin product-item -->
-                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
-                  <div class="badge__wrap product-item__badge">
-                    <span class="badge sale">-32%</span>
-                    <span class="badge new">New</span>
-                    <span class="badge hit">Хит</span>
-                  </div>
+                <a class="product-item js-product-item" href="card.html" itemscope itemtype="http://schema.org/Product">
                   <!-- begin product-item__img -->
                   <div class="product-item__img">
-                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <img class="product-item__image lazy" data-src="img/products/BlusenstoffMillefleurs/250x250/1.jpg" src="img/general/loading.gif" alt="Атлас дюпон" itemprop="image">
                     <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                    <div class="badge__wrap product-item__badge">
+                      <span class="badge badge--sale">-32%</span>
+                      <span class="badge badge--new"></span>
+                      <!-- <span class="badge badge--hit">Хит</span> -->
+                    </div>
                   </div><!-- end product-item__img -->
                   <!-- begin product-slider -->
                   <div class="product-slider">
                     <ul class="product-slider__list">
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/1.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/2.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item">
-                        <div class="product-slider__image" style="background-image: url('img/products/atlas/2.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
-                      </li>
-                      <li class="product-slider__item">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/4.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/3.jpg)">
+                        </div>
                       </li>
                       <li class="product-slider__item product-slider__item--last">
-                        <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/4.jpg)"></div>
                         <div class="product-slider__more"> Ещё<br>5 цветов </div>
                       </li>
                     </ul>
@@ -1780,72 +1072,172 @@
                   <!-- begin product-item__desc -->
                   <div class="product-item__desc">
                     <div class="product-item__box">
-                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон <span>white</span>
-                      </h5>
-                      <span class="product-item__articul">ам07</span>
+                      <h5 class="h5 product-item__title" itemprop="name"> Косая бейка "Серый нейтральный" </h5>
                     </div>
                     <div class="product-item__box">
-                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <meta itemprop="price" content="300.00">
-                        <meta itemprop="priceCurrency" content="RUB" /> 300 <i class="fal fa-ruble-sign"></i>
+                      <div class="product-item__price product-item__price--discount" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="RUB">
+                        <meta itemprop="price" content="300.00"> 300 <span>₽/м</span>
                       </div>
-                      <div class="product-item__color-count color-count">18 цветов</div>
-                    </div>
-                    <div class="product-item__more">
-                      <div class="product-item__color color">
-                        <ul class="color__list">
-                          <li class="color__item js-color-item" data-color="img/products/atlas/1.png">
-                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/2.png">
-                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/3.png">
-                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
-                          </li>
-                          <li class="color__item js-color-item" data-color="img/products/atlas/4.png">
-                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
-                          </li>
-                        </ul>
+                      <div class="product-item__price text-color--error"> 278 <span>₽/м</span>
                       </div>
-                      <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();">Добавить в корзину</button>
-                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div><!-- end product-item__desc -->
+                  <div class="product-item__more">
+                    <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();"> Добавить в корзину </button>
+                    <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                  </div>
+                </a><!-- end product-item -->
+                <!-- begin product-item -->
+                <a class="product-item js-product-item" href="card.html" itemscope itemtype="http://schema.org/Product">
+                  <!-- begin product-item__img -->
+                  <div class="product-item__img">
+                    <img class="product-item__image lazy" data-src="img/products/BlusenstoffMillefleurs/250x250/1.jpg" src="img/general/loading.gif" alt="Атлас дюпон" itemprop="image">
+                    <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                    <div class="badge__wrap product-item__badge">
+                      <span class="badge badge--sale">-32%</span>
+                      <span class="badge badge--new"></span>
+                      <!-- <span class="badge badge--hit">Хит</span> -->
+                    </div>
+                  </div><!-- end product-item__img -->
+                  <!-- begin product-slider -->
+                  <div class="product-slider">
+                    <ul class="product-slider__list">
+                      <li class="product-slider__item">
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/2.jpg)">
+                        </div>
+                      </li>
+                      <li class="product-slider__item">
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/3.jpg)">
+                        </div>
+                      </li>
+                      <li class="product-slider__item product-slider__item--last">
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/4.jpg)"></div>
+                        <div class="product-slider__more"> Ещё<br>5 цветов </div>
+                      </li>
+                    </ul>
+                  </div><!-- end product-slider -->
+                  <!-- begin product-item__desc -->
+                  <div class="product-item__desc">
+                    <div class="product-item__box">
+                      <h5 class="h5 product-item__title" itemprop="name"> Косая бейка "Серый нейтральный" </h5>
+                    </div>
+                    <div class="product-item__box">
+                      <div class="product-item__price product-item__price--discount" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="RUB">
+                        <meta itemprop="price" content="300.00"> 300 <span>₽/м</span>
+                      </div>
+                      <div class="product-item__price text-color--error"> 278 <span>₽/м</span>
+                      </div>
+                    </div>
+                  </div><!-- end product-item__desc -->
+                  <div class="product-item__more">
+                    <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();"> Добавить в корзину </button>
+                    <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                  </div>
+                </a><!-- end product-item -->
+                <!-- begin product-item -->
+                <a class="product-item js-product-item" href="card.html" itemscope itemtype="http://schema.org/Product">
+                  <!-- begin product-item__img -->
+                  <div class="product-item__img">
+                    <img class="product-item__image lazy" data-src="img/products/BlusenstoffMillefleurs/250x250/1.jpg" src="img/general/loading.gif" alt="Атлас дюпон" itemprop="image">
+                    <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                    <div class="badge__wrap product-item__badge">
+                      <span class="badge badge--sale">-32%</span>
+                      <span class="badge badge--new"></span>
+                      <!-- <span class="badge badge--hit">Хит</span> -->
+                    </div>
+                  </div><!-- end product-item__img -->
+                  <!-- begin product-slider -->
+                  <div class="product-slider">
+                    <ul class="product-slider__list">
+                      <li class="product-slider__item">
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/2.jpg)">
+                        </div>
+                      </li>
+                      <li class="product-slider__item">
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/3.jpg)">
+                        </div>
+                      </li>
+                      <li class="product-slider__item product-slider__item--last">
+                        <div class="product-slider__image lazy" data-bg="url(img/products/BlusenstoffMillefleurs/250x250/4.jpg)"></div>
+                        <div class="product-slider__more"> Ещё<br>5 цветов </div>
+                      </li>
+                    </ul>
+                  </div><!-- end product-slider -->
+                  <!-- begin product-item__desc -->
+                  <div class="product-item__desc">
+                    <div class="product-item__box">
+                      <h5 class="h5 product-item__title" itemprop="name"> Косая бейка "Серый нейтральный" </h5>
+                    </div>
+                    <div class="product-item__box">
+                      <div class="product-item__price product-item__price--discount" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="RUB">
+                        <meta itemprop="price" content="300.00"> 300 <span>₽/м</span>
+                      </div>
+                      <div class="product-item__price text-color--error"> 278 <span>₽/м</span>
+                      </div>
+                    </div>
+                  </div><!-- end product-item__desc -->
+                  <div class="product-item__more">
+                    <button class="button button--transparent button--muted product-item__btn" onclick="pushUp();"> Добавить в корзину </button>
+                    <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                  </div>
                 </a><!-- end product-item -->
               </div><!-- end product-item -->
-              <!-- begin catalog-filter__btn -->
-              <button class="catalog-filter__btn catalog-filter__btn--show js-catalog-filter--show">
-                <svg class="icon icon-filter-btn ">
-                  <use xlink:href="img/sprite.svg#filter-btn"></use>
-                </svg>
-              </button><!-- end catalog-filter__btn -->
-              <!-- begin catalog-content__btn -->
-              <button class="button button--transparent button--accent catalog-content__btn">Показать еще</button><!-- end catalog-content__btn -->
-              <!-- begin pagination -->
-              <div class="pagination">
-                <ul class="pagination__list">
-                  <li class="pagination__item">
-                    <a class="pagination__link" href="#">
-                      <i class="fal fa-angle-left pagination__icon"></i>
-                    </a>
-                  </li>
-                  <li class="pagination__item">
-                    <a class="pagination__link" href="#">1</a>
-                  </li>
-                  <li class="pagination__item is-active">
-                    <a class="pagination__link" href="#">2</a>
-                  </li>
-                  <li class="pagination__item">
-                    <a class="pagination__link" href="#">3</a>
-                  </li>
-                  <li class="pagination__item">
-                    <a class="pagination__link" href="#">
-                      <i class="fal fa-angle-right pagination__icon"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div><!-- end pagination -->
+              <button class="catalog-filter__btn catalog-filter__btn--show js-catalog-filter--show"> Фильтр </button>
+              <button class="button button--transparent button--gray catalog-content__btn">Показать еще</button>
+              <div class="button-box">
+                <!-- begin pagination -->
+                <div class="pagination">
+                  <span class="pagination__title">Показывать по</span>
+                  <ul class="pagination__list js-toggle-list">
+                    <li class="pagination__item">
+                      <button class="pagination__link">24</button>
+                    </li>
+                    <li class="pagination__item is-active">
+                      <button class="pagination__link">48</button>
+                    </li>
+                    <li class="pagination__item">
+                      <button class="pagination__link">96</button>
+                    </li>
+                  </ul>
+                </div><!-- end pagination -->
+                <!-- begin pagination -->
+                <div class="pagination pagination--right">
+                  <span class="pagination__title">страница 2 из 88</span>
+                  <ul class="pagination__list js-toggle-list">
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">
+                        <i class="fal fa-angle-left pagination__icon"></i>
+                      </a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">1</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">2</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">3</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">4</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">...</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">88</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">
+                        <i class="fal fa-angle-right pagination__icon"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div><!-- end pagination -->
+              </div>
               <!-- begin catalog-content__empty -->
               <div class="catalog-content__empty" style="display: none;">
                 <p>По вашим поисковым параметрам ничего не найдено</p>
@@ -1859,7 +1251,7 @@
           </div><!-- end catalog__wrap -->
           <!-- begin seoblock -->
           <section class="seoblock catalog__seoblock">
-            <div class="container">
+            <div class="seoblock__inner">
               <h4 class="h4 seoblock__title">BAAZAR-TEX - Lorem ipsum dolor sit amet.</h4>
               <p class="seoblock__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit earum. Molestiae tenetur pariatur, sequi quo id quisquam dolorum non fuga incidunt maiores suscipit repudiandae repellat corporis, cumque a placeat maxime quaerat quidem in ullam totam. Ratione quo quam esse asperiores corrupti consequuntur maiores? Accusantium, saepe est illum placeat aliquid omnis consequuntur, neque tempora itaque optio debitis veritatis, molestias magnam ad aperiam explicabo perspiciatis atque ullam nihil vel assumenda. Cum!</p>
               <div class="list-dash__wrap">
@@ -1876,12 +1268,12 @@
         </div>
       </main><!-- end home -->
       <!-- begin footer -->
-      <footer class="footer js-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+      <footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
         <div class="container">
-          <div class="footer__in">
-            <div class="footer-item">
-              <h4 class="h4 footer-item__title">Контакты</h4>
-              <div class="footer-item__content">
+          <div class="footer__in" data-accordeon>
+            <div class="footer-item" data-accordeon-item>
+              <h4 class="h4 footer-item__title" data-accordeon-title>Контакты</h4>
+              <div class="footer-item__content" data-accordeon-content>
                 <ul class="footer-item__list">
                   <li class="footer-item__el">
                     <i class="fal fa-phone footer-item__icon"></i>
@@ -1897,9 +1289,9 @@
                 </ul>
               </div>
             </div>
-            <div class="footer-item">
-              <h4 class="h4 footer-item__title">Каталог товаров</h4>
-              <div class="footer-item__content">
+            <div class="footer-item" data-accordeon-item>
+              <h4 class="h4 footer-item__title" data-accordeon-title>Каталог товаров</h4>
+              <div class="footer-item__content" data-accordeon-content>
                 <ul class="footer-item__list">
                   <li class="footer-item__el">
                     <a href="#" class="footer-item__link">Ткани</a>
@@ -1919,9 +1311,9 @@
                 </ul>
               </div>
             </div>
-            <div class="footer-item">
-              <h4 class="h4 footer-item__title">Клиентам и партнерам</h4>
-              <div class="footer-item__content">
+            <div class="footer-item" data-accordeon-item>
+              <h4 class="h4 footer-item__title" data-accordeon-title>Клиентам и партнерам</h4>
+              <div class="footer-item__content" data-accordeon-content>
                 <ul class="footer-item__list">
                   <li class="footer-item__el">
                     <a href="#" class="footer-item__link">Доставка и оплата</a>
@@ -1941,9 +1333,9 @@
                 </ul>
               </div>
             </div>
-            <div class="footer-item">
-              <h4 class="h4 footer-item__title">Bazaar-tex</h4>
-              <div class="footer-item__content">
+            <div class="footer-item" data-accordeon-item>
+              <h4 class="h4 footer-item__title" data-accordeon-title>Bazaar-tex</h4>
+              <div class="footer-item__content" data-accordeon-content>
                 <ul class="footer-item__list">
                   <li class="footer-item__el">
                     <a href="#" class="footer-item__link">О нас</a>
@@ -1978,152 +1370,6 @@
     <!-- end wrapper -->
     <!-- begin windows -->
     <div class="windows">
-      <!-- begin auth-form -->
-      <div class="modal fade" id="auth-form">
-        <div class="modal-dialog modal-dialog--sm" role="document">
-          <div class="modal-content">
-            <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="modal-body">
-              <div class="form">
-                <div class="form__header">
-                  <div class="form__title">Вход или регистрация</div>
-                </div>
-                <div class="form__inner">
-                  <form class="auth-form">
-                    <div class="input input--email form__input">
-                      <input type='email' class="input__field" placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                      <span class="input__error">*Какая-то ошибочка вышла</span>
-                    </div>
-                    <div class="input input--password form__input">
-                      <input type='password' class="input__field" placeholder="Введите пароль">
-                      <i class="input__icon fal fa-eye-slash js-input-password--show"></i>
-                      <i class="input__icon fal fa-eye js-input-password--hide" style="display: none;"></i>
-                      <span class="input__error">*Какая-то ошибочка вышла</span>
-                    </div>
-                    <div class="form__box">
-                      <label class="checkbox auth-form__rememberme">
-                        <input type="checkbox">
-                        <span class="checkbox__box"></span>
-                        <span class="checkbox__title">Запомнить меня</span>
-                      </label>
-                      <a href="recover-password.html" class="form__link form__link--recover">Забыли пароль?</a>
-                    </div>
-                    <div class="form__buttons">
-                      <button class="button button--default form__btn">Войти</button>
-                    </div>
-                    <div class="section-header form__devider">
-                      <span class="section-header__text">или войдите через</span>
-                    </div>
-                    <!-- begin social -->
-                    <div class="social">
-                      <ul class="social__list">
-                        <li class="social__item" tooltip="мы в vkontakte">
-                          <a href="#" class="social__link social__link--vk"></a>
-                        </li>
-                        <li class="social__item" tooltip="мы в odnoklasniki">
-                          <a href="#" class="social__link social__link--ok"></a>
-                        </li>
-                        <li class="social__item" tooltip="мы в instagram">
-                          <a href="#" class="social__link social__link--inst"></a>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- end social -->
-                    <div class="form-success">
-                      <div class="form-success__center">
-                        <h3 class="form-success__title">Спасибо за регистрацию!</h3>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end auth-form -->
-      <!-- begin change-city -->
-      <div class="modal fade change-city" id="change-city">
-        <div class="modal-dialog modal-dialog--md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Выберите город</h5>
-              <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="change-city__title">Россия</div>
-              <div class="change-city__in">
-                <ul class="change-city__list">
-                  <li class="change-city__item">Ангарск</li>
-                  <li class="change-city__item">Астрахань</li>
-                  <li class="change-city__item">Барнаул</li>
-                  <li class="change-city__item">Белгород</li>
-                  <li class="change-city__item">Бийск</li>
-                  <li class="change-city__item">Благовещенск</li>
-                  <li class="change-city__item">Братск</li>
-                  <li class="change-city__item">Великий Новгород</li>
-                  <li class="change-city__item">Владивосток</li>
-                  <li class="change-city__item">Волгоград</li>
-                  <li class="change-city__item">Воронеж</li>
-                  <li class="change-city__item">Дзержинск</li>
-                  <li class="change-city__item">Екатеринбург</li>
-                  <li class="change-city__item">Ижевск</li>
-                  <li class="change-city__item">Иркутск</li>
-                  <li class="change-city__item">Казань</li>
-                  <li class="change-city__item">Кемерово</li>
-                  <li class="change-city__item">Киров</li>
-                  <li class="change-city__item">Краснодар</li>
-                  <li class="change-city__item">Красноярск</li>
-                  <li class="change-city__item">Курган</li>
-                  <li class="change-city__item">Кызыл</li>
-                  <li class="change-city__item">Набережные Челны</li>
-                  <li class="change-city__item">Нальчик</li>
-                  <li class="change-city__item">Нижнекамск</li>
-                  <li class="change-city__item">Нижний Новгород</li>
-                  <li class="change-city__item">Новокузнецк</li>
-                  <li class="change-city__item">Омск</li>
-                  <li class="change-city__item">Оренбург</li>
-                  <li class="change-city__item">Орск</li>
-                  <li class="change-city__item">Пенза</li>
-                  <li class="change-city__item">Пермь</li>
-                  <li class="change-city__item">Прокопьевск</li>
-                  <li class="change-city__item">Псков</li>
-                  <li class="change-city__item">Ростов-на-Дону</li>
-                  <li class="change-city__item">Рязань</li>
-                  <li class="change-city__item">Салехард</li>
-                  <li class="change-city__item">Самара</li>
-                  <li class="change-city__item">Саратов</li>
-                  <li class="change-city__item">Симферополь</li>
-                  <li class="change-city__item">Старый Оскол</li>
-                  <li class="change-city__item">Тольятти</li>
-                  <li class="change-city__item">Томск</li>
-                  <li class="change-city__item">Тюмень</li>
-                  <li class="change-city__item">Ульяновск</li>
-                  <li class="change-city__item">Уфа</li>
-                  <li class="change-city__item">Хабаровск</li>
-                  <li class="change-city__item">Ханты-Мансийск</li>
-                  <li class="change-city__item">Челябинск</li>
-                  <li class="change-city__item">Чита</li>
-                  <li class="change-city__item">Шахты</li>
-                  <li class="change-city__item">Энгельс</li>
-                  <li class="change-city__item">Якутск</li>
-                  <li class="change-city__item">Ярославль</li>
-                </ul>
-              </div>
-              <ul class="change-city__list change-city__list_country">
-                <li class="change-city__item change-city__item--belarus">Белоруссия</li>
-                <li class="change-city__item change-city__item--ukraine">Украина</li>
-                <li class="change-city__item change-city__item--kaz">Казахстан</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end change-city -->
       <!-- begin preview -->
       <div class="modal fade preview" id="preview">
         <div class="modal-dialog modal-dialog--lg">
@@ -2142,19 +1388,19 @@
                     <div class="bz-slider bz-slider--card card__slider">
                       <div class="bz-slider__slides js-bz-slider--card">
                         <div itemscope itemtype="https://schema.org/ImageObject">
-                          <img itemprop="url contentUrl" src="img/products/atlas/big/1.png" alt="Атлас дюпон «izumrud»">
+                          <img src alt="Косая бейка Серый нейтральный" itemprop="url contentUrl">
                           <meta itemprop="name" content="здесь полное описание вплоть до артикула">
                         </div>
                         <div itemscope itemtype="https://schema.org/ImageObject">
-                          <img itemprop="url contentUrl" src="img/products/atlas/big/2.png" alt="Атлас дюпон «izumrud»">
+                          <img src alt="Косая бейка Серый нейтральный" itemprop="url contentUrl">
                           <meta itemprop="name" content="здесь полное описание вплоть до артикула">
                         </div>
                         <div itemscope itemtype="https://schema.org/ImageObject">
-                          <img itemprop="url contentUrl" src="img/products/atlas/big/3.png" alt="Атлас дюпон «izumrud»">
+                          <img src alt="Косая бейка Серый нейтральный" itemprop="url contentUrl">
                           <meta itemprop="name" content="здесь полное описание вплоть до артикула">
                         </div>
                         <div itemscope itemtype="https://schema.org/ImageObject">
-                          <img itemprop="url contentUrl" src="img/products/atlas/big/4.png" alt="Атлас дюпон «izumrud»">
+                          <img src alt="Косая бейка Серый нейтральный" itemprop="url contentUrl">
                           <meta itemprop="name" content="здесь полное описание вплоть до артикула">
                         </div>
                       </div>
@@ -2213,7 +1459,7 @@
                         <div class="item-select__value">
                           <div class="item-select__control item-select__control--minus js-item-select-control--minus"></div>
                           <span class="item-select__title">Выбрать</span>
-                          <input type="text" class="item-select__input" style="display: none;" spellcheck="false">
+                          <input class="item-select__input" type="text" style="display: none;" spellcheck="false">
                           <div class="item-select__control item-select__control--plus js-item-select-control--plus"></div>
                         </div>
                         <div class="item-select__list">
@@ -2265,56 +1511,56 @@
                             <div class="tab__title" data-tab="1">Описание</div>
                           </div>
                           <div class="tab__contentes">
-                            <div class="tab__content" style="display: block;" data-tab-content="0">
+                            <div class="tab__content" data-tab-content="0" style="display: block;">
                               <div class="bz-table bz-table--dot">
                                 <ul class="bz-table__list">
                                   <li class="bz-table__item">
                                     <span class="bz-table__subitem">
                                       <span>Состав</span>
                                     </span>
-                                    <a href="#" class="bz-table__subitem">100% п/э</a>
+                                    <a class="bz-table__subitem" href="#">100% п/э</a>
                                   </li>
                                   <li class="bz-table__item">
                                     <span class="bz-table__subitem">
                                       <span>Плотность</span>
                                     </span>
-                                    <a href="#" class="bz-table__subitem">120 гр/м.кв</a>
+                                    <a class="bz-table__subitem" href="#">120 гр/м.кв</a>
                                   </li>
                                   <li class="bz-table__item">
                                     <span class="bz-table__subitem">
                                       <span>Ширина</span>
                                     </span>
-                                    <a href="#" class="bz-table__subitem">1.5 м</a>
+                                    <a class="bz-table__subitem" href="#">1.5 м</a>
                                   </li>
                                   <li class="bz-table__item">
                                     <span class="bz-table__subitem">
                                       <span>Цвет</span>
                                     </span>
-                                    <a href="#" class="bz-table__subitem">коричневый</a>
+                                    <a class="bz-table__subitem" href="#">коричневый</a>
                                   </li>
                                   <li class="bz-table__item">
                                     <span class="bz-table__subitem">
                                       <span>Производитель</span>
                                     </span>
-                                    <a href="#" class="bz-table__subitem">Турция</a>
+                                    <a class="bz-table__subitem" href="#">Турция</a>
                                   </li>
                                   <li class="bz-table__item">
                                     <span class="bz-table__subitem">
                                       <span>Отпускается</span>
                                     </span>
-                                    <a href="#" class="bz-table__subitem">от 1 м</a>
+                                    <a class="bz-table__subitem" href="#">от 1 м</a>
                                   </li>
                                   <li class="bz-table__item">
                                     <span class="bz-table__subitem">
                                       <span>Кол-во метров в рулоне</span>
                                     </span>
-                                    <a href="#" class="bz-table__subitem">25</a>
+                                    <a class="bz-table__subitem" href="#">25</a>
                                   </li>
                                   <li class="bz-table__item">
                                     <span class="bz-table__subitem">
                                       <span>Артикул</span>
                                     </span>
-                                    <a href="#" class="bz-table__subitem">ас06</a>
+                                    <a class="bz-table__subitem" href="#">ас06</a>
                                   </li>
                                 </ul>
                               </div>
@@ -2700,13 +1946,158 @@
                     </a><!-- end product-item--color -->
                   </div>
                 </div><!-- end card__colors -->
-                <a href="#" class="button button--default">Подробнее</a>
+                <a class="button button--default" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end preview -->
+      <!-- begin auth-form -->
+      <div class="modal fade" id="auth-form">
+        <div class="modal-dialog modal-dialog--sm" role="document">
+          <div class="modal-content">
+            <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+              <div class="form">
+                <div class="form__header">
+                  <div class="form__title">Вход или регистрация</div>
+                </div>
+                <div class="form__inner">
+                  <form class="auth-form">
+                    <div class="input input--email form__input">
+                      <input type='email' class="input__field" placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
+                    <div class="input input--password form__input">
+                      <input type='password' class="input__field" placeholder="Введите пароль">
+                      <i class="input__icon fal fa-eye-slash js-input-password--show"></i>
+                      <i class="input__icon fal fa-eye js-input-password--hide" style="display: none;"></i>
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
+                    <div class="form__box">
+                      <label class="checkbox auth-form__rememberme">
+                        <input type="checkbox">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__title">Запомнить меня</span>
+                      </label>
+                      <a href="recover-password.html" class="form__link form__link--recover">Забыли пароль?</a>
+                    </div>
+                    <div class="form__buttons">
+                      <button class="button button--default form__btn">Войти</button>
+                    </div>
+                    <div class="section-header form__devider">
+                      <span class="section-header__text">или войдите через</span>
+                    </div>
+                    <!-- begin social -->
+                    <div class="social">
+                      <ul class="social__list">
+                        <li class="social__item" tooltip="мы в vkontakte">
+                          <a href="#" class="social__link social__link--vk"></a>
+                        </li>
+                        <li class="social__item" tooltip="мы в odnoklasniki">
+                          <a href="#" class="social__link social__link--ok"></a>
+                        </li>
+                        <li class="social__item" tooltip="мы в instagram">
+                          <a href="#" class="social__link social__link--inst"></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- end social -->
+                    <div class="form-success">
+                      <div class="form-success__center">
+                        <h3 class="form-success__title">Спасибо за регистрацию!</h3>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- end preview -->
+      <!-- end auth-form -->
+      <!-- begin change-city -->
+      <div class="modal fade change-city" id="change-city">
+        <div class="modal-dialog modal-dialog--md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Выберите город</h5>
+              <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="change-city__title">Россия</div>
+              <div class="change-city__in">
+                <ul class="change-city__list">
+                  <li class="change-city__item">Ангарск</li>
+                  <li class="change-city__item">Астрахань</li>
+                  <li class="change-city__item">Барнаул</li>
+                  <li class="change-city__item">Белгород</li>
+                  <li class="change-city__item">Бийск</li>
+                  <li class="change-city__item">Благовещенск</li>
+                  <li class="change-city__item">Братск</li>
+                  <li class="change-city__item">Великий Новгород</li>
+                  <li class="change-city__item">Владивосток</li>
+                  <li class="change-city__item">Волгоград</li>
+                  <li class="change-city__item">Воронеж</li>
+                  <li class="change-city__item">Дзержинск</li>
+                  <li class="change-city__item">Екатеринбург</li>
+                  <li class="change-city__item">Ижевск</li>
+                  <li class="change-city__item">Иркутск</li>
+                  <li class="change-city__item">Казань</li>
+                  <li class="change-city__item">Кемерово</li>
+                  <li class="change-city__item">Киров</li>
+                  <li class="change-city__item">Краснодар</li>
+                  <li class="change-city__item">Красноярск</li>
+                  <li class="change-city__item">Курган</li>
+                  <li class="change-city__item">Кызыл</li>
+                  <li class="change-city__item">Набережные Челны</li>
+                  <li class="change-city__item">Нальчик</li>
+                  <li class="change-city__item">Нижнекамск</li>
+                  <li class="change-city__item">Нижний Новгород</li>
+                  <li class="change-city__item">Новокузнецк</li>
+                  <li class="change-city__item">Омск</li>
+                  <li class="change-city__item">Оренбург</li>
+                  <li class="change-city__item">Орск</li>
+                  <li class="change-city__item">Пенза</li>
+                  <li class="change-city__item">Пермь</li>
+                  <li class="change-city__item">Прокопьевск</li>
+                  <li class="change-city__item">Псков</li>
+                  <li class="change-city__item">Ростов-на-Дону</li>
+                  <li class="change-city__item">Рязань</li>
+                  <li class="change-city__item">Салехард</li>
+                  <li class="change-city__item">Самара</li>
+                  <li class="change-city__item">Саратов</li>
+                  <li class="change-city__item">Симферополь</li>
+                  <li class="change-city__item">Старый Оскол</li>
+                  <li class="change-city__item">Тольятти</li>
+                  <li class="change-city__item">Томск</li>
+                  <li class="change-city__item">Тюмень</li>
+                  <li class="change-city__item">Ульяновск</li>
+                  <li class="change-city__item">Уфа</li>
+                  <li class="change-city__item">Хабаровск</li>
+                  <li class="change-city__item">Ханты-Мансийск</li>
+                  <li class="change-city__item">Челябинск</li>
+                  <li class="change-city__item">Чита</li>
+                  <li class="change-city__item">Шахты</li>
+                  <li class="change-city__item">Энгельс</li>
+                  <li class="change-city__item">Якутск</li>
+                  <li class="change-city__item">Ярославль</li>
+                </ul>
+              </div>
+              <ul class="change-city__list change-city__list_country">
+                <li class="change-city__item change-city__item--belarus">Белоруссия</li>
+                <li class="change-city__item change-city__item--ukraine">Украина</li>
+                <li class="change-city__item change-city__item--kaz">Казахстан</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end change-city -->
     </div>
     <!-- end windows -->
     <div class="go-top js-go-top">Наверх</div>

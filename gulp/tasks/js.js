@@ -107,6 +107,6 @@ gulp.task('js:build', function(js) {
 });
 
 gulp.task('js:watch', function() {
-    gulp.watch(config.src.js + '/app.js', ['js']);
+    gulp.watch([config.src.js + '/app.js', config.src.js + '/del.js'], ['js']);
     gulp.watch(config.src.js + '/app.libs.js', ['js:libs']);
 });

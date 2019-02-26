@@ -72,9 +72,32 @@ productDesc = [
 {% set
 mainMenu = [
 	{
+		text: 'Новинки',
+		icon: 'new',
+		isActive: true
+	},
+	{
 		text: 'Ткани',
 		icon: 'cloth',
-		active: 'is-active'
+		accordeon: true,
+		liClass: true,
+		dropdown: [
+			{
+				title: 'Еврофатин luxe'
+			}
+			,{
+				title: 'Еврофатин life'
+			}
+			,{
+				title: 'Средней жесткости'
+			}
+			,{
+				title: 'Матовый'
+			}
+			,{
+				title: 'Набивной'
+			}
+		]
 	},
 	{
 		text: 'Швейная фурнитура',
@@ -82,18 +105,11 @@ mainMenu = [
 	},
 	{
 		text: 'Остатки тканей',
-		icon: 'leavings',
-		class: 'nav-main__item--empty'
+		icon: 'leavings'
 	},
 	{
 		text: 'Распродажа',
-		icon: 'sale',
-		class: 'nav-main__item--empty'
-	},
-	{
-		text: 'Новинки',
-		icon: 'new',
-		class: 'nav-main__item--empty'
+		icon: 'sale'
 	}
 ]
 %}

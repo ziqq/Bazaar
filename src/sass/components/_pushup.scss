@@ -1,19 +1,19 @@
 .pushUp {
-    display: block;
-    padding: 5px 15px;
-    font-size: 15px;
-    line-height: 1.2;
-    color: #fff;
     background-color: $color-accent;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    position: fixed;
-    top: 10px;
-    right: -200%;
-    max-width: 300px;
-    width: 100%;
-    height: 50px;
     border-radius: $border-radius;
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    height: 50px;
+    line-height: 1.2;
+    max-width: 300px;
+    overflow: hidden;
+    padding: 5px 15px;
+    position: fixed;
+    right: -200%;
+    text-overflow: ellipsis;
+    top: 10px;
+    width: 100%;
     z-index: z(modal);
     @include tr;
 
@@ -22,12 +22,12 @@
     }
 
     &__close {
-        width: 10px;
-        height: 10px;
-        fill: #fff;
         cursor: pointer;
+        fill: #fff;
+        height: 10px;
         position: absolute;
-        top: 2px;
         right: 8px;
+        top: 2px;
+        width: 10px;
     }
 } //bz-pushUp

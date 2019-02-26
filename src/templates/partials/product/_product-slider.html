@@ -1,0 +1,17 @@
+<div class="bz-slider bz-slider--new">
+	<div class="swiper-container js-bz-slider">
+		<div class="swiper-wrapper bz-slider__slides">
+			{% for i in range(0, 19) %}
+			<div class="swiper-slide">
+				{% include "partials/product/_product-small.html" %}
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="swiper-button-next swiper-button-white bz-slider__arrow">
+		{{ mixin.icon('angle') }}
+	</div>
+	<div class="swiper-button-prev swiper-button-white bz-slider__arrow">
+		{{ mixin.icon('angle') }}
+	</div>
+</div>

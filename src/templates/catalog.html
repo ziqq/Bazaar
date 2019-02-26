@@ -1,16 +1,23 @@
 ---
-title: Каталог
+title: Остатки тканей в балаково
 
 changer:
  - title: Все
    class: is-checked
- - title: Дюпон
+ - title: Еврофатин LUXE
    counter: 200
- - title: Матовый
+ - title: Еврофатин LIFE
    counter: 350
- - title: Тонкий
+ - title: Стрейч-фатин
    counter: 150
- - title: Стрейч
+ - title: Свадебный еврофатин
+   counter: 183
+ - title: Еврофатин для вышевки
+   counter: 72
+ - title: Фатин с бусинами
+   counter: 88
+ - title: Фатин с Омбре
+   counter: 12
 
 ---
 {% extends "layouts/_layout.html" %}
@@ -19,7 +26,16 @@ changer:
 
 <!-- begin home -->
 <main class="main catalog">
+
+	{% include "partials/_page-banner.html" %}
+
 	<div class="container">
+
+		<div class="catalog__title">
+			<a class="catalog__back" href="#"><i class="far fa-angle-left"></i></a>
+			<h1 class="h1" itemprop="headline">{{ title }}</h1>
+		</div>
+
 		<!-- begin catalog__wrap -->
 		<div class="catalog__wrap">
 
@@ -30,18 +46,14 @@ changer:
 
 				<!-- begin catalog__top-line -->
 				<div class="catalog__top-line">
-					 <div class="catalog__title">
-					 	<a class="catalog__back" href="#"><i class="far fa-angle-left"></i></a>
-					 	<h1 class="h1" itemprop="headline">Остатки тканей в балаково</h1>
-					 	<span class="catalog__count">350 товаров на складе</span>
-					 </div>
+					<span class="catalog__count">350 товаров на складе</span>
+
 					<div class="catalog__sorting sorting bz-select--dark">
 						<span class="sorting__title">Сортировать по:</span>
 						<select class="js-select select-with-icon">
-							<option value="По умолчанию" data-image="default">По умолчанию</option>
 							<option value="По возрастанию цены" data-image="top">По возрастанию цены</option>
 							<option value="По убыванию цены" data-image="down">По убыванию цены</option>
-							<option value="В начале новинки" data-image="new">В начале новинки</option>
+							<option value="В начале новинки">В начале новинки</option>
 						</select>
 					</div>
 				</div><!-- end catalog__top-line -->
@@ -64,20 +76,37 @@ changer:
 
 				<!-- begin product-item -->
 				<div class="product-item__wrap">
-					{% for i in range(0, 10) %}
+					{% for i in range(0, 12) %}
 						{% include "partials/product/_product.html" %}
 					{% endfor %}
 				</div><!-- end product-item -->
 
-				<!-- begin catalog-filter__btn -->
 				<button class="catalog-filter__btn catalog-filter__btn--show js-catalog-filter--show">
-					{{mixin.icon('filter-btn')}}
-				</button><!-- end catalog-filter__btn -->
+					Фильтр
+				</button>
 
-				<!-- begin catalog-content__btn -->
-				<button class="button button--transparent button--accent catalog-content__btn">Показать еще</button><!-- end catalog-content__btn -->
+				<button class="button button--transparent button--gray catalog-content__btn">Показать еще</button>
 
-				{% include "partials/components/_pagination.html" %}
+				<div class="button-box">
+					<!-- begin pagination -->
+					<div class="pagination">
+						<span class="pagination__title">Показывать по</span>
+						<ul class="pagination__list js-toggle-list">
+							<li class="pagination__item">
+								<button class="pagination__link">24</button>
+							</li>
+							<li class="pagination__item is-active">
+								<button class="pagination__link">48</button>
+							</li>
+							<li class="pagination__item">
+								<button class="pagination__link">96</button>
+							</li>
+						</ul>
+					</div><!-- end pagination -->
+
+					{% include "partials/components/_pagination.html" %}
+
+				</div>
 
 				<!-- begin catalog-content__empty -->
 				<div class="catalog-content__empty" style="display: none;">
@@ -95,7 +124,7 @@ changer:
 
 		<!-- begin seoblock -->
 		<section class="seoblock catalog__seoblock">
-			<div class="container">
+			<div class="seoblock__inner">
 				<h4 class="h4 seoblock__title">BAAZAR-TEX - Lorem ipsum dolor sit amet.</h4>
 				<p class="seoblock__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit earum. Molestiae tenetur pariatur, sequi quo id quisquam dolorum non fuga incidunt maiores suscipit repudiandae repellat corporis, cumque a placeat maxime quaerat quidem in ullam totam. Ratione quo quam esse asperiores corrupti consequuntur maiores? Accusantium, saepe est illum placeat aliquid omnis consequuntur, neque tempora itaque optio debitis veritatis, molestias magnam ad aperiam explicabo perspiciatis atque ullam nihil vel assumenda. Cum!</p>
 				<div class="list-dash__wrap">
@@ -113,4 +142,8 @@ changer:
 	</div>
 </main><!-- end home -->
 
+{% endblock %}
+
+{% block windows %}
+	{% include "partials/product/_preview.html" %}
 {% endblock %}

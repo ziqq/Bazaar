@@ -134,17 +134,17 @@
 	}
 }
 
-%flex{
+@include flex{
 	display: flex;
 	justify-content: space-between;
 }
 
-%flexCenter{
+@include flexCenter{
 	display: flex;
 	align-items: center;
 }
 
-%flexColumn{
+@include flexColumn{
 	display: flex;
 	flex-direction: column;
 }

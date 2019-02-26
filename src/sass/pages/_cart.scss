@@ -1,9 +1,9 @@
 .cart {
-    padding-bottom: $gutter * 2;
     border-top: 1px solid $color-border--light;
+    padding-bottom: $gutter * 2;
 
     &__wrap {
-        @extend %flexColumn;
+        @include flexColumn;
     } //.cart__wrap
 
     &__title,
@@ -12,7 +12,7 @@
     } //.cart__item
 
     &__items {
-        @extend %flexColumn;
+        @include flexColumn;
         @include respond-to(xs) {
             order: 3;
         }
@@ -22,9 +22,10 @@
         margin-bottom: 0;
         padding: $gutter 0 $gutter 10px;
         @include respond-to(xs) {
-            padding: $gutter 0;
             margin-bottom: 0;
+            padding: $gutter 0;
         }
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -34,17 +35,17 @@
         font-size: 15px;
 
         @include respond-to(xs) {
-            width: 100%;
+            font-size: 16px;
             height: 45px;
             line-height: 44px;
-            font-size: 16px;
+            width: 100%;
         }
     } //.cart__btn
 
     &__box {
-        padding: $gutter 0;
-        @extend %flexCenter;
         justify-content: space-between;
+        @include flexCenter;
+        padding: $gutter 0;
         @include respond-to(xs) {
             flex-wrap: wrap;
             order: 1;
@@ -52,30 +53,33 @@
     } //.cart__box
 
     &__sum {
-        margin-left: auto;
         font-family: $f-bold;
         font-size: 14px;
+        margin-left: auto;
         text-align: right;
 
         @include respond-to(xs) {
-            width: 100%;
             margin-bottom: 0;
             text-align: left;
+            width: 100%;
         }
 
         &_sale {
             @include respond-to(xs) {
-                display: flex;
                 align-items: center;
+                display: flex;
+
                 span {
                     margin-left: auto;
                 }
             }
+
             span {
+                color: $color-accent;
                 font-family: $f2-bold;
                 font-size: 18px;
-                color: $color-accent;
             }
+
             small {
                 font-family: $f;
                 font-size: 14px;
@@ -88,6 +92,7 @@
         &_current {
             font-size: 17px;
             @extend .cart__sum_sale;
+
             span {
                 font-size: 20px;
             }
@@ -95,20 +100,23 @@
     } //.cart__sum
 
     &__form {
-        max-width: 425px;
         margin: $gutter * 2.5 auto 0;
+        max-width: 425px;
 
         @include respond-to(xs) {
-            max-width: 100%;
-            width: 100%;
             margin: $gutter auto;
+            max-width: 100%;
             order: 2;
+            width: 100%;
         }
 
         .form {
+
             &__inner {
                 flex-direction: column;
+
                 & > .form__box {
+
                     &:last-child {
                         @include size-sm(12);
                     }
@@ -130,15 +138,18 @@
                 }
 
                 .form__box {
-                    width: 100%;
                     margin-bottom: 0;
+                    width: 100%;
+
                     .form__input {
+
                         &:last-child {
                             width: 50%;
                             @include respond-to(xs) {
                                 width: 55%;
                             }
                         }
+
                         & + .form__input {
                             margin-left: $gutter;
                             @include respond-to(xs) {
@@ -149,18 +160,20 @@
                 }
 
                 .form__input {
+
                     &:first-child {
                         flex: 1;
                         @include respond-to(xs) {
                             width: 100%;
                         }
                     }
+
                     &:last-child {
-                        width: 30%;
                         margin-left: $gutter;
+                        width: 30%;
                         @include respond-to(xs) {
-                            width: 100%;
                             margin-left: 0;
+                            width: 100%;
                         }
                     }
                 }
@@ -168,31 +181,33 @@
         }
 
         .cart__btn {
-            width: 100%;
+            font-size: 16px;
             height: 43px;
             line-height: 42px;
-            font-size: 16px;
+            width: 100%;
         }
 
         .section-header {
+
             .h1 {
                 margin: 0 0 $gutter * 2 0;
             }
         }
-	} //.cart__form
+    } //.cart__form
 
-	&__policy {
-		margin-bottom: $gutter;
-	}//.cart__policy
+    &__policy {
+        margin-bottom: $gutter;
+    } //.cart__policy
 
-	.form-success{
-		@include respond-to(xs) {
-			align-items: flex-start;
-			&__center{
-				margin-top: 30px;
-			}
-		}
-	}
+    .form-success {
+        @include respond-to(xs) {
+            align-items: flex-start;
+
+            &__center {
+                margin-top: 30px;
+            }
+        }
+    }
 } //.cart
 
 .cart-success {
@@ -200,13 +215,14 @@
     text-align: center;
 
     &__title {
-        margin-bottom: $gutter;
         font-family: $f-bold;
         font-size: 23px;
+        margin-bottom: $gutter;
     } //.cart-success__title
 
     &__subtitle {
         margin-bottom: $gutter;
+
         span {
             font-family: $f2-bold;
             font-size: 18px;
@@ -221,6 +237,7 @@
 .empty {
     padding: 50px 0;
     text-align: center;
+
     p {
         font-size: 20px;
         text-transform: uppercase;

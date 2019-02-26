@@ -1,4 +1,41 @@
-//prefix
+$breakpoints: (
+    i5: 320px,
+    i7: 375px,
+    i8: 414px,
+    xs: 480px,
+    sm: 768px,
+    md: 1024px,
+    mdX: 1200px,
+    lg: 1366px
+);
+
+$breakpointsMin: (
+    i5: 319px,
+    i7: 374px,
+    i8: 413px,
+    xs: 479px,
+    sm: 767px,
+    md: 1023px,
+    mdX: 1200px,
+    lg: 1365px
+);
+
+//z-index
+$z-index: (
+    bottom: -9999,
+    down: -1,
+    default: 1,
+    fixed: 10,
+    absolute: 50,
+    success: 50,
+    successBtnClose: 51,
+    dropdown: 333,
+	lk: 500,
+	mobileMenu: 901,
+    overlay: 999,
+	modal-overlay: 1000,
+    modal: 1001,
+);
 
 //FONT
 $f: roboto-400, sans-serif;
@@ -8,7 +45,6 @@ $f-bold: roboto-600, sans-serif;
 
 $f2: robotoslab-400, sans-serif;
 $f2-light: robotoslab-300, sans-serif;
-$f2-medium: robotoslab-500, sans-serif;
 $f2-bold: robotoslab-600, sans-serif;
 
 $font-size-base: 16px;
@@ -79,82 +115,58 @@ $color-placeholder: $gray;
 $bxs: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 $bxs-hover: 1px 1px 10px rgba($color-main, 0.6);
 $bxs-i: inset 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
-	0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
 
 //button colors
 $button-colors: (
-	accent: $color-accent,
-	default: $color-main,
-	yellow: $color-third,
-	success: $color-success,
-	error: $color-danger,
-	info: $color-info,
-	muted: $gray--darken
-);
-
-//z-index
-$z-index: (
-	bottom: -9999,
-	down: -1,
-	default: 1,
-	absolute: 50,
-	fixed: 99,
-	dropdown: 333,
-	lk: 500,
-	overlay: 900,
-	mobileMenu: 901,
-	modal-overlay: 1000,
-	modal: 1001
+    accent: $color-accent,
+    default: $color-main,
+    yellow: $color-third,
+    success: $color-success,
+    error: $color-danger,
+    info: $color-info,
+    muted: $gray--darken,
+    gray: $gray
 );
 
 //Icons
-$icon-vk: "\f189";
-$icon-odnk: "\f263";
-$icon-inst: "\f16d";
-$icon-order: "\f07a";
-$icon-fav: "\f004";
-$icon-data: "\f044";
-$icon-exit: "\f08b";
+$icon-vk: '\f189';
+$icon-odnk: '\f263';
+$icon-inst: '\f16d';
+$icon-order: '\f07a';
+$icon-fav: '\f004';
+$icon-data: '\f044';
+$icon-exit: '\f08b';
 
 $soc-icons: (
-	vk: $icon-vk,
-	ok: $icon-odnk,
-	inst: $icon-inst
+    vk: $icon-vk,
+    ok: $icon-odnk,
+    inst: $icon-inst
 );
 
 $nav-lk-icons: (
-	order: $icon-order,
-	fav: $icon-fav,
-	data: $icon-data,
-	exit: $icon-exit
-);
-
-$breakpoints: (
-	i5: 320px,
-	i7: 375px,
-	i8: 414px,
-	xs: 480px,
-	sm: 768px,
-	md: 1024px,
-	lg: 1200px
+    order: $icon-order,
+    fav: $icon-fav,
+    data: $icon-data,
+    exit: $icon-exit
 );
 
 //Modal Variebles
-$modal-border-width: 1px;
-$modal-border-color: $color-border--light;
-$border-radius: $border-radius;
+$modal-border-width     : 1px;
+$modal-border-color     : #e8e8e8;
+$modal-border-radius    : $border-radius;
 
-$modal-box-shadow: 0 0.25rem 0.5rem rgba(#000, 0.5) !default;
+$modal-box-shadow       : 0 0.25rem 0.5rem rgba(#000, 0.5) !default;
 
-$modal-backdrop-bg: #000 !default;
-$modal-content-bg: #fff !default;
-$modal-backdrop-opacity: 0.4 !default;
-$modal-header-padding: 1rem !default;
-$modal-inner-padding: 1rem !default;
+$modal-backdrop-bg      : #000 !default;
+$modal-content-bg       : #fff !default;
+$modal-backdrop-opacity : 0.4 !default;
+$modal-header-padding   : 15px !default;
+$modal-inner-padding    : 15px !default;
 
-$modal-md: 500px !default;
-$modal-sm: 300px !default;
-$modal-lg: 800px !default;
+$modal-lg               : 800px !default;
+$modal-md               : 500px !default;
+$modal-sm               : 300px !default;
 
-$transition-collapse: height 0.35s ease !default;
-$transition-fade: opacity 0.15s linear !default;
+$transition-collapse    : height 0.35s ease !default;
+$transition-fade        : opacity 0.15s linear !default;

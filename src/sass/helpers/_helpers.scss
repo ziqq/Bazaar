@@ -1,57 +1,173 @@
-//border-radius
-@mixin br($radius){
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	-o-border-radius: $radius;
-	border-radius: $radius;
-}
-	
-//transform rotate
-@mixin rotate($var){
-	transform: rotate($var+deg);
-}
+@mixin container {
+    max-width: 1440px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 
-//transform scale
-@mixin scale($var){
-	-ms-transform: scale($var);
-	-webkit-transform: scale($var);
-	transform: scale($var);
-}
-	
+    @include respond-to(mdX) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-@mixin blur($var){
-	-webkit-filter: blur($var);
-	filter: blur($var);
-}
+    &--md {
+        max-width: 1024px;
+    }
 
-@mixin smooth-scroll{
-	-webkit-overflow-scrolling: touch;
-}	
+    &--sm {
+        max-width: 768px;
+    }
 
-@mixin smooth-font{
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    &--xs {
+        max-width: 480px;
+    }
 }
 
-@mixin gpu{
-	transform: translate3d(0,0,0);
+//Custom Webkit Scroll
+@mixin bz-scroll {
+	@include scroll;
+	@include scrollbar {width: 5px;}
+	@include scrollbar-track {width: 5px;}
+	@include scrollbar-thumb {background-color: $color-bg--dark; border-radius: 100px;}
 }
 
-@mixin tY($var){
-	transform: translateY($var);
+//Custom Webkit Scroll
+@mixin bz-scroll--light {
+	@include scroll;
+	@include scrollbar {width: 5px;}
+	@include scrollbar-track {width: 5px;}
+	@include scrollbar-thumb {background-color: $color-bg--light; border-radius: 100px;}
 }
 
-@mixin tX($var){
-	transform: translateX($var);
+@mixin badge{
+	min-width: 20px;
+	height: 20px;
+	color: $color-text;
+	font-family: $f-light;
+	font-size: 11px;
+	vertical-align: middle;
+	border-radius: 500px;
+	background: $color-main;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 }
 
-//Clearfix
-@mixin clr {
-	&:after {
-		content: " ";
-		display: table;
-		clear: both;
+
+@mixin trans($what: all, $time: .35s){
+	transition: $what $time cubic-bezier(.38,.22,.21,.95);
+}
+
+@mixin overlay{
+	position: relative;
+	&::before{
+		display: block;
+		content: '';
+		background-color: rgba(#000, .45);
+		@include tr;
+		@include coverdiv;
 	}
-	*zoom: 1;
+	& > * {
+		z-index: z(default);
+	}
+	.container{
+		position: relative;
+	}
 }
+
+@mixin listIcon($color){
+	padding-left: 15px;
+	position: relative;
+	&::before{
+		content: '';
+		display: block;
+		width: 8px;
+		height: 2px;
+		background-color: $color;
+		position: absolute;
+		top: 12px;
+		left: 0;
+	}
+}//ul li &::before (-)
+
+@mixin bdt($color){
+	border-top: 1px solid $color;
+	&:first-child{
+		border-top: none;
+	}
+}
+
+@mixin bdb($color){
+	border-bottom: 1px solid $color;
+	&:last-child{
+		border-bottom: none;
+	}
+}
+
+@mixin screenSize{
+	@include respond-to(sm) {
+		max-width: 748px;
+		width: 100%;
+	}
+	@include respond-to(xs) {
+		max-width: 480px;
+	}
+	@include respond-to(i8) {
+		max-width: 414px;
+	}
+	@include respond-to(i7) {
+		max-width: 375px;
+	}
+	@include respond-to(i5) {
+		max-width: 320px;
+	}
+}
+
+%img {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+%box{
+	border-radius: $border-radius;
+	background-color: #fff;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1), 0 0 4px 0 rgba(0,0,0,.1);
+}
+
+%textLight{
+	font-family: $f-light;
+	font-weight: 300;
+}
+
+//style input
+%styleInput {
+	width: 100%;
+	padding: 10px 15px;
+	font-family: $f;
+	font-size: 16px;
+	line-height: 1;
+	color: $color-text;
+	border: 1px solid #d9d9d9;
+	border-radius: $border-radius;
+	&:focus{
+		border-color: $color-border;
+	}
+}
+
+@mixin flex{
+	display: flex;
+	justify-content: space-between;
+}
+
+@mixin flexCenter{
+	display: flex;
+	align-items: center;
+}
+
+@mixin flexColumn{
+	display: flex;
+	flex-direction: column;
+}
+

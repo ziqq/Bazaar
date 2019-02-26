@@ -1,161 +1,195 @@
 [tooltip] {
-	position: relative;
-	&::before, &::after {
-		text-transform: none;
-		font-size: 13px;
-		line-height: 1;
-		user-select: none;
-		pointer-events: none;
-		position: absolute;
-		display: none;
-		opacity: 0;
-	}
-	&::before {
-		content: '';
-		border: 5px solid transparent;
-		z-index: 1001;
-	}
-	&::after {
-		content: attr(tooltip);
-		font-family: $f-light;
-		font-size: 13px;
-		line-height: 1;
-		text-align: center;
-		min-width: 3em;
-		max-width: 21em;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		padding: 1ch 1.5ch 1.2ch;
-		border-radius: $border-radius;
-		box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
-		background: #333;
-		color: #fff;
-		z-index: 1000;
-	}
+    position: relative;
 
-	&:hover {
-		&::before, &::after {
-			display: block;
-		}
-	}
+    &::before,
+    &::after {
+        display: none;
+        font-size: 13px;
+        line-height: 1;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        text-transform: none;
+        user-select: none;
+    }
 
-	&:not([flow])::before, &[flow^="up"]::before {
-		bottom: 100%;
-		border-bottom-width: 0;
-		border-top-color: #333;
-	}
+    &::before {
+        border: 5px solid transparent;
+        content: '';
+        z-index: 1001;
+    }
 
-	&:not([flow])::after, &[flow^="up"]::after {
-		bottom: calc(100% + 5px);
-	}
+    &::after {
+        background: #333;
+        border-radius: $border-radius;
+        box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+        color: #fff;
+        content: attr(tooltip);
+        font-family: $f-light;
+        font-size: 13px;
+        line-height: 1;
+        max-width: 21em;
+        min-width: 3em;
+        overflow: hidden;
+        padding: 1ch 1.5ch 1.2ch;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        z-index: 1000;
+    }
 
-	&:not([flow]) {
-		&::before, &::after {
-			left: 50%;
-			transform: translate(-50%, -0.5em);
-		}
-	}
+    &:hover {
 
-	&[flow^="up"] {
-		&::before, &::after {
-			left: 50%;
-			transform: translate(-50%, -0.5em);
-		}
-	}
+        &::before,
+        &::after {
+            display: block;
+        }
+    }
 
-	&[flow^="down"] {
-		&::before {
-			top: 100%;
-			border-top-width: 0;
-			border-bottom-color: #333;
-		}
-		&::after {
-			top: calc(100% + 5px);
-		}
-		&::before, &::after {
-			left: 50%;
-			transform: translate(-50%, 0.5em);
-		}
-	}
+    &:not([flow])::before,
+    &[flow^='up']::before {
+        border-bottom-width: 0;
+        border-top-color: #333;
+        bottom: 100%;
+    }
 
-	&[flow^="left"] {
-		&::before {
-			top: 50%;
-			border-right-width: 0;
-			border-left-color: #333;
-			left: calc(0em - 5px);
-			transform: translate(-0.5em, -50%);
-		}
-		&::after {
-			top: 50%;
-			right: calc(100% + 5px);
-			transform: translate(-0.5em, -50%);
-		}
-	}
+    &:not([flow])::after,
+    &[flow^='up']::after {
+        bottom: calc(100% + 5px);
+    }
 
-	&[flow^="right"] {
-		&::before {
-			top: 50%;
-			border-left-width: 0;
-			border-right-color: #333;
-			right: calc(0em - 5px);
-			transform: translate(0.5em, -50%);
-		}
-		&::after {
-			top: 50%;
-			left: calc(100% + 5px);
-			transform: translate(0.5em, -50%);
-		}
-	}
+    &:not([flow]) {
 
-	&:not([flow]):hover {
-		&::before, &::after {
-			animation: tooltips-vert 300ms ease-out forwards;
-		}
-	}
+        &::before,
+        &::after {
+            left: 50%;
+            transform: translate(-50%, -0.5em);
+        }
+    }
 
-	&[flow^="up"]:hover {
-		&::before, &::after {
-			animation: tooltips-vert 300ms ease-out forwards;
-		}
-	}
+    &[flow^='up'] {
 
-	&[flow^="down"]:hover {
-		&::before, &::after {
-			animation: tooltips-vert 300ms ease-out forwards;
-		}
-	}
+        &::before,
+        &::after {
+            left: 50%;
+            transform: translate(-50%, -0.5em);
+        }
+    }
 
-	&[flow^="left"]:hover {
-		&::before, &::after {
-			animation: tooltips-horz 300ms ease-out forwards;
-		}
-	}
+    &[flow^='down'] {
 
-	&[flow^="right"]:hover {
-		&::before, &::after {
-			animation: tooltips-horz 300ms ease-out forwards;
-		}
-	}
+        &::before {
+            border-bottom-color: #333;
+            border-top-width: 0;
+            top: 100%;
+        }
+
+        &::after {
+            top: calc(100% + 5px);
+        }
+
+        &::before,
+        &::after {
+            left: 50%;
+            transform: translate(-50%, 0.5em);
+        }
+    }
+
+    &[flow^='left'] {
+
+        &::before {
+            border-left-color: #333;
+            border-right-width: 0;
+            left: calc(0 - 5px);
+            top: 50%;
+            transform: translate(-0.5em, -50%);
+        }
+
+        &::after {
+            right: calc(100% + 5px);
+            top: 50%;
+            transform: translate(-0.5em, -50%);
+        }
+    }
+
+    &[flow^='right'] {
+
+        &::before {
+            border-left-width: 0;
+            border-right-color: #333;
+            right: calc(0 - 5px);
+            top: 50%;
+            transform: translate(0.5em, -50%);
+        }
+
+        &::after {
+            left: calc(100% + 5px);
+            top: 50%;
+            transform: translate(0.5em, -50%);
+        }
+    }
+
+    &:not([flow]):hover {
+
+        &::before,
+        &::after {
+            animation: tooltips-vert 300ms ease-out forwards;
+        }
+    }
+
+    &[flow^='up']:hover {
+
+        &::before,
+        &::after {
+            animation: tooltips-vert 300ms ease-out forwards;
+        }
+    }
+
+    &[flow^='down']:hover {
+
+        &::before,
+        &::after {
+            animation: tooltips-vert 300ms ease-out forwards;
+        }
+    }
+
+    &[flow^='left']:hover {
+
+        &::before,
+        &::after {
+            animation: tooltips-horz 300ms ease-out forwards;
+        }
+    }
+
+    &[flow^='right']:hover {
+
+        &::before,
+        &::after {
+            animation: tooltips-horz 300ms ease-out forwards;
+        }
+    }
 }
 
 [tooltip=''] {
-	&::before, &::after {
-		display: none !important;
-	}
+
+    &::before,
+    &::after {
+        display: none !important;
+    }
 }
 
 @keyframes tooltips-vert {
-	to {
-		opacity: .9;
-		transform: translate(-50%, 0);
-	}
+
+    to {
+        opacity: 0.9;
+        transform: translate(-50%, 0);
+    }
 }
 
 @keyframes tooltips-horz {
-	to {
-		opacity: .9;
-		transform: translate(0, -50%);
-	}
+
+    to {
+        opacity: 0.9;
+        transform: translate(0, -50%);
+    }
 }
