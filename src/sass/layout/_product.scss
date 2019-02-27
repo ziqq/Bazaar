@@ -154,7 +154,7 @@
 
     &__price {
         font-family: $f2;
-        font-size: 17px;
+        font-size: 20px;
         text-align: center;
 
         & + .product-item__price {
@@ -171,6 +171,7 @@
         }
 
         &--discount {
+            font-size: 14px;
             text-decoration: line-through;
         } //.product-item__price--discount
     } //.product-item__price

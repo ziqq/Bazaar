@@ -9,9 +9,29 @@
 			</div>
 			<div class="catalog-filter__body accordeon accordeon--other js-accordeon">
 
-				<div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
-					<div class="catalog-filter__subtitle accordeon__title">Цвет</div>
+				<div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open sm-only">
+					<div class="catalog-filter__subtitle accordeon__title">Разделы</div>
 					<div class="catalog-filter__content accordeon__content js-scroll">
+						<div class="changer js-changer">
+							<span class="changer__title">Разделы:</span>
+							<ul class="changer__list">
+								{% for item in changer %}
+								<li class="changer__item {{ item.class }}">
+									<a class="changer__link" href="#">
+										{{ item.title }}
+										<span class="changer__counter">{{ item.counter }}</span>
+										<div class="changer__reset"><i class="fal fa-times"></i></div>
+									</a>
+								</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="catalog-filter__item js-catalog-filter-item accordeon__item">
+					<div class="catalog-filter__subtitle accordeon__title">Цвет</div>
+					<div class="catalog-filter__content accordeon__content js-scroll" style="display: none;">
 						{% for i in range(0, 2) %}
 						{% for item in qwe.product %}
 						<div class="catalog-filter__subitem">
@@ -30,9 +50,9 @@
 					</div>
 				</div>
 
-				<div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
+				<div class="catalog-filter__item js-catalog-filter-item accordeon__item">
 					<div class="catalog-filter__subtitle accordeon__title">Плотность ткани</div>
-					<div class="catalog-filter__content accordeon__content js-scroll">
+					<div class="catalog-filter__content accordeon__content js-scroll" style="display: none;">
 						{% for i in range(0, 2) %}
 						{% for item in qwe.product %}
 						<div class="catalog-filter__subitem">
@@ -47,9 +67,9 @@
 					</div>
 				</div>
 
-				<div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
+				<div class="catalog-filter__item js-catalog-filter-item accordeon__item">
 					<div class="catalog-filter__subtitle accordeon__title">Цена</div>
-					<div class="catalog-filter__content accordeon__content">
+					<div class="catalog-filter__content accordeon__content" style="display: none;">
 						<div class="catalog-filter__item_price js-catalog-filter-item-price">
 							<div class="catalog-filter__range range">
 								<div class="range__slider" id="js-catalog-filter-slider" data-end="680" data-start="350"></div>
@@ -68,9 +88,9 @@
 					</div>
 				</div>
 
-				<div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
+				<div class="catalog-filter__item js-catalog-filter-item accordeon__item">
 					<div class="catalog-filter__subtitle accordeon__title">Производитель</div>
-					<div class="catalog-filter__content accordeon__content js-scroll">
+					<div class="catalog-filter__content accordeon__content js-scroll" style="display: none;">
 						{% for i in range(0, 2) %}
 						{% for item in qwe.product %}
 						<div class="catalog-filter__subitem">

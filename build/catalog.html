@@ -285,6 +285,9 @@
             <a class="catalog__back" href="#"><i class="far fa-angle-left"></i></a>
             <h1 class="h1" itemprop="headline">Остатки тканей в балаково</h1>
           </div>
+          <button class="button button--transparent catalog-filter__btn js-catalog-filter--show mb-20 sm-only">
+            <span>Фильтр</span>
+          </button>
           <!-- begin catalog__wrap -->
           <div class="catalog__wrap">
             <!-- begin catalog-filter -->
@@ -296,9 +299,59 @@
                     <button class="button button button--link">Сбросить</button>
                   </div>
                   <div class="catalog-filter__body accordeon accordeon--other js-accordeon">
-                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
+                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open sm-only">
+                      <div class="catalog-filter__subtitle accordeon__title">Разделы</div>
+                      <div class="catalog-filter__content accordeon__content js-scroll">
+                        <div class="changer js-changer">
+                          <span class="changer__title">Разделы:</span>
+                          <ul class="changer__list">
+                            <li class="changer__item is-checked">
+                              <a class="changer__link" href="#"> Все <span class="changer__counter"></span>
+                                <div class="changer__reset"><i class="fal fa-times"></i></div>
+                              </a>
+                            </li>
+                            <li class="changer__item ">
+                              <a class="changer__link" href="#"> Еврофатин LUXE <span class="changer__counter">200</span>
+                                <div class="changer__reset"><i class="fal fa-times"></i></div>
+                              </a>
+                            </li>
+                            <li class="changer__item ">
+                              <a class="changer__link" href="#"> Еврофатин LIFE <span class="changer__counter">350</span>
+                                <div class="changer__reset"><i class="fal fa-times"></i></div>
+                              </a>
+                            </li>
+                            <li class="changer__item ">
+                              <a class="changer__link" href="#"> Стрейч-фатин <span class="changer__counter">150</span>
+                                <div class="changer__reset"><i class="fal fa-times"></i></div>
+                              </a>
+                            </li>
+                            <li class="changer__item ">
+                              <a class="changer__link" href="#"> Свадебный еврофатин <span class="changer__counter">183</span>
+                                <div class="changer__reset"><i class="fal fa-times"></i></div>
+                              </a>
+                            </li>
+                            <li class="changer__item ">
+                              <a class="changer__link" href="#"> Еврофатин для вышевки <span class="changer__counter">72</span>
+                                <div class="changer__reset"><i class="fal fa-times"></i></div>
+                              </a>
+                            </li>
+                            <li class="changer__item ">
+                              <a class="changer__link" href="#"> Фатин с бусинами <span class="changer__counter">88</span>
+                                <div class="changer__reset"><i class="fal fa-times"></i></div>
+                              </a>
+                            </li>
+                            <li class="changer__item ">
+                              <a class="changer__link" href="#"> Фатин с Омбре <span class="changer__counter">12</span>
+                                <div class="changer__reset"><i class="fal fa-times"></i></div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item">
                       <div class="catalog-filter__subtitle accordeon__title">Цвет</div>
-                      <div class="catalog-filter__content accordeon__content js-scroll">
+                      <div class="catalog-filter__content accordeon__content js-scroll" style="display: none;">
                         <div class="catalog-filter__subitem">
                           <label class="checkbox checkbox--transform js-checkbox">
                             <input type="checkbox">
@@ -365,9 +418,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
+                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item">
                       <div class="catalog-filter__subtitle accordeon__title">Плотность ткани</div>
-                      <div class="catalog-filter__content accordeon__content js-scroll">
+                      <div class="catalog-filter__content accordeon__content js-scroll" style="display: none;">
                         <div class="catalog-filter__subitem">
                           <label class="checkbox checkbox--transform js-checkbox">
                             <input type="checkbox">
@@ -426,9 +479,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
+                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item">
                       <div class="catalog-filter__subtitle accordeon__title">Цена</div>
-                      <div class="catalog-filter__content accordeon__content">
+                      <div class="catalog-filter__content accordeon__content" style="display: none;">
                         <div class="catalog-filter__item_price js-catalog-filter-item-price">
                           <div class="catalog-filter__range range">
                             <div class="range__slider" id="js-catalog-filter-slider" data-end="680" data-start="350"></div>
@@ -446,9 +499,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item is-open">
+                    <div class="catalog-filter__item js-catalog-filter-item accordeon__item">
                       <div class="catalog-filter__subtitle accordeon__title">Производитель</div>
-                      <div class="catalog-filter__content accordeon__content js-scroll">
+                      <div class="catalog-filter__content accordeon__content js-scroll" style="display: none;">
                         <div class="catalog-filter__subitem">
                           <label class="checkbox checkbox--transform js-checkbox">
                             <input type="checkbox">
@@ -560,52 +613,54 @@
                   </select>
                 </div>
               </div><!-- end catalog__top-line -->
-              <!-- begin catalog__changer -->
-              <div class="catalog__changer changer">
-                <span class="changer__title">Разделы:</span>
-                <ul class="changer__list js-changer">
-                  <li class="changer__item is-checked">
-                    <a class="changer__link" href="#"> Все <span class="changer__counter"></span>
-                      <div class="changer__reset"><i class="fal fa-times"></i></div>
-                    </a>
-                  </li>
-                  <li class="changer__item ">
-                    <a class="changer__link" href="#"> Еврофатин LUXE <span class="changer__counter">200</span>
-                      <div class="changer__reset"><i class="fal fa-times"></i></div>
-                    </a>
-                  </li>
-                  <li class="changer__item ">
-                    <a class="changer__link" href="#"> Еврофатин LIFE <span class="changer__counter">350</span>
-                      <div class="changer__reset"><i class="fal fa-times"></i></div>
-                    </a>
-                  </li>
-                  <li class="changer__item ">
-                    <a class="changer__link" href="#"> Стрейч-фатин <span class="changer__counter">150</span>
-                      <div class="changer__reset"><i class="fal fa-times"></i></div>
-                    </a>
-                  </li>
-                  <li class="changer__item ">
-                    <a class="changer__link" href="#"> Свадебный еврофатин <span class="changer__counter">183</span>
-                      <div class="changer__reset"><i class="fal fa-times"></i></div>
-                    </a>
-                  </li>
-                  <li class="changer__item ">
-                    <a class="changer__link" href="#"> Еврофатин для вышевки <span class="changer__counter">72</span>
-                      <div class="changer__reset"><i class="fal fa-times"></i></div>
-                    </a>
-                  </li>
-                  <li class="changer__item ">
-                    <a class="changer__link" href="#"> Фатин с бусинами <span class="changer__counter">88</span>
-                      <div class="changer__reset"><i class="fal fa-times"></i></div>
-                    </a>
-                  </li>
-                  <li class="changer__item ">
-                    <a class="changer__link" href="#"> Фатин с Омбре <span class="changer__counter">12</span>
-                      <div class="changer__reset"><i class="fal fa-times"></i></div>
-                    </a>
-                  </li>
-                </ul>
-              </div><!-- end catalog__changer -->
+              <!-- begin changer -->
+              <div class="catalog__changer sm-hide">
+                <div class="changer js-changer">
+                  <span class="changer__title">Разделы:</span>
+                  <ul class="changer__list">
+                    <li class="changer__item is-checked">
+                      <a class="changer__link" href="#"> Все <span class="changer__counter"></span>
+                        <div class="changer__reset"><i class="fal fa-times"></i></div>
+                      </a>
+                    </li>
+                    <li class="changer__item ">
+                      <a class="changer__link" href="#"> Еврофатин LUXE <span class="changer__counter">200</span>
+                        <div class="changer__reset"><i class="fal fa-times"></i></div>
+                      </a>
+                    </li>
+                    <li class="changer__item ">
+                      <a class="changer__link" href="#"> Еврофатин LIFE <span class="changer__counter">350</span>
+                        <div class="changer__reset"><i class="fal fa-times"></i></div>
+                      </a>
+                    </li>
+                    <li class="changer__item ">
+                      <a class="changer__link" href="#"> Стрейч-фатин <span class="changer__counter">150</span>
+                        <div class="changer__reset"><i class="fal fa-times"></i></div>
+                      </a>
+                    </li>
+                    <li class="changer__item ">
+                      <a class="changer__link" href="#"> Свадебный еврофатин <span class="changer__counter">183</span>
+                        <div class="changer__reset"><i class="fal fa-times"></i></div>
+                      </a>
+                    </li>
+                    <li class="changer__item ">
+                      <a class="changer__link" href="#"> Еврофатин для вышевки <span class="changer__counter">72</span>
+                        <div class="changer__reset"><i class="fal fa-times"></i></div>
+                      </a>
+                    </li>
+                    <li class="changer__item ">
+                      <a class="changer__link" href="#"> Фатин с бусинами <span class="changer__counter">88</span>
+                        <div class="changer__reset"><i class="fal fa-times"></i></div>
+                      </a>
+                    </li>
+                    <li class="changer__item ">
+                      <a class="changer__link" href="#"> Фатин с Омбре <span class="changer__counter">12</span>
+                        <div class="changer__reset"><i class="fal fa-times"></i></div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div><!-- end changer -->
               <!-- begin product-item -->
               <div class="product-item__wrap">
                 <!-- begin product-item -->
@@ -1185,24 +1240,8 @@
                   </div>
                 </a><!-- end product-item -->
               </div><!-- end product-item -->
-              <button class="catalog-filter__btn catalog-filter__btn--show js-catalog-filter--show"> Фильтр </button>
               <button class="button button--transparent button--gray catalog-content__btn">Показать еще</button>
               <div class="button-box">
-                <!-- begin pagination -->
-                <div class="pagination">
-                  <span class="pagination__title">Показывать по</span>
-                  <ul class="pagination__list js-toggle-list">
-                    <li class="pagination__item">
-                      <button class="pagination__link">24</button>
-                    </li>
-                    <li class="pagination__item is-active">
-                      <button class="pagination__link">48</button>
-                    </li>
-                    <li class="pagination__item">
-                      <button class="pagination__link">96</button>
-                    </li>
-                  </ul>
-                </div><!-- end pagination -->
                 <!-- begin pagination -->
                 <div class="pagination pagination--right">
                   <span class="pagination__title">страница 2 из 88</span>

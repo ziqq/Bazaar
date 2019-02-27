@@ -307,10 +307,9 @@
     } //..catalog-filter__color
 
     &__btn {
-        background-color: transparent;
+        // background-color: transparent;
         border: 0;
-        display: inline-block;
-        font-family: $f-light;
+        font-family: $f;
         font-size: 15px;
         height: 40px;
         letter-spacing: 0.5px;
@@ -318,7 +317,19 @@
         outline: none;
         text-align: center;
         text-transform: uppercase;
-        width: 50%;
+        width: 100%;
+        @include flexCenter;
+        justify-content: center;
+
+        &:hover, &:active {
+            background-color: inherit;
+        }
+
+        &.button--transparent {
+            border: 1px solid $color-border;
+            border-radius: $border-radius;
+            text-transform: initial;
+        }
 
         &--aply {
             background-color: $color-main;
@@ -524,9 +535,10 @@
         @include flexCenter;
         width: 100%;
 
-        @include xs-block() {
+        @include sm-block() {
             flex-wrap: wrap;
-            justify-content: center;
+            align-items: flex-start;
+            justify-content: flex-start;
         }
     } //.changer__list
 

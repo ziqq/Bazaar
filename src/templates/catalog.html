@@ -36,6 +36,10 @@ changer:
 			<h1 class="h1" itemprop="headline">{{ title }}</h1>
 		</div>
 
+		<button class="button button--transparent catalog-filter__btn js-catalog-filter--show mb-20 sm-only">
+			<span>Фильтр</span>
+		</button>
+
 		<!-- begin catalog__wrap -->
 		<div class="catalog__wrap">
 
@@ -58,21 +62,23 @@ changer:
 					</div>
 				</div><!-- end catalog__top-line -->
 
-				<!-- begin catalog__changer -->
-				<div class="catalog__changer changer">
-					<span class="changer__title">Разделы:</span>
-					<ul class="changer__list js-changer">
-						{% for item in changer %}
-						<li class="changer__item {{ item.class }}">
-							<a class="changer__link" href="#">
-								{{ item.title }}
-								<span class="changer__counter">{{ item.counter }}</span>
-								<div class="changer__reset"><i class="fal fa-times"></i></div>
-							</a>
-						</li>
-						{% endfor %}
-					</ul>
-				</div><!-- end catalog__changer -->
+				<!-- begin changer -->
+				<div class="catalog__changer sm-hide">
+					<div class="changer js-changer">
+						<span class="changer__title">Разделы:</span>
+						<ul class="changer__list">
+							{% for item in changer %}
+							<li class="changer__item {{ item.class }}">
+								<a class="changer__link" href="#">
+									{{ item.title }}
+									<span class="changer__counter">{{ item.counter }}</span>
+									<div class="changer__reset"><i class="fal fa-times"></i></div>
+								</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div><!-- end changer -->
 
 				<!-- begin product-item -->
 				<div class="product-item__wrap">
@@ -81,28 +87,9 @@ changer:
 					{% endfor %}
 				</div><!-- end product-item -->
 
-				<button class="catalog-filter__btn catalog-filter__btn--show js-catalog-filter--show">
-					Фильтр
-				</button>
-
 				<button class="button button--transparent button--gray catalog-content__btn">Показать еще</button>
 
 				<div class="button-box">
-					<!-- begin pagination -->
-					<div class="pagination">
-						<span class="pagination__title">Показывать по</span>
-						<ul class="pagination__list js-toggle-list">
-							<li class="pagination__item">
-								<button class="pagination__link">24</button>
-							</li>
-							<li class="pagination__item is-active">
-								<button class="pagination__link">48</button>
-							</li>
-							<li class="pagination__item">
-								<button class="pagination__link">96</button>
-							</li>
-						</ul>
-					</div><!-- end pagination -->
 
 					{% include "partials/components/_pagination.html" %}
 
