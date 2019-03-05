@@ -241,6 +241,15 @@
               </li>
               <li class="nav-main__item  ">
                 <a href="javascript:void(0);" class="nav-main__link">
+                  <svg class="icon icon-20 nav-main__icon">
+                    <use xlink:href="img/sprite.svg#20"></use>
+                  </svg>
+                  <span class="nav-main__text">Пряжа</span>
+                  <!-- <i class="fal fa-angle-right"></i> -->
+                </a>
+              </li>
+              <li class="nav-main__item  ">
+                <a href="javascript:void(0);" class="nav-main__link">
                   <svg class="icon icon-leavings nav-main__icon">
                     <use xlink:href="img/sprite.svg#leavings"></use>
                   </svg>
@@ -269,29 +278,40 @@
       </header><!-- end header -->
       <!-- begin main card -->
       <main class="main card">
+        <!-- begin page-banner -->
+        <div class="page-banner" style="background-color: #f8dcd2">
+          <a class="page-banner__link" href="sale.html">
+            <div id="page-banner__content">
+              <p class="text-center">
+                <strong>Предложение на выходные:</strong> скидка 10% на остатки тканей - <strong>Посмотреть</strong>
+              </p>
+            </div>
+          </a>
+        </div>
+        <!-- end page-banner -->
         <div class="container">
           <!-- begin card__top-line -->
           <div class="card__top-line">
             <!-- begin breadcrumbs -->
-            <div class="breadcrumbs" itemtype="http://www.data-vocabulary.org/Breadcrumb">
-              <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item">
-                  <a href="#" class="breadcrumbs__link" itemprop="url">
-                    <span class="breadcrumbs__title" itemprop="title">Главная</span>
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                  <a class="breadcrumbs__link" href="/" itemprop="item" rel="home">
+                    <span class="breadcrumbs__title" itemprop="name">Главная</span>
+                  </a>
+                </li>
+                <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                  <a class="breadcrumbs__link" href="catalog.html" itemprop="item">
+                    <span class="breadcrumbs__title" itemprop="name">Ткани</span>
                   </a>
                 </li>
                 <li class="breadcrumbs__item">
-                  <a href="#" class="breadcrumbs__link" itemprop="url">
-                    <span class="breadcrumbs__title" itemprop="title">Ткани</span>
+                  <a class="breadcrumbs__link" href="catalog.html" itemprop="item">
+                    <span class="breadcrumbs__title" itemprop="name">Атлас</span>
                   </a>
                 </li>
                 <li class="breadcrumbs__item">
-                  <a href="#" class="breadcrumbs__link" itemprop="url">
-                    <span class="breadcrumbs__title" itemprop="title">Атлас</span>
-                  </a>
-                </li>
-                <li class="breadcrumbs__item">
-                  <span class="breadcrumbs__title" itemprop="title">Дюпон</span>
+                  <span class="breadcrumbs__title" itemprop="name">Дюпон</span>
                 </li>
               </ul>
             </div>
@@ -299,58 +319,99 @@
             <a class="button button--link card__btn card__btn--back" href="catalog.html">Вернуться в каталог</a>
             <a class="card__back" href="catalog.html">Атлас</a>
           </div><!-- end card__top-line -->
+          <h1 class="h1 card__title" itemprop="headline">Косая бейка &quot;серый нейтральный&quot;</h1>
           <!-- begin card__wrap -->
           <div class="card__wrap" itemscope itemtype="http://schema.org/Product">
             <!-- begin card__image -->
             <div class="card__image">
               <div class="bz-slider bz-slider--card">
-                <div class="swiper-container js-bz-slider-card">
-                  <div class="swiper-wrapper bz-slider__slides">
-                    <div class="swiper-slide" itemscope itemtype="https://schema.org/ImageObject">
-                      <img src="img/products/BlusenstoffMillefleurs/600x600/0.jpg" alt="Атлас дюпон «izumrud»" itemprop="url contentUrl">
-                      <meta itemprop="name" content="здесь полное описание вплоть до артикула">
-                    </div>
-                    <div class="swiper-slide" itemscope itemtype="https://schema.org/ImageObject">
-                      <img src="img/products/BlusenstoffMillefleurs/600x600/1.jpg" alt="Атлас дюпон «izumrud»" itemprop="url contentUrl">
-                      <meta itemprop="name" content="здесь полное описание вплоть до артикула">
-                    </div>
-                    <div class="swiper-slide" itemscope itemtype="https://schema.org/ImageObject">
-                      <img src="img/products/BlusenstoffMillefleurs/600x600/2.jpg" alt="Атлас дюпон «izumrud»" itemprop="url contentUrl">
-                      <meta itemprop="name" content="здесь полное описание вплоть до артикула">
-                    </div>
-                    <div class="swiper-slide" itemscope itemtype="https://schema.org/ImageObject">
-                      <img src="img/products/BlusenstoffMillefleurs/600x600/3.jpg" alt="Атлас дюпон «izumrud»" itemprop="url contentUrl">
-                      <meta itemprop="name" content="здесь полное описание вплоть до артикула">
+                <div class="bz-slider__thumbs">
+                  <div class="swiper-container gallery-thumbs gallery-thumbs--vertical js-bz-slider-thumbs">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide" style="background-image:url(img/products/BlusenstoffMillefleurs/128x128/4.jpg)">
+                      </div>
+                      <div class="swiper-slide" style="background-image:url(img/products/BlusenstoffMillefleurs/128x128/5.jpg)">
+                      </div>
+                      <div class="swiper-slide" style="background-image:url(img/products/BlusenstoffMillefleurs/128x128/6.jpg)">
+                      </div>
+                      <div class="swiper-slide" style="background-image:url(img/products/BlusenstoffMillefleurs/128x128/7.jpg)">
+                      </div>
                     </div>
                   </div>
-                  <div class="swiper-button-next swiper-button-white bz-slider__arrow">
+                  <button class="swiper-button-next swiper-button-white bz-slider__arrow bz-slider__arrow--next">
                     <svg class="icon icon-angle ">
                       <use xlink:href="img/sprite.svg#angle"></use>
                     </svg>
-                  </div>
-                  <div class="swiper-button-prev swiper-button-white bz-slider__arrow">
+                  </button>
+                  <button class="swiper-button-prev swiper-button-white bz-slider__arrow bz-slider__arrow--prev">
                     <svg class="icon icon-angle ">
                       <use xlink:href="img/sprite.svg#angle"></use>
                     </svg>
+                  </button>
+                </div>
+                <div class="bz-slider__gallery swiper-container js-bz-slider-gallery">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" itemscope itemtype="https://schema.org/ImageObject">
+                      <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/600x600/0.jpg" alt="Атлас дюпон «izumrud»" itemprop="url contentUrl">
+                      <meta itemprop="name" content="здесь полное описание вплоть до артикула">
+                    </div>
+                    <div class="swiper-slide" itemscope itemtype="https://schema.org/ImageObject">
+                      <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/600x600/1.jpg" alt="Атлас дюпон «izumrud»" itemprop="url contentUrl">
+                      <meta itemprop="name" content="здесь полное описание вплоть до артикула">
+                    </div>
+                    <div class="swiper-slide" itemscope itemtype="https://schema.org/ImageObject">
+                      <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/600x600/2.jpg" alt="Атлас дюпон «izumrud»" itemprop="url contentUrl">
+                      <meta itemprop="name" content="здесь полное описание вплоть до артикула">
+                    </div>
+                    <div class="swiper-slide" itemscope itemtype="https://schema.org/ImageObject">
+                      <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/600x600/3.jpg" alt="Атлас дюпон «izumrud»" itemprop="url contentUrl">
+                      <meta itemprop="name" content="здесь полное описание вплоть до артикула">
+                    </div>
+                  </div>
+                  <button class="swiper-button-next swiper-button-white bz-slider__arrow bz-slider__arrow--next md-only">
+                    <svg class="icon icon-angle ">
+                      <use xlink:href="img/sprite.svg#angle"></use>
+                    </svg>
+                  </button>
+                  <button class="swiper-button-prev swiper-button-white bz-slider__arrow bz-slider__arrow--prev md-only">
+                    <svg class="icon icon-angle ">
+                      <use xlink:href="img/sprite.svg#angle"></use>
+                    </svg>
+                  </button>
+                  <button class="button-icon button-icon--fav js-button-icon--fav card__btn--fav"></button>
+                </div>
+              </div>
+              <div class="bz-slider bz-slider--colors">
+                <div class="swiper-container js-bz-slider-color">
+                  <div class="swiper-wrapper">
+                    <a class="swiper-slide" href="card.html">
+                      <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/4.jpg" src="img/general/loading.gif" alt="">
+                    </a>
+                    <a class="swiper-slide" href="card.html">
+                      <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/5.jpg" src="img/general/loading.gif" alt="">
+                    </a>
+                    <a class="swiper-slide" href="card.html">
+                      <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/6.jpg" src="img/general/loading.gif" alt="">
+                    </a>
+                    <a class="swiper-slide" href="card.html">
+                      <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/7.jpg" src="img/general/loading.gif" alt="">
+                    </a>
                   </div>
                 </div>
-                <div class="swiper-container gallery-thumbs js-bz-slider-card--thumbs">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image:url(img/products/BlusenstoffMillefleurs/128x128/4.jpg)">
-                    </div>
-                    <div class="swiper-slide" style="background-image:url(img/products/BlusenstoffMillefleurs/128x128/5.jpg)">
-                    </div>
-                    <div class="swiper-slide" style="background-image:url(img/products/BlusenstoffMillefleurs/128x128/6.jpg)">
-                    </div>
-                    <div class="swiper-slide" style="background-image:url(img/products/BlusenstoffMillefleurs/128x128/7.jpg)">
-                    </div>
-                  </div>
+                <div class="swiper-button-prev swiper-button-white bz-slider__arrow bz-slider__arrow--prev">
+                  <svg class="icon icon-angle ">
+                    <use xlink:href="img/sprite.svg#angle"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-next swiper-button-white bz-slider__arrow bz-slider__arrow--next">
+                  <svg class="icon icon-angle ">
+                    <use xlink:href="img/sprite.svg#angle"></use>
+                  </svg>
                 </div>
               </div>
             </div><!-- end card__image -->
             <!-- begin card__desc -->
             <div class="card__desc">
-              <h1 class="h1 product-item__title card__title" itemprop="name"> Косая бейка "Серый нейтральный" </h1>
               <div class="card__price">340,00 <span>руб/м</span><small>-15%</small></div>
               <!-- begin item-select -->
               <div class="item-select__group card__item-select">
@@ -412,13 +473,10 @@
                   </div>
                 </div>
               </div><!-- end item-select -->
-              <div class="button-box">
+              <div class="button-box button-box--column">
                 <button class="button button--yellow card__btn card__btn--cart is-checked" onclick="pushUp();"> Добавить в корзину <span></span>
                   <span title="убрать из корзины"></span>
                 </button>
-                <div tooltip="в избранное">
-                  <button class="button-icon button-icon--fav js-button-icon--fav card__btn card__btn--fav"></button>
-                </div>
                 <span class="card__order-info">В корзине <span>5</span> метров — <span>1694,90 </span>руб.</span>
               </div>
               <!-- begin card__info -->
@@ -479,325 +537,878 @@
           </div><!-- end card__wrap -->
           <!-- begin card__related -->
           <div class="card__related related">
-            <h2 class="h2 page-title">Сопутствующие товары</h2>
-            <div class="tab js-card-tab-related">
-              <ul class="tab__titles">
-                <li class="tab__title js-related-tab">
-                  <a class="tab__link" href="#related-tabs-1">
-                    <span class="tab__icon_wrap">
-                      <svg class="icon icon-cloth tab__icon">
-                        <use xlink:href="img/sprite.svg#cloth"></use>
-                      </svg>
-                    </span>
-                    <span class="tab__text">Ткани</span>
-                  </a>
-                </li>
-                <li class="tab__title js-related-tab">
-                  <a class="tab__link" href="#related-tabs-2">
-                    <span class="tab__icon_wrap">
-                      <img class="tab__icon" src="img/general/thread.svg" alt="Нитки">
-                    </span>
-                    <span class="tab__text">Нитки</span>
-                  </a>
-                </li>
-                <li class="tab__title js-related-tab">
-                  <a class="tab__link" href="#related-tabs-3">
-                    <span class="tab__icon_wrap">
-                      <svg class="icon icon-button tab__icon">
-                        <use xlink:href="img/sprite.svg#button"></use>
-                      </svg>
-                    </span>
-                    <span class="tab__text">Пуговицы <br>и кнопки</span>
-                  </a>
-                </li>
-                <li class="tab__title js-related-tab">
-                  <a class="tab__link" href="#related-tabs-4">
-                    <span class="tab__icon_wrap">
-                      <svg class="icon icon-zipper tab__icon">
-                        <use xlink:href="img/sprite.svg#zipper"></use>
-                      </svg>
-                    </span>
-                    <span class="tab__text">Молнии</span>
-                  </a>
-                </li>
-                <li class="tab__title js-related-tab">
-                  <a class="tab__link" href="#related-tabs-5">
-                    <span class="tab__icon_wrap">
-                      <img class="tab__icon" src="img/general/elastic.svg" alt="Резинки">
-                    </span>
-                    <span class="tab__text">Резинки</span>
-                  </a>
-                </li>
-                <li class="tab__title js-related-tab">
-                  <a class="tab__link" href="#related-tabs-6">
-                    <span class="tab__icon_wrap">
-                      <svg class="icon icon-tapes tab__icon">
-                        <use xlink:href="img/sprite.svg#tapes"></use>
-                      </svg>
-                    </span>
-                    <span class="tab__text">Ленты <br> отделочные</span>
-                  </a>
-                </li>
-              </ul>
+            <div class="section-header">
+              <h2 class="h2">С этим товаром покупают</h2>
+            </div>
+            <div class="tab tab--devider js-card-tab-related">
+              <div class="tab__titles_wrap">
+                <ul class="tab__titles">
+                  <li class="tab__title js-related-tab">
+                    <a class="tab__link" href="#related-tabs-1">
+                      <span class="tab__icon_wrap">
+                        <svg class="icon icon-cloth tab__icon">
+                          <use xlink:href="img/sprite.svg#cloth"></use>
+                        </svg>
+                      </span>
+                      <span class="tab__text">Ткани</span>
+                    </a>
+                  </li>
+                  <li class="tab__title js-related-tab">
+                    <a class="tab__link" href="#related-tabs-2">
+                      <span class="tab__icon_wrap">
+                        <img class="tab__icon" src="img/general/thread.svg" alt="Нитки">
+                      </span>
+                      <span class="tab__text">Нитки</span>
+                    </a>
+                  </li>
+                  <li class="tab__title js-related-tab">
+                    <a class="tab__link" href="#related-tabs-3">
+                      <span class="tab__icon_wrap">
+                        <svg class="icon icon-button tab__icon">
+                          <use xlink:href="img/sprite.svg#button"></use>
+                        </svg>
+                      </span>
+                      <span class="tab__text">Пуговицы <br>и кнопки</span>
+                    </a>
+                  </li>
+                  <li class="tab__title js-related-tab">
+                    <a class="tab__link" href="#related-tabs-4">
+                      <span class="tab__icon_wrap">
+                        <svg class="icon icon-zipper tab__icon">
+                          <use xlink:href="img/sprite.svg#zipper"></use>
+                        </svg>
+                      </span>
+                      <span class="tab__text">Молнии</span>
+                    </a>
+                  </li>
+                  <li class="tab__title js-related-tab">
+                    <a class="tab__link" href="#related-tabs-5">
+                      <span class="tab__icon_wrap">
+                        <img class="tab__icon" src="img/general/elastic.svg" alt="Резинки">
+                      </span>
+                      <span class="tab__text">Резинки</span>
+                    </a>
+                  </li>
+                  <li class="tab__title js-related-tab">
+                    <a class="tab__link" href="#related-tabs-6">
+                      <span class="tab__icon_wrap">
+                        <svg class="icon icon-tapes tab__icon">
+                          <use xlink:href="img/sprite.svg#tapes"></use>
+                        </svg>
+                      </span>
+                      <span class="tab__text">Ленты <br> отделочные</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
               <div class="tab__contentes">
                 <div id="related-tabs-1">
                   <div class="bz-slider bz-slider--related">
-                    <div class="bz-slider__slides js-bz-slider--related">
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="http://via.placeholder.com/150x150" alt="Атлас дюпон «izumrud»">
+                    <div class="swiper-container js-bz-slider">
+                      <div class="swiper-wrapper bz-slider__slides">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="http://via.placeholder.com/150x150" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="http://via.placeholder.com/150x150" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="http://via.placeholder.com/150x150" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="http://via.placeholder.com/150x150" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-white bz-slider__arrow">
+                      <svg class="icon icon-angle ">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
+                    </div>
+                    <div class="swiper-button-prev swiper-button-white bz-slider__arrow">
+                      <svg class="icon icon-angle ">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
                     </div>
                   </div>
                 </div>
                 <div id="related-tabs-2">
                   <div class="bz-slider bz-slider--related">
-                    <div class="bz-slider__slides js-bz-slider--related">
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/1.png" alt="Атлас дюпон «izumrud»">
+                    <div class="swiper-container js-bz-slider">
+                      <div class="swiper-wrapper bz-slider__slides">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/2.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/3.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/4.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/5.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/6.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/7.png" alt="Атлас дюпон «izumrud»">
-                        </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
-                        </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/8.png" alt="Атлас дюпон «izumrud»">
-                        </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
-                        </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/9.png" alt="Атлас дюпон «izumrud»">
-                        </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
-                        </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/10.png" alt="Атлас дюпон «izumrud»">
-                        </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
-                        </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/11.png" alt="Атлас дюпон «izumrud»">
-                        </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
-                        </div>
-                      </a>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-white bz-slider__arrow">
+                      <svg class="icon icon-angle ">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
+                    </div>
+                    <div class="swiper-button-prev swiper-button-white bz-slider__arrow">
+                      <svg class="icon icon-angle ">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
                     </div>
                   </div>
                 </div>
                 <div id="related-tabs-3">
                   <div class="bz-slider bz-slider--related">
-                    <div class="bz-slider__slides js-bz-slider--related">
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/1.png" alt="Атлас дюпон «izumrud»">
+                    <div class="swiper-container js-bz-slider">
+                      <div class="swiper-wrapper bz-slider__slides">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/2.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/3.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/4.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/5.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/6.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/7.png" alt="Атлас дюпон «izumrud»">
+                      </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-white bz-slider__arrow">
+                      <svg class="icon icon-angle ">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
+                    </div>
+                    <div class="swiper-button-prev swiper-button-white bz-slider__arrow">
+                      <svg class="icon icon-angle ">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div id="related-tabs-4">
+                  <div class="bz-slider bz-slider--related">
+                    <div class="swiper-container js-bz-slider">
+                      <div class="swiper-wrapper bz-slider__slides">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/8.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/9.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/10.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
-                      <a class="related__item" href="#">
-                        <div class="related__img">
-                          <img src="img/products/thread/11.png" alt="Атлас дюпон «izumrud»">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                        <div class="related__desc">
-                          <span class="related__title">Нитки <span>dor tak 40/2</span></span>
-                          <span class="related__price">12,80 руб</span>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
                         </div>
-                      </a>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-white bz-slider__arrow">
+                      <svg class="icon icon-angle ">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
+                    </div>
+                    <div class="swiper-button-prev swiper-button-white bz-slider__arrow">
+                      <svg class="icon icon-angle ">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div id="related-tabs-5">
+                  <div class="bz-slider bz-slider--related">
+                    <div class="swiper-container js-bz-slider">
+                      <div class="swiper-wrapper bz-slider__slides">
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="item-related" href="card.html">
+                            <div class="item-related__img">
+                              <img class="swiper-lazy" data-src="img/products/thread/128x128/1.jpg" src="img/general/loading.gif" alt="thread" itemprop="image">
+                            </div>
+                            <div class="item-related__desc">
+                              <span class="item-related__title"> Нитки <span>dor tak 40/2</span>
+                              </span>
+                              <span class="item-related__price">12,80 руб</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next swiper-button-white bz-slider__arrow">
+                      <svg class="icon icon-angle ">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
+                    </div>
+                    <div class="swiper-button-prev swiper-button-white bz-slider__arrow">
+                      <svg class="icon icon-angle ">
+                        <use xlink:href="img/sprite.svg#angle"></use>
+                      </svg>
                     </div>
                   </div>
                 </div>
@@ -806,44 +1417,328 @@
           </div><!-- end card__related -->
           <!-- begin card__colors -->
           <div class="card__colors">
-            <h2 class="h2 page-title">Другие цвета</h2>
-            <div class="product-item__wrap">
-              <!-- begin product-item--color -->
-              <a href="#" class="product-item product-item--small product-item--color" itemscope itemtype="http://schema.org/Product">
-                <div class="product-item__img">
-                  <img src="img/products/atlas/small/3.png" alt="Черный цвет" itemprop="image">
+            <div class="section-header">
+              <h2 class="h2">Другие цвета</h2>
+            </div>
+            <div class="bz-slider bz-slider--new">
+              <div class="swiper-container js-bz-slider">
+                <div class="swiper-wrapper bz-slider__slides">
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
+                  <div class="swiper-slide">
+                    <!-- begin product-item--small -->
+                    <a class="product-item product-item--small" href="#" itemscope itemtype="http://schema.org/Product">
+                      <div class="product-item__img">
+                        <img class="swiper-lazy" data-src="img/products/BlusenstoffMillefleurs/128x128/3.jpg" src="img/general/loading.gif" alt="Blusenstoff Millefleurs" itemprop="image">
+                      </div>
+                      <div class="product-item__desc">
+                        <h5 class="h5 product-item__title" itemprop="name"> Blusenstoff Millefleurs </h5>
+                        <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="price" content="300.00">
+                          <meta itemprop="priceCurrency" content="RUB"> 300 <i class="rub">Руб/м</i>
+                        </div>
+                      </div>
+                    </a>
+                    <!-- end product-item--small -->
+                  </div>
                 </div>
-                <div class="product-item__desc">
-                  <h5 class="h5 product-item__title" itemprop="name">Черный</h5>
-                </div>
-              </a><!-- end product-item--color -->
-              <!-- begin product-item--color -->
-              <a href="#" class="product-item product-item--small product-item--color" itemscope itemtype="http://schema.org/Product">
-                <div class="product-item__img">
-                  <img src="img/products/atlas/small/3.png" alt="Черный цвет" itemprop="image">
-                </div>
-                <div class="product-item__desc">
-                  <h5 class="h5 product-item__title" itemprop="name">Черный</h5>
-                </div>
-              </a><!-- end product-item--color -->
-              <!-- begin product-item--color -->
-              <a href="#" class="product-item product-item--small product-item--color" itemscope itemtype="http://schema.org/Product">
-                <div class="product-item__img">
-                  <img src="img/products/atlas/small/3.png" alt="Черный цвет" itemprop="image">
-                </div>
-                <div class="product-item__desc">
-                  <h5 class="h5 product-item__title" itemprop="name">Черный</h5>
-                </div>
-              </a><!-- end product-item--color -->
-              <!-- begin product-item--color -->
-              <a href="#" class="product-item product-item--small product-item--color" itemscope itemtype="http://schema.org/Product">
-                <div class="product-item__img">
-                  <img src="img/products/atlas/small/3.png" alt="Черный цвет" itemprop="image">
-                </div>
-                <div class="product-item__desc">
-                  <h5 class="h5 product-item__title" itemprop="name">Черный</h5>
-                </div>
-              </a><!-- end product-item--color -->
+              </div>
+              <div class="swiper-button-next swiper-button-white bz-slider__arrow">
+                <svg class="icon icon-angle ">
+                  <use xlink:href="img/sprite.svg#angle"></use>
+                </svg>
+              </div>
+              <div class="swiper-button-prev swiper-button-white bz-slider__arrow">
+                <svg class="icon icon-angle ">
+                  <use xlink:href="img/sprite.svg#angle"></use>
+                </svg>
+              </div>
             </div>
           </div><!-- end card__colors -->
           <div class="button-box">

@@ -82,6 +82,11 @@
     } //.pagination__icon
 
     &--right {
+        margin-left: auto;
+
+        @include xs-block() {
+            margin: auto;
+        }
 
         .pagination__title {
             text-align: right;

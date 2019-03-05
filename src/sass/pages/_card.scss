@@ -1,43 +1,44 @@
 $card-indent: $gutter * 2;
 
 .card {
-    margin-bottom: $card-indent;
-
-    @include respond-to(md) {
-        margin-bottom: $card-indent/2;
-    }
 
     &__top-line {
-        margin-bottom: $gutter;
-        padding-top: 20px;
+        // margin-bottom: 10px;
+        // margin-bottom: $gutter;
+        // padding-top: 20px;
+        border-bottom: 1px dashed $color-border;
         @include flexCenter;
 
-        @include respond-to(xs) {
+        @include xs-block() {
             margin: $gutter/2 0;
             padding-top: 0;
         }
     } //.card__top-line
 
     &__wrap {
+        margin-bottom: 10px;
         display: flex;
-        margin-bottom: $card-indent * 2;
 
-        @include respond-to(xs) {
+        @include xs-block() {
             flex-wrap: wrap;
             margin-bottom: $card-indent * 1.5;
         }
     } //.card__wrap
 
     &__image {
-        margin-right: $gutter * 3;
-        width: 40%;
+        width: 610px;
+        margin-right: 30px;
 
-        @include respond-to(sm) {
+        @include md-block() {
+            width: 50%;
+        }
+
+        @include sm-block() {
             margin-right: $gutter * 2;
             width: calc(50% - 40px);
         }
 
-        @include respond-to(xs) {
+        @include xs-block() {
             margin-bottom: $card-indent/2;
             margin-right: 0;
             width: 100%;
@@ -84,7 +85,7 @@ $card-indent: $gutter * 2;
         }
 
         &--nav {
-            @include respond-to(xs) {
+            @include xs-block() {
                 display: none;
             }
 
@@ -113,27 +114,34 @@ $card-indent: $gutter * 2;
     } //.card__slider
 
     &__desc {
-        width: 60%;
+        width: 100%;
+        padding-top: 22px;
 
-        @include respond-to(sm) {
+        @include md-block() {
             width: 50%;
         }
 
-        @include respond-to(xs) {
+        @include sm-block() {
+            width: 50%;
+        }
+
+        @include xs-block() {
             width: 100%;
         }
     } //.card__desc
 
     &__title {
         display: block;
-        font-size: 30px;
-        margin: $gutter * 1.5 0;
+        margin: 25px 0;
+        font-size: 24px;
+        font-family: $f2;
+        font-weight: 400;
 
-        @include respond-to(sm) {
+        @include sm-block() {
             font-size: 28px;
         }
 
-        @include respond-to(xs) {
+        @include xs-block() {
             font-size: 23px;
             margin: $gutter/2 0;
             text-align: left;
@@ -141,9 +149,9 @@ $card-indent: $gutter * 2;
     } //.card__title
 
     &__item-select {
-        margin: $gutter * 1.5 0;
+        margin-bottom: 40px;
 
-        @include respond-to(xs) {
+        @include xs-block() {
             margin: 0 0 $gutter * 1.5;
             max-width: 100%;
         }
@@ -152,8 +160,8 @@ $card-indent: $gutter * 2;
     &__price {
         font-family: $f2-bold;
         font-size: 23px;
-        margin-bottom: $gutter * 1.5;
-        @include respond-to(xs) {
+        margin-bottom: 20px;
+        @include xs-block() {
             margin-bottom: $gutter/1.5;
         }
 
@@ -181,7 +189,7 @@ $card-indent: $gutter * 2;
             margin-left: auto;
             padding-left: 15px;
 
-            @include respond-to(xs) {
+            @include xs-block() {
                 display: none;
             }
 
@@ -218,7 +226,7 @@ $card-indent: $gutter * 2;
                 display: inline-block;
                 margin: 15px auto;
 
-                @include respond-to(xs) {
+                @include xs-block() {
                     margin: $card-indent/2 auto 0;
                 }
 
@@ -243,6 +251,10 @@ $card-indent: $gutter * 2;
             padding-left: 20px;
             padding-right: 60px;
             @include btnBig;
+
+            @include xs-block() {
+                padding-right: 25px;
+            }
 
             span {
                 background-color: $gray--darken;
@@ -322,13 +334,18 @@ $card-indent: $gutter * 2;
         } //.card__btn--cart
 
         &--fav {
-            border: 1px solid $color-border--light;
-            border-radius: 50%;
-            height: 45px;
-            width: 45px;
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            z-index: z(fixed);
 
             &::before {
-                font-size: 21px;
+                font-size: 41px;
+            }
+
+            &::after {
+                color: #fff;
+                font-size: 39px;
             }
         } //.card__btn--fav
     } //.card__btn
@@ -356,38 +373,15 @@ $card-indent: $gutter * 2;
         }
     } //.card__back
 
-    .button-box {
-        flex-wrap: wrap;
-        @include flexCenter;
-        margin-bottom: $gutter * 1.5;
-
-        .button--yellow {
-            @include respond-to(xs) {
-                width: 85%;
-            }
-            @include respond-to(i7) {
-                width: 83%;
-            }
-            @include respond-to(i5) {
-                width: 80%;
-            }
-        }
-
-        div {
-            height: 45px;
-            margin-left: 30px;
-            width: 45px;
-
-            @include respond-to(xs) {
-                margin-left: 15px;
-            }
-        }
-    }
-
     &__order-info {
-        font-size: 13px;
-        margin-top: 5px;
         width: 100%;
+        margin-top: 5px;
+        font-size: 13px;
+        text-align: left;
+
+        @include xs-block() {
+            text-align: center;
+        }
 
         span {
             font-family: $f2-bold;
@@ -396,7 +390,7 @@ $card-indent: $gutter * 2;
 
     &__info {
         max-width: 375px;
-        @include respond-to(xs) {
+        @include xs-block() {
             max-width: 100%;
         }
 
@@ -408,97 +402,83 @@ $card-indent: $gutter * 2;
         }
     } //.card__info
 
-    &__related,
-    &__colors {
-        margin-bottom: $card-indent;
-
-        @include respond-to(xs) {
-            margin-bottom: $card-indent/1.5;
-        }
-    }
-
     &__related {
 
         .tab {
+            margin: 0 148px;
+
+            @include md-block() {
+                margin: 0 45px;
+            }
+
+            @include xs-block() {
+                margin: 0;
+            }
 
             &__titles {
-                overflow-x: auto;
-                padding-bottom: 1px;
-            }
+                padding: 0 15px 1px;
+
+                @include md-block() {
+                    padding: 0 10px 1px;
+                }
+
+                @include xs-block() {
+                    width: 100%;
+                    padding-bottom: 30px;
+                    margin-bottom: -30px;
+                    overflow-x: auto;
+
+                    &_wrap {
+                        border-bottom: 1px solid $color-border--lighten;
+                        overflow: hidden;
+                    }
+                }
+            } //.card__related .tab__titles
 
             &__title {
                 padding-bottom: 15px;
-
-                &:hover {
-
-                    .tab__text {
-                        color: $color-accent;
-                    }
-                }
-
-                &.ui-tabs-active {
-
-                    .tab__text {
-                        color: $color-accent;
-                    }
-                }
-            }
+            } //.card__related .tab__title
 
             &__contentes {
-                padding: 35px;
-            }
+                padding: 35px 0;
+            } //.card__related .tab__contentes
 
             &__link {
                 align-items: center;
                 display: inline-flex;
                 flex-direction: column;
                 justify-content: center;
-            }
-        }
-
-        .bz-slider {
-
-            &__arrow {
-                height: 27px;
-                line-height: 1;
-                top: 50px;
-
-                @include respond-to(md) {
-                    top: 58px;
-                }
-
-                @include respond-to(sm) {
-                    top: 47px;
-                }
-
-                @include respond-to(xs) {
-                    top: 36px;
-                }
-
-                @include respond-to(i7) {
-                    top: 51px;
-                }
-
-                @include respond-to(i5) {
-                    top: 37px;
-                }
-
-                &--prev {
-                    left: -30px;
-                }
-
-                &--next {
-                    right: -30px;
-                }
-            }
-        }
+            } //.card__related .tab__link
+        } //.card__related .tab
     } //.card__related
 
     &__colors {
-        @include respond-to(xs) {
+        @include xs-block() {
             margin-bottom: 0;
         }
     } //.card__colors
+
+    .button-box {
+        margin-bottom: 35px;
+
+        .button--yellow {
+            @include xs-block() {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        div {
+            height: 45px;
+            margin-left: 30px;
+            width: 45px;
+
+            @include xs-block() {
+                margin-left: 15px;
+            }
+        }
+    }
 
     .accordeon {
 
@@ -524,9 +504,21 @@ $card-indent: $gutter * 2;
             }
         }
     }
+
+    .bz-slider {
+
+        &--colors {
+            margin-top: 30px;
+            margin-left: 180px;
+
+            @include md-block() {
+                margin-left: 35px;
+            }
+        } //.card .bz-slider--colors
+    } //.card .bz-slider
 } //.card
 
-.related {
+.item-related {
 
     &__img {
         margin-bottom: 10px;
@@ -550,7 +542,7 @@ $card-indent: $gutter * 2;
         font-size: 12px;
         text-align: center;
     } //.related__price
-} //.related
+} //.item-related
 
 .item-select {
     border: 1px solid $color-border;
@@ -939,11 +931,11 @@ $card-indent: $gutter * 2;
         width: 215px;
         @include text-overflow;
 
-        @include respond-to(md) {
+        @include md-block() {
             min-width: 250px;
         }
 
-        @include respond-to(sm) {
+        @include sm-block() {
             min-width: 175px;
         }
 

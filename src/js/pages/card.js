@@ -1,10 +1,10 @@
-App.card = {
+App.Card = {
     init() {
         this.tabs();
         this.selectItem();
     },
     tabs() {
-        // $('.js-card-tab-related, .js-card-tab-related--modal').tabs();
+        $('.js-card-tab-related, .js-card-tab-related--modal').tabs();
 
         $(document).on('click', '.js-related-tab', function() {
             $(this)
@@ -108,7 +108,7 @@ class ProductSelect {
     constructor(o) {
         this.element = o.selector;
         this.active = false;
-        this.overlay = o.overlay || '.js-overlay';
+        this.overlay = '.js-overlay';
     }
     init() {
         this.events();
@@ -159,7 +159,6 @@ class ProductSelect {
         $document.on('click', '.overlay--transparent', function() {
             mainScope.toggle(mainScope, $(this));
             $('.js-overlay').removeClass('overlay--transparent');
-            mainScope.active = false;
         });
     }
     toggle(mainScope, _this) {

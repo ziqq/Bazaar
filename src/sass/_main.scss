@@ -26,6 +26,22 @@
     }
 } //.bz-section
 
+.bz-link {
+    display: inline-block;
+    overflow: hidden;
+
+    &:hover {
+
+        img {
+            @include scale(1.03);
+        }
+    }
+
+    img {
+        @include tr;
+    }
+} //.bz-link
+
 .section-header {
     display: block;
     font-size: 14px;

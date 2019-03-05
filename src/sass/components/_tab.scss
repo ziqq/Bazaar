@@ -9,20 +9,28 @@
         padding: 5px 0;
         text-transform: uppercase;
         font-size: 14px;
-        border-bottom: 1px solid transparent;
-        transition: border 0.2s linear;
+        border-bottom: 2px solid transparent;
+        // transition: border 0.2s linear;
         cursor: pointer;
         outline: none;
         position: relative;
         top: 1px;
 
         &:hover {
-            border-bottom: 1px solid rgba($color-accent, 0.4);
+            border-bottom: 2px solid rgba($color-accent, 0.4);
         }
 
         &.is-active,
         &.ui-tabs-active {
-            border-bottom: 1px solid $color-accent;
+            border-bottom: 2px solid $color-accent;
+
+            .tab {
+
+                &__text {
+                    color: $color-accent;
+                    font-family: $f-bold;
+                }
+            }
         }
 
         & + & {
@@ -63,4 +71,58 @@
         font-size: 12px;
         text-align: center;
     } //.tab__text
+
+    &--devider {
+
+        .tab {
+
+            &__titles {
+            }
+
+            &__text {
+                font-size: 11px;
+                line-height: 1.3;
+            }
+
+            &__title {
+                min-width: 70px;
+                @include flexColumn;
+
+                & + .tab__title {
+                    margin-left: 70px;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 60px;
+                        height: 1px;
+                        background-color: $color-bg--dark;
+                        position: absolute;
+                        top: 31.5px;
+                        left: -67px;
+                    }
+                }
+
+                &.is-active,
+                &.ui-tabs-active {
+
+                    .tab {
+
+                        &__icon {
+                            fill: #fff;
+
+                            &_wrap {
+                                border-color: $color-accent;
+                                background-color: $color-accent;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    border-bottom: 0;
+                }
+            }
+        }
+    } //.tab--devider
 } //.tab

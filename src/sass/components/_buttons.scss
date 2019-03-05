@@ -33,7 +33,8 @@
             background-color: $color;
             color: #fff;
 
-            &:hover,:focus {
+            &:hover,
+            :focus {
                 background-color: lighten($color, 8%);
                 color: #fff;
             }
@@ -169,7 +170,7 @@
 
     &--column {
         @include flexColumn;
-        align-items: center;
+        align-items: flex-start;
 
         .button-animate {
             margin-bottom: 5px;

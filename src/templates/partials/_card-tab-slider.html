@@ -1,0 +1,33 @@
+<div class="bz-slider bz-slider--related">
+	<div class="swiper-container js-bz-slider">
+		<div class="swiper-wrapper bz-slider__slides">
+			{% for i in range(0, 12) %}
+			<div class="swiper-slide">
+				<a class="item-related" href="card.html">
+					<div class="item-related__img">
+						<img
+							class="swiper-lazy"
+							data-src="img/products/thread/128x128/1.jpg"
+							src="img/general/loading.gif"
+							alt="thread"
+							itemprop="image"
+						>
+					</div>
+					<div class="item-related__desc">
+						<span class="item-related__title">
+							Нитки <span>dor tak 40/2</span>
+						</span>
+						<span class="item-related__price">12,80 руб</span>
+					</div>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="swiper-button-next swiper-button-white bz-slider__arrow">
+		{{ mixin.icon('angle') }}
+	</div>
+	<div class="swiper-button-prev swiper-button-white bz-slider__arrow">
+		{{ mixin.icon('angle') }}
+	</div>
+</div>

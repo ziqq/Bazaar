@@ -1,5 +1,11 @@
 ---
 title: Косая бейка "серый нейтральный"
+
+tabRelated:
+ - title: 'Ткани'
+   icon: 'cloth'
+ - title: 'Нитки'
+   icon: 'thread'
 ---
 
 {% extends "layouts/_layout.html" %}
@@ -8,6 +14,9 @@ title: Косая бейка "серый нейтральный"
 
 <!-- begin main card -->
 <main class="main card">
+
+	{% include "partials/_page-banner.html" %}
+
 	<div class="container">
 
 		<!-- begin card__top-line -->
@@ -19,116 +28,69 @@ title: Косая бейка "серый нейтральный"
 			<a class="card__back" href="catalog.html">Атлас</a>
 		</div><!-- end card__top-line -->
 
+		<h1 class="h1 card__title" itemprop="headline">{{ title }}</h1>
+
 		{% include "partials/_card-product.html" %}
 
 		<!-- begin card__related -->
 		<div class="card__related related">
+			<div class="section-header">
+				<h2 class="h2">С этим товаром покупают</h2>
+			</div>
 
-			<h2 class="h2 page-title">Сопутствующие товары</h2>
-
-			<div class="tab js-card-tab-related">
-				<ul class="tab__titles">
-					<li class="tab__title js-related-tab">
-						<a class="tab__link" href="#related-tabs-1">
-							<span class="tab__icon_wrap">
-								{{ mixin.icon('cloth', 'tab__icon') }}
-							</span>
-							<span class="tab__text">Ткани</span>
-						</a>
-					</li>
-					<li class="tab__title js-related-tab">
-						<a class="tab__link" href="#related-tabs-2">
-							<span class="tab__icon_wrap">
-								<img class="tab__icon" src="img/general/thread.svg" alt="Нитки">
-							</span>
-							<span class="tab__text">Нитки</span>
-						</a>
-					</li>
-					<li class="tab__title js-related-tab">
-						<a class="tab__link" href="#related-tabs-3">
-							<span class="tab__icon_wrap">{{mixin.icon('button', 'tab__icon')}}</span>
-							<span class="tab__text">Пуговицы <br>и кнопки</span>
-						</a>
-					</li>
-					<li class="tab__title js-related-tab">
-						<a class="tab__link" href="#related-tabs-4">
-							<span class="tab__icon_wrap">{{mixin.icon('zipper', 'tab__icon')}}</span>
-							<span class="tab__text">Молнии</span>
-						</a>
-					</li>
-					<li class="tab__title js-related-tab">
-						<a class="tab__link" href="#related-tabs-5">
-							<span class="tab__icon_wrap">
-								<img class="tab__icon" src="img/general/elastic.svg" alt="Резинки">
-							</span>
-							<span class="tab__text">Резинки</span>
-						</a>
-					</li>
-					<li class="tab__title js-related-tab">
-						<a class="tab__link" href="#related-tabs-6">
-							<span class="tab__icon_wrap">{{mixin.icon('tapes', 'tab__icon')}}</span>
-							<span class="tab__text">Ленты <br> отделочные</span>
-						</a>
-					</li>
-				</ul>
+			<div class="tab tab--devider js-card-tab-related">
+				<div class="tab__titles_wrap">
+					<ul class="tab__titles">
+						<li class="tab__title js-related-tab">
+							<a class="tab__link" href="#related-tabs-1">
+								<span class="tab__icon_wrap">
+									{{ mixin.icon('cloth', 'tab__icon') }}
+								</span>
+								<span class="tab__text">Ткани</span>
+							</a>
+						</li>
+						<li class="tab__title js-related-tab">
+							<a class="tab__link" href="#related-tabs-2">
+								<span class="tab__icon_wrap">
+									<img class="tab__icon" src="img/general/thread.svg" alt="Нитки">
+								</span>
+								<span class="tab__text">Нитки</span>
+							</a>
+						</li>
+						<li class="tab__title js-related-tab">
+							<a class="tab__link" href="#related-tabs-3">
+								<span class="tab__icon_wrap">{{mixin.icon('button', 'tab__icon')}}</span>
+								<span class="tab__text">Пуговицы <br>и кнопки</span>
+							</a>
+						</li>
+						<li class="tab__title js-related-tab">
+							<a class="tab__link" href="#related-tabs-4">
+								<span class="tab__icon_wrap">{{mixin.icon('zipper', 'tab__icon')}}</span>
+								<span class="tab__text">Молнии</span>
+							</a>
+						</li>
+						<li class="tab__title js-related-tab">
+							<a class="tab__link" href="#related-tabs-5">
+								<span class="tab__icon_wrap">
+									<img class="tab__icon" src="img/general/elastic.svg" alt="Резинки">
+								</span>
+								<span class="tab__text">Резинки</span>
+							</a>
+						</li>
+						<li class="tab__title js-related-tab">
+							<a class="tab__link" href="#related-tabs-6">
+								<span class="tab__icon_wrap">{{mixin.icon('tapes', 'tab__icon')}}</span>
+								<span class="tab__text">Ленты <br> отделочные</span>
+							</a>
+						</li>
+					</ul>
+				</div>
 				<div class="tab__contentes">
-					<div id="related-tabs-1">
-
-						<div class="bz-slider bz-slider--related">
-							<div class="bz-slider__slides js-bz-slider--related">
-								{% for i in range(0, 5) %}
-								<a class="related__item" href="#">
-									<div class="related__img">
-										<img src="http://via.placeholder.com/150x150" alt="Атлас дюпон «izumrud»">
-									</div>
-									<div class="related__desc">
-										<span class="related__title">Нитки <span>dor tak 40/2</span></span>
-										<span class="related__price">12,80 руб</span>
-									</div>
-								</a>
-								{% endfor %}
-							</div>
-						</div>
-
+					{% for i in range(1, 6) %}
+					<div id="related-tabs-{{ i }}">
+						{% include "partials/_card-tab-slider.html" %}
 					</div>
-					<div id="related-tabs-2">
-
-						<div class="bz-slider bz-slider--related">
-							<div class="bz-slider__slides js-bz-slider--related">
-								{% for i in range(0, 11) %}
-								<a class="related__item" href="#">
-									<div class="related__img">
-										<img src="img/products/thread/{{i+1}}.png" alt="Атлас дюпон «izumrud»">
-									</div>
-									<div class="related__desc">
-										<span class="related__title">Нитки <span>dor tak 40/2</span></span>
-										<span class="related__price">12,80 руб</span>
-									</div>
-								</a>
-								{% endfor %}
-							</div>
-						</div>
-
-					</div>
-					<div id="related-tabs-3">
-
-						<div class="bz-slider bz-slider--related">
-							<div class="bz-slider__slides js-bz-slider--related">
-								{% for i in range(0, 11) %}
-								<a class="related__item" href="#">
-									<div class="related__img">
-										<img src="img/products/thread/{{i+1}}.png" alt="Атлас дюпон «izumrud»">
-									</div>
-									<div class="related__desc">
-										<span class="related__title">Нитки <span>dor tak 40/2</span></span>
-										<span class="related__price">12,80 руб</span>
-									</div>
-								</a>
-								{% endfor %}
-							</div>
-						</div>
-
-					</div>
+					{% endfor %}
 				</div>
 			</div>
 
@@ -136,15 +98,11 @@ title: Косая бейка "серый нейтральный"
 
 		<!-- begin card__colors -->
 		<div class="card__colors">
-
-			<h2 class="h2 page-title">Другие цвета</h2>
-
-			<div class="product-item__wrap">
-				{% for i in range(0, 4) %}
-					{% include "partials/product/_product-color.html" %}
-				{% endfor %}
+			<div class="section-header">
+				<h2 class="h2">Другие цвета</h2>
 			</div>
 
+			{% include "partials/product/_product-slider.html" %}
 		</div><!-- end card__colors -->
 
 		<div class="button-box">

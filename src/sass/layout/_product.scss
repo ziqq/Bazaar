@@ -228,6 +228,14 @@
     &--small {
         width: 180px;
 
+        &:hover {
+            box-shadow: none;
+        }
+
+        &::after {
+            display: none !important;
+        }
+
         @include min-screen(481) {
 
             &:hover,

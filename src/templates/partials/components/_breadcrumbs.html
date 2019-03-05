@@ -1,23 +1,26 @@
 <!-- begin breadcrumbs -->
-<div class="breadcrumbs" itemtype="http://www.data-vocabulary.org/Breadcrumb">
-	<ul class="breadcrumbs__list">
-		<li class="breadcrumbs__item">
-			<a href="#" class="breadcrumbs__link" itemprop="url">
-				<span class="breadcrumbs__title" itemprop="title">Главная</span>
+<div class="breadcrumbs">
+	<ul class="breadcrumbs__list"
+		itemscope
+		itemtype="http://schema.org/BreadcrumbList"
+	>
+		<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a class="breadcrumbs__link" href="/" itemprop="item" rel="home">
+				<span class="breadcrumbs__title" itemprop="name">Главная</span>
+			</a>
+		</li>
+		<li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+			<a class="breadcrumbs__link" href="catalog.html" itemprop="item">
+				<span class="breadcrumbs__title" itemprop="name">Ткани</span>
 			</a>
 		</li>
 		<li class="breadcrumbs__item">
-			<a href="#" class="breadcrumbs__link" itemprop="url">
-				<span class="breadcrumbs__title" itemprop="title">Ткани</span>
+			<a class="breadcrumbs__link" href="catalog.html" itemprop="item">
+				<span class="breadcrumbs__title" itemprop="name">Атлас</span>
 			</a>
 		</li>
 		<li class="breadcrumbs__item">
-			<a href="#" class="breadcrumbs__link" itemprop="url">
-				<span class="breadcrumbs__title" itemprop="title">Атлас</span>
-			</a>
-		</li>
-		<li class="breadcrumbs__item">
-			<span class="breadcrumbs__title" itemprop="title">Дюпон</span>
+			<span class="breadcrumbs__title" itemprop="name">Дюпон</span>
 		</li>
 	</ul>
 </div>

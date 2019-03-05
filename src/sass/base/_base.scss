@@ -129,9 +129,9 @@ select {
     @include coverdiv;
     z-index: z(overlay);
 
-    &.is-active {
+    &.is-visible {
         display: block;
-    } //.overlay.is-active
+    } //.overlay.is-visible
 
     &--transparent {
         display: block;
