@@ -14,7 +14,6 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
 .nav-main {
     background-color: #fff;
     border-bottom: 1px solid $color-border--light;
-    position: relative;
     transition: $trsMenu;
 
     @include sm-block() {
@@ -73,6 +72,7 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
         height: 95px;
         @include container;
         transition: height 0.5s linear;
+        position: relative;
         @include flex;
 
         @include sm-block() {

@@ -29,6 +29,8 @@
     &__bottom {
         background-color: $color-bg--lighten;
         height: 80px;
+        position: relative;
+        z-index: z(fixed);
         @include tr;
 
         @include sm-block() {

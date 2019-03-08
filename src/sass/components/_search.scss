@@ -60,28 +60,32 @@
         width: 23px;
         @include tr;
     } //.search__icon
+
+    &__hint {
+        background-color: #fff;
+        border: 1px solid $color-border--light;
+        border-radius: 0 0 $border-radius $border-radius;
+        border-top-color: transparent;
+        left: 0;
+        max-height: 250px;
+        overflow-y: auto;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: z(dropdown);
+        @include scroll;
+
+        @include sm-block() {
+            border-left-color: transparent;
+            border-right-color: transparent;
+            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+            top: 100%;
+        }
+    }
 } //.search
 
 .search-hint {
-    background-color: #fff;
-    border: 1px solid $color-border--light;
-    border-radius: 0 0 $border-radius $border-radius;
-    border-top-color: transparent;
-    left: 0;
-    max-height: 250px;
-    overflow-y: auto;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    z-index: z(dropdown);
-    @include bz-scroll;
-
-    @include sm-block() {
-        border-left-color: transparent;
-        border-right-color: transparent;
-        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-        top: 100%;
-    }
+    // @include bz-scroll;
 
     &__item {
 
