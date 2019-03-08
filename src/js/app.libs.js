@@ -6,6 +6,7 @@
 //=include ../../node_modules/select2/dist/js/select2.full.js
 //=include ../../node_modules/nouislider/distribute/nouislider.min.js
 //=include ../../node_modules/swiper/dist/js/swiper.min.js
+//=include ../../node_modules/simplebar/dist/simplebar.min.js
 
 //=include _lib/lazyloadImg.js
 //=include _lib/bootstrap-util.js

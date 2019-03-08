@@ -22,15 +22,24 @@ class Tabs {
 
             $content.not(':first').hide();
 
-            $title.on('click', function() {
-                let tabId = $(this).attr('data-tab');
+            if (!$(this).hasClass('tab--transform')) {
+                if ($(window).width() >= 768) {
+                    $title.on('click', function() {
+                        let tabId = $(this).attr('data-tab');
 
-                $title.removeClass('is-active');
-                $(this).addClass('is-active');
+                        $title.removeClass('is-active');
+                        $(this).addClass('is-active');
 
-                $content.hide();
-                $content.filter('[data-tab-content=' + tabId + ']').show();
-            });
+                        $content.hide();
+                        $content
+                            .filter('[data-tab-content=' + tabId + ']')
+                            .show();
+                    });
+                }
+            }
         });
+    }
+    destroy() {
+        $(this.element).each(function() {});
     }
 }

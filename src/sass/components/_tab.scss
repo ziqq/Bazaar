@@ -50,6 +50,17 @@
             font-size: 15px;
             line-height: 1.6;
         }
+
+        &--scroll {
+            max-height: 265px;
+            position: relative;
+            @include blurBg;
+
+            @include sm-block() {
+                height: 100%;
+                @include scroll;
+            }
+        } //.tab__content--scroll
     } //.tab__content
 
     &__icon {
@@ -77,31 +88,26 @@
         .tab {
 
             &__titles {
-            }
-
-            &__text {
-                font-size: 11px;
-                line-height: 1.3;
-            }
+            } //.tab--devider .tab__titles
 
             &__title {
                 min-width: 70px;
                 @include flexColumn;
 
                 & + .tab__title {
-                    margin-left: 70px;
+                    margin-left: 45px;
 
                     &::before {
                         content: '';
                         display: block;
-                        width: 60px;
+                        width: 53px;
                         height: 1px;
-                        background-color: $color-bg--dark;
+                        background-color: #aeaeae;
                         position: absolute;
                         top: 31.5px;
-                        left: -67px;
+                        left: -48px;
                     }
-                }
+                } //.tab--devider .tab__title+.tab__title
 
                 &.is-active,
                 &.ui-tabs-active {
@@ -115,14 +121,42 @@
                                 border-color: $color-accent;
                                 background-color: $color-accent;
                             }
+
+                            // &.icon-thread {
+                            //     @include sprite('thread--hover');
+                            // }
+
+                            // &.icon-elastic {
+                            //     @include sprite('elastic--hover');
+                            // }
+
+                            &--static {
+                                display: none;
+                            }
+
+                            &--hover {
+                                display: block;
+                            }
                         }
                     }
                 }
 
                 &:hover {
                     border-bottom: 0;
+                } //.tab--devider .tab__title:hover
+            } //.tab--devider .tab__title
+
+            &__text {
+                font-size: 11px;
+                line-height: 1.3;
+            } //.tab--devider .tab__text
+
+            &__icon {
+
+                &--hover {
+                    display: none;
                 }
             }
-        }
+        } //.tab--devider
     } //.tab--devider
 } //.tab

@@ -57,13 +57,13 @@
         }
 
         &.is-active {
-            border-color: $color-bg--dark;
+            border-color: $color-accent;
 
             .pagination__link {
-                background-color: $color-bg--dark;
+                background-color: $color-accent;
                 color: #fff;
             }
-        }
+        } //.pagination__item .is-active
     } //.pagination__item
 
     &__link {

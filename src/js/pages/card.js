@@ -21,6 +21,9 @@ App.Card = {
             $('.js-bz-slider--card-modal').resize();
             $('.js-bz-slider--related-modal').resize();
 
+            App.Conponents.Slider.card();
+            App.Conponents.Slider.new();
+
             // if ($(window).width() <= 480) {
             //     tabTransform();
             // }

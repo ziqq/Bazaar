@@ -20,8 +20,8 @@ $card-indent: $gutter * 2;
         display: flex;
 
         @include xs-block() {
+            margin-bottom: 40px;
             flex-wrap: wrap;
-            margin-bottom: $card-indent * 1.5;
         }
     } //.card__wrap
 
@@ -389,15 +389,48 @@ $card-indent: $gutter * 2;
     } //.card__order-info
 
     &__info {
-        max-width: 375px;
-        @include xs-block() {
-            max-width: 100%;
-        }
+        // max-width: 375px;
+
+        // @include xs-block() {
+        //     max-width: 100%;
+        // }
 
         .tab {
 
             &__titles {
                 display: flex;
+            } //.card__info .tab__titles
+
+            &__title {
+                padding: 8px 10px;
+                font-size: 13px;
+                border-bottom: 4px solid transparent;
+
+                & + .tab__title {
+                    margin-left: 20px;
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 1px;
+                        height: 90%;
+                        background-color: $gray--light;
+                        @include centre('y');
+                        left: -10px;
+                    }
+                }
+
+                &.is-active {
+                    font-family: $f-bold;
+                    border-bottom: 4px solid $color-accent;
+                }
+            } //.card__info .tab__title
+        } //.card__info .tab
+
+        .item-select {
+
+            &--free {
+                margin: 0 -10px;
             }
         }
     } //.card__info
@@ -419,12 +452,16 @@ $card-indent: $gutter * 2;
                 padding: 0 15px 1px;
 
                 @include md-block() {
-                    padding: 0 10px 1px;
+                    padding: 0 22px 1px;
+                }
+
+                @include sm-block() {
+                    padding: 0 13px 1px;
                 }
 
                 @include xs-block() {
                     width: 100%;
-                    padding-bottom: 30px;
+                    padding: 0 10px 30px;
                     margin-bottom: -30px;
                     overflow-x: auto;
 
@@ -483,18 +520,18 @@ $card-indent: $gutter * 2;
     .accordeon {
 
         &__item {
-            border-bottom: 1px solid $color-border;
+            border-bottom: 1px solid $color-border--light;
 
             &:first-child {
-                border-top: 1px solid $color-border;
-            }
-        }
+                border-top: 1px solid $color-border--light;
+            } //.card .accordeon__item:first-child
+        } //.card .accordeon__item
 
         &__title {
             font-family: $f;
             padding: 12px 0 12px 10px;
             text-transform: uppercase;
-        }
+        } //.card .accordeon__title
 
         &__content {
             padding: 0 10px 10px;
@@ -502,16 +539,18 @@ $card-indent: $gutter * 2;
             p {
                 font-size: 15px;
             }
-        }
-    }
+        } //.card .accordeon__content
+    } //.card .accordeon
 
     .bz-slider {
 
         &--colors {
             margin-top: 30px;
-            margin-left: 180px;
+            margin-left: 132px;
+            margin-right: 40px;
 
             @include md-block() {
+                margin-top: 20px;
                 margin-left: 35px;
             }
         } //.card .bz-slider--colors
@@ -757,6 +796,7 @@ $card-indent: $gutter * 2;
         border-bottom: 1px solid $color-border--light;
         padding: 0 15px 0 30px;
         position: relative;
+        @include nosel;
         @include flexCenter;
 
         &:last-child {
@@ -911,6 +951,24 @@ $card-indent: $gutter * 2;
             }
         }
     } //.item-select--count
+
+    &--free {
+
+        .item-select {
+
+            &__list {
+                display: block;
+                max-width: 375px;
+                border-color: $color-border--light;
+                position: static;
+            }
+
+            &__item {
+                padding: 8px 10px 8px 2px;
+                pointer-events: none;
+            }
+        }
+    }
 } //.item-select
 
 .bz-table {

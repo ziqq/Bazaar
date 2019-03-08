@@ -5,23 +5,23 @@
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str8 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str9 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str10 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str7 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str2 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str6 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str5 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str4 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str3 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str0 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str14 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str11 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str12 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str13 {stroke:#565656;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
-    .str1 {stroke:#565656;stroke-width:45.7772;stroke-linecap:round;stroke-linejoin:round}
+    .str8 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str9 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str10 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str7 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str2 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str6 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str5 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str4 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str3 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str0 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str14 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str11 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str12 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str13 {stroke:#fff;stroke-width:45.7682;stroke-linecap:round;stroke-linejoin:round}
+    .str1 {stroke:#fff;stroke-width:45.7772;stroke-linecap:round;stroke-linejoin:round}
     .fil0 {fill:none}
-    .fil1 {fill:#565656;fill-rule:nonzero}
+    .fil1 {fill:#fff;fill-rule:nonzero}
    ]]>
   </style>
  </defs>

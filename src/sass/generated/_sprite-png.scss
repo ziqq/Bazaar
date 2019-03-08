@@ -12,7 +12,7 @@ $icons: map-merge($icons,('flag--ukraine': (X: -84px, Y:0px, W: 24px, H: 24px, T
 	$icon: map-get($icons, $icon);
 	@return map-get($icon, $attr);
 }
-	
+
 
 @mixin sprite($iconName){
 	background-image: url(icon-attr($iconName, IMG));
@@ -20,7 +20,7 @@ $icons: map-merge($icons,('flag--ukraine': (X: -84px, Y:0px, W: 24px, H: 24px, T
 	height: icon-attr($iconName, H);
 	background-position: icon-attr($iconName, X) icon-attr($iconName, Y);
 }
-	
+
 @mixin sprite-position($iconName){
 	background-position: icon-attr($iconName, X) icon-attr($iconName, Y);
 }
@@ -33,11 +33,11 @@ $icons: map-merge($icons,('flag--ukraine': (X: -84px, Y:0px, W: 24px, H: 24px, T
 	$x: icon-attr($iconName, X);
 	$y: icon-attr($iconName, Y);
 	background-position: $x/2 $y/2;
-	$tw: icon-attr($iconName, TW);	
+	$tw: icon-attr($iconName, TW);
 	$th: icon-attr($iconName, TH);
 	background-size: $tw/2 $th/2;
 }
-	 	
+
 
 
 @mixin s($i){
@@ -50,46 +50,39 @@ $icons: map-merge($icons,('flag--ukraine': (X: -84px, Y:0px, W: 24px, H: 24px, T
 	@include sprite-retina($i);
 }
 
-//
-//.icon-angel-white--left{
-	//	width: 32px
-//	height: 32px
-//	background-image: url('../img/sprite.png')
-//	background-position: 0px 0px
-//}
-//
-//.icon-angel-white--right{
-	//	width: 32px
-//	height: 32px
-//	background-image: url('../img/sprite.png')
-//	background-position: -42px 0px
-//}
-//
-//.icon-colors{
-	//	width: 16px
-//	height: 16px
-//	background-image: url('../img/sprite.png')
-//	background-position: -84px -34px
-//}
-//
-//.icon-flag--belarus{
-	//	width: 24px
-//	height: 24px
-//	background-image: url('../img/sprite.png')
-//	background-position: 0px -42px
-//}
-//
-//.icon-flag--kaz{
-	//	width: 24px
-//	height: 24px
-//	background-image: url('../img/sprite.png')
-//	background-position: -34px -42px
-//}
-//
-//.icon-flag--ukraine{
-	//	width: 24px
-//	height: 24px
-//	background-image: url('../img/sprite.png')
-//	background-position: -84px 0px
-//}
-//
+.icon-angel-white--left{
+	width: 32px;
+	height: 32px;
+	background-image: url('../img/sprite.png');
+	background-position: 0px 0px;
+}
+.icon-angel-white--right{
+	width: 32px;
+	height: 32px;
+	background-image: url('../img/sprite.png');
+	background-position: -42px 0px;
+}
+.icon-colors{
+	width: 16px;
+	height: 16px;
+	background-image: url('../img/sprite.png');
+	background-position: -84px -34px;
+}
+.icon-flag--belarus{
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/sprite.png');
+	background-position: 0px -42px;
+}
+.icon-flag--kaz{
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/sprite.png');
+	background-position: -34px -42px;
+}
+.icon-flag--ukraine{
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/sprite.png');
+	background-position: -84px 0px;
+}

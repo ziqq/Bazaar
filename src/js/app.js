@@ -46,6 +46,7 @@ const App = {
         });
 
         $window.on('resize', () => {
+            this.scrollBar();
             this.offsetMainBlock();
         });
 
@@ -60,26 +61,13 @@ const App = {
         $main.css('padding-top', $header.outerHeight(true));
     },
     scrollBar() {
-        //GetNiceScroll https://github.com/inuyaksa/jquery.nicescroll
+        //SimpleBar https://github.com/Grsmto/simplebar
 
-        if ($(window).width() > 480) {
+        if ($(window).width() > 768) {
+            console.log('---', 1);
             let $scrollBar = $('.js-scroll');
             if ($scrollBar.length) {
-                $scrollBar.niceScroll({
-                    cursorcolor: '#2c2b2b',
-                    horizrailenabled: false,
-                    // autohidemode: false,
-                    boxzoom: false,
-                    verge: 500,
-                    cursorwidth: '4px',
-                    cursorborder: 'none',
-                    cursorborderradius: '0'
-                });
-                $scrollBar.mouseover(function() {
-                    $(this)
-                        .getNiceScroll()
-                        .resize();
-                });
+                new SimpleBar($scrollBar[0]);
             }
         } else {
             $document.find('.js-scroll').removeClass('js-scroll');
@@ -374,7 +362,7 @@ App.Conponents = {
             this.Select.native();
         });
 
-        if ($window.width() <= 480) {
+        if ($window.width() <= 768) {
             this.tabTransform();
         }
     },
@@ -565,169 +553,154 @@ App.Conponents = {
     },
     Slider: {
         init() {
+            this.gallaryCard();
             this.new();
             this.color();
-            this.card();
+            // this.card();
         },
-        // card() {
-        //     let $sliderCard = $('.js-bz-slider-card');
-        //     console.log('---', 'INIT SLIDEr');
+        gallaryCard() {
+            let $sliderCard = $('.js-bz-slider-card');
+            if ($sliderCard.length) {
+                $sliderCard.each(function() {
+                    let $gallary = $(this).find('.bz-slider__slides--gallery');
+                    let $thumbs = $(this).find('.bz-slider__slides--thumbs');
 
-        //     if ($sliderCard.length) {
-        //         var galleryTop = new Swiper('.js-bz-slider-gallery', {
-        //             thumbs: {
-        //                 swiper: galleryThumbs
-        //             }
-        //         });
-        //         var galleryThumbs = new Swiper('.js-bz-slider-thumbs', {
-        //             direction: 'vertical',
-        //             spaceBetween: 10,
-        //             // loop: true, bug too
-        //             centeredSlides: true,
-        //             slidesPerView: 4,
-        //             touchRatio: 0.2,
-        //             slideToClickedSlide: true
-        //         });
-        //     }
-        // },
-        // related() {
-        //     let $sliderRelated = $('.js-bz-slider--related');
-        //     if ($sliderRelated.length) {
-        //         $sliderRelated.not('.slick-initialized').slick({
-        //             arrows: true,
-        //             infinite: true,
-        //             slidesToShow: 8,
-        //             slidesToScroll: 1,
-        //             speed: 500,
-        //             autoplaySpeed: 5000,
-        //             autoplay: true,
-        //             dots: false,
-        //             responsive: [
-        //                 {
-        //                     breakpoint: 1025,
-        //                     settings: {
-        //                         slidesToShow: 6
-        //                     }
-        //                 },
-        //                 {
-        //                     breakpoint: 769,
-        //                     settings: {
-        //                         slidesToShow: 5
-        //                     }
-        //                 },
-        //                 {
-        //                     breakpoint: 481,
-        //                     settings: {
-        //                         slidesToShow: 3
-        //                     }
-        //                 },
-        //                 {
-        //                     breakpoint: 376,
-        //                     settings: {
-        //                         slidesToShow: 2
-        //                     }
-        //                 }
-        //             ]
-        //         });
-        //     }
-        // },
-        new() {
-            new Swiper('.js-bz-slider', {
-                slidesPerView: 9,
-                slidesPerGroup: 5,
-                spaceBetween: 15,
-                freeMode: true,
-                grabCursor: true,
-                lazy: true,
+                    $gallary.not('.slick-initialized').slick({
+                        lazyLoad: 'ondemand',
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        asNavFor: $thumbs,
+                        responsive: [
+                            {
+                                breakpoint: 1025,
+                                settings: {
+                                    arrows: true
+                                }
+                            }
+                        ]
+                    });
 
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
-                breakpoints: {
-                    1024: {
-                        slidesPerView: 7
-                    },
-                    768: {
-                        slidesPerView: 6
-                    },
-                    480: {
-                        slidesPerView: 3,
-                        slidesPerGroup: 3,
-                        navigation: false
+                    $thumbs.not('.slick-initialized').slick({
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        asNavFor: $gallary,
+                        dots: false,
+                        arrows: true,
+                        // centerMode: true,
+                        focusOnSelect: true,
+                        vertical: true,
+                        infinite: false,
+                        responsive: [
+                            {
+                                breakpoint: 1025,
+                                settings: 'unslick'
+                            }
+                        ]
+                    });
+
+                    if ($(window).width() <= 1024) {
+                        $thumbs.remove();
                     }
-                }
-            });
-        },
-        card() {
-            let galleryThumbs = new Swiper('.js-bz-slider-thumbs', {
-                direction: 'vertical',
-                spaceBetween: 10,
-                centeredSlides: true,
-                slidesPerView: 5,
-                slideToClickedSlide: true,
-                navigation: {
-                    nextEl: '.bz-slider__thumbs .swiper-button-next',
-                    prevEl: '.bz-slider__thumbs .swiper-button-prev'
-                },
-                breakpoints: {
-                    1024: {
-                        navigation: false
-                    }
-                }
-            });
-
-            let galleryTop = new Swiper('.js-bz-slider-gallery', {
-                spaceBetween: 10,
-                lazy: true,
-                thumbs: {
-                    swiper: galleryThumbs
-                },
-                navigation: {
-                    nextEl: '.bz-slider__gallery .swiper-button-next',
-                    prevEl: '.bz-slider__gallery .swiper-button-prev'
-                },
-                breakpoints: {
-                    1024: {
-                        thumbs: false
-                    }
-                }
-            });
-
-            if ($(window).width() > 1024) {
-                galleryTop.params.control = galleryThumbs;
-                galleryThumbs.params.control = galleryTop;
-            } else {
-                // galleryThumbs.destroy(true, true);
-                $('.bz-slider__thumbs').remove();
+                });
             }
         },
-        color() {
-            new Swiper('.js-bz-slider-color', {
-                slidesPerView: 7,
-                slidesPerGroup: 5,
-                spaceBetween: 10,
-                freeMode: true,
-                lazy: true,
+        new() {
+            $('.js-bz-slider').each(function() {
+                let $parent = $(this).parent();
 
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
+                new Swiper(this, {
+                    slidesPerView: 9,
+                    slidesPerGroup: 5,
+                    spaceBetween: 15,
+                    freeMode: true,
+                    grabCursor: true,
+                    lazy: true,
 
-                breakpoints: {
-                    1024: {
-                        slidesPerView: 7
+                    navigation: {
+                        nextEl: $parent.find('.swiper-button-next')[0],
+                        prevEl: $parent.find('.swiper-button-prev')[0]
                     },
-                    768: {
-                        slidesPerView: 6
-                    },
-                    480: {
-                        slidesPerView: 3,
-                        slidesPerGroup: 3,
-                        navigation: false
+
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 7
+                        },
+                        768: {
+                            slidesPerView: 6
+                        },
+                        480: {
+                            slidesPerView: 3,
+                            slidesPerGroup: 3,
+                            navigation: false
+                        }
                     }
-                }
+                });
+            });
+        },
+        // card() {
+        //     let galleryThumbs = new Swiper('.js-bz-slider-thumbs', {
+        //         direction: 'vertical',
+        //         spaceBetween: 10,
+        //         centeredSlides: true,
+        //         slidesPerView: 5,
+        //         slideToClickedSlide: true,
+        //         navigation: {
+        //             nextEl: '.bz-slider__thumbs .swiper-button-next',
+        //             prevEl: '.bz-slider__thumbs .swiper-button-prev'
+        //         },
+        //         breakpoints: {
+        //             1024: {
+        //                 navigation: false
+        //             }
+        //         }
+        //     });
+
+        //     let galleryTop = new Swiper('.js-bz-slider-gallery', {
+        //         spaceBetween: 10,
+        //         lazy: true,
+        //         thumbs: {
+        //             swiper: galleryThumbs
+        //         },
+        //         navigation: {
+        //             nextEl: '.bz-slider__gallery .swiper-button-next',
+        //             prevEl: '.bz-slider__gallery .swiper-button-prev'
+        //         },
+        //         breakpoints: {
+        //             1024: {
+        //                 thumbs: {
+        //                     swiper: false
+        //                 }
+        //             }
+        //         }
+        //     });
+
+        //     if ($(window).width() > 1024) {
+        //         galleryTop.params.control = galleryThumbs;
+        //         galleryThumbs.params.control = galleryTop;
+        //     } else {
+        //         // galleryThumbs.destroy(true, true);
+        //         $('.bz-slider__thumbs').remove();
+        //     }
+        // },
+        color() {
+            let $slider = $('.js-bz-slider-color');
+
+            $slider.each(function() {
+                let $parent = $(this).parent();
+
+                new Swiper(this, {
+                    slidesPerView: 7,
+                    slidesPerGroup: 3,
+                    spaceBetween: 10,
+                    freeMode: true,
+                    lazy: true,
+
+                    navigation: {
+                        nextEl: $parent.find('.swiper-button-next')[0],
+                        prevEl: $parent.find('.swiper-button-prev')[0]
+                    }
+                });
             });
         }
     },
@@ -735,42 +708,37 @@ App.Conponents = {
         new CheckBox({ selector: '.js-checkbox' });
         new Radio({ selector: '.js-radio' });
     },
-    // tabs() {
-    //     let $tab = $(document).find('.js-tabs');
-    //     if ($tab.length) {
-    //         $tab.tabs();
-    //     }
-    // },
     tabs() {
-        if ($(window).width() > 480) {
-            new Tabs({ selector: '.js-tab' });
-            new Tabs({ selector: '.js-tab-modal' });
-        }
+        new Tabs({ selector: '.js-tab' });
     },
     tabTransform() {
         var $tab = $('.js-tab--transform');
+        let $tabTitles = $tab.find('.tab__titles');
+        let $tabTitle = $tab.find('.tab__title');
+        let $tabContent = $tab.find('.tab__content');
 
-        $('.js-tab, .js-tab-modal')
-            .unwrap()
+        $tab.removeClass('js-tab');
+
+        $tabTitles
             .addClass('accordeon accordeon--other js-accordeon')
             .removeClass('tab__titles');
-        $tab.find('.tab__title')
+
+        $tabTitle
             .addClass('accordeon__title')
-            .removeClass('tab__title is-active')
+            .removeClass('tab__title')
+            .removeClass('is-active')
             .wrap('<div class="accordeon__item">');
 
-        $tab.find('[data-tab-content="0"]')
-            .removeAttr('style')
-            .insertAfter('[data-tab="0"]')
-            .parent()
-            .addClass('is-open');
-        $tab.find('[data-tab-content="1"]')
-            .css('display', 'none')
-            .insertAfter('[data-tab="1"]');
+        $tabContent.each(function() {
+            let id = $(this).data('tab-content');
+            $(this)
+                .removeAttr('style')
+                .insertAfter('[data-tab="' + id + '"]')
+                .addClass('accordeon__content')
+                .removeClass('tab__content tab__content--product')
+                .css('display', 'none');
+        });
 
-        $tab.find('.tab__content')
-            .addClass('accordeon__content')
-            .removeClass('tab__content tab__content--product');
         $tab.find('.tab__contentes').remove();
     }
 };
