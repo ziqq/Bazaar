@@ -11,6 +11,10 @@
         position: absolute;
         text-transform: none;
         user-select: none;
+
+        @include xs-block() {
+            display: none !important;
+        }
     }
 
     &::before {

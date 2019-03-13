@@ -47,7 +47,7 @@
     font-size: 14px;
     line-height: 1;
     margin: auto;
-    overflow: hidden;
+    // overflow: hidden;
     text-align: center;
     width: 100%;
 
@@ -55,10 +55,11 @@
         font-family: $f2-bold;
         font-size: 20px;
         font-weight: 600;
-        margin: $gutter * 2 0;
+        padding: 40px 0;
         text-transform: uppercase;
+
         @include respond-to(sm) {
-            margin: $gutter 0;
+            padding: 20px;
         }
     }
 
@@ -315,3 +316,23 @@
         }
     }
 } //.policy
+
+.empty {
+    padding: 50px 0;
+    text-align: center;
+
+    @include xs-block() {
+        padding: 30px 0;
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 28px;
+    } //.empty__title
+
+    .button {
+        max-width: 320px;
+        margin: auto;
+    } //.empty .button
+} //.empty

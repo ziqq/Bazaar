@@ -449,7 +449,7 @@ $card-indent: $gutter * 2;
             }
 
             &__titles {
-                padding: 0 15px 1px;
+                // padding: 0 15px 1px;
 
                 @include md-block() {
                     padding: 0 22px 1px;

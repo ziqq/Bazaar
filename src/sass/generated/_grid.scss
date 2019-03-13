@@ -73,7 +73,7 @@
     }
 }
 
-@for $i from 0 through 30 {
+@for $i from 0 through 50 {
 
     .mb-#{$i} {
         margin-bottom: $i + px;

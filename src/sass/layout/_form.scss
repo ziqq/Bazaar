@@ -17,8 +17,20 @@
     } //.form__input
 
     &__box {
-        margin-bottom: $base-indent;
         @include flexCenter;
+
+        & + .form__box {
+            margin-top: 20px;
+        }
+
+        .input {
+            width: calc(50% - 10px);
+            margin-bottom: 0;
+
+            & + .input {
+                margin-left: 20px;
+            }
+        }
     } //.form__box
 
     &__link {

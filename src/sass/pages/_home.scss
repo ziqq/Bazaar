@@ -19,6 +19,7 @@
 .advantages-item {
     margin-bottom: $base-indent * 2;
     @include flexCenter;
+    justify-content: center;
 
     @include col;
     @include size(4);

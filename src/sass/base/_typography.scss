@@ -96,3 +96,11 @@ h5,.h5, h6,.h6 {
 }
 
 p{margin-bottom: $gutter;}
+
+.text-color {
+    @each $theme, $color in $button-colors {
+        &--#{$theme} {
+            color: $color;
+        }
+    }
+}

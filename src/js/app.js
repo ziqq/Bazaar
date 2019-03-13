@@ -209,6 +209,10 @@ App.Utils = {
         new LazyLoad({
             elements_selector: '.lazy'
         });
+
+        if ($(window).width() <= 480) {
+            this.setFixedBlcok();
+        }
     },
     lazyLoadImage() {},
     transformAccordeon(width) {
@@ -231,6 +235,23 @@ App.Utils = {
                 .removeAttr('style');
             $accordeonTitle.removeClass('accordeon__title');
         }
+    },
+    setFixedBlcok() {
+        let $fixBlock = $('.js-fixed-block');
+        let $relBlock = $('.js-relative-block');
+        let relBlockHeight = $relBlock.outerHeight(true);
+        let relBlockOffsetTop = $relBlock.offset().top;
+        let wHeight = $(window).height();
+
+        $(window).scroll(function() {
+            let scroll = $(this).scrollTop();
+
+            if (scroll + wHeight - relBlockHeight + 120 <= relBlockOffsetTop) {
+                $fixBlock.removeClass('is-hide');
+            } else {
+                $fixBlock.addClass('is-hide');
+            }
+        });
     }
 };
 

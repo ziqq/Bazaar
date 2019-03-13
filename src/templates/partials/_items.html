@@ -17,20 +17,21 @@
 {% endmacro %}
 <!-- item.btn('Купить', 'button--transparent') -->
 
-{% macro checkbox(title, class, checked) %}
-<label class="checkbox {{class}}">
-	<input type="checkbox" {{checked}}>
+{% macro checkbox(title, type, class, checked) %}
+<label class="checkbox {{ class }} {% if checked %}is-checked{% endif %}">
+	<input type="{{ type | escape }}" {% if checked %}checked{% endif %}>
 	<span class="checkbox__box"></span>
-	<span class="checkbox__title">{{title}}</span>
+	{% if title %}<span class="checkbox__title">{{ title }}</span>{% endif %}
 </label>
 {% endmacro %}
 <!-- item.checkbox('мужской', 'checkbox--radio, profile-editor__checkbox') -->
 
-{% macro radio(title, name, class) %}
+{% macro radio(title, name, subtitle, class, subtitleColor) %}
 <label class="checkbox checkbox--radio {{class}}">
-	<input type="radio" name="{{name}}">
+	<input type="radio" name="{{ name | escape }}">
 	<span class="checkbox__box"></span>
-	<span class="checkbox__title">{{title}}</span>
+	{% if title %}<span class="checkbox__title">{{ title }}</span>{% endif %}
+	{% if subtitle %}<div class="checkbox__subtitle {% if subtitleColor %}text-color--{{ subtitleColor }}{% endif %}">{{ subtitle }}</div>{% endif %}
 </label>
 {% endmacro %}
 <!-- item.checkbox('мужской', 'checkbox--radio, profile-editor__checkbox') -->
