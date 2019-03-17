@@ -59,6 +59,7 @@
 
     &__title {
         margin-bottom: 40px;
+        overflow: initial;
         position: relative;
 
         @include xs-block() {

@@ -1,0 +1,54 @@
+<!-- begin card__reviews -->
+<div class="card__reviews">
+	<div class="section-header">
+		<h2 class="h2">Отзывы</h2>
+	</div>
+
+	<div class="bz-slider bz-slider--new">
+		<div class="swiper-container js-bz-slider-reviews">
+			<div class="swiper-wrapper bz-slider__slides">
+				{% for i in range(0, 2) %}
+				{% import "data/data.html" as reviews %}
+				{% for reviews in reviews.reviews %}
+				<div class="swiper-slide">
+					<div
+						class="item-reviews item-reviews--small"
+						itemprop="review"
+						itemscope
+						itemtype="http://schema.org/Review"
+					>
+						<div class="item-reviews__header">
+							<div class="item-reviews__avatar">
+								<img
+									class="swiper-lazy"
+									data-src="img/general/noavatar.jpg"
+									src="img/general/loading.gif"
+									alt="">
+							</div>
+							<div class="item-reviews__user-info">
+								<div class="item-reviews__author" itemprop="author">{{ reviews.author }}</div>
+								<div class="item-reviews__date" itemprop="datePublished" content="2019-03-14">{{ reviews.date }}</div>
+								<div class="item-reviews__rating">
+									<div class="rating__wrap">
+										<div class="rating">
+											<div class="rating__inner" style="width: 50%;"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="item-reviews__comment" itemprop="description">{{ reviews.text }}</p>
+					</div>
+				</div>
+				{% endfor %}
+				{% endfor %}
+			</div>
+		</div>
+		<div class="swiper-button-next swiper-button-white bz-slider__arrow">
+			{{ mixin.icon('angle') }}
+		</div>
+		<div class="swiper-button-prev swiper-button-white bz-slider__arrow">
+			{{ mixin.icon('angle') }}
+		</div>
+	</div>
+</div><!-- end card__reviews -->

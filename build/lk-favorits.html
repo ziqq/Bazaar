@@ -33,8 +33,15 @@
             <!-- begin conditions -->
             <div class="conditions header__conditions">
               <ul class="conditions__list">
-                <li class="conditions__item"><a href="#" class="conditions__link">Условия доставки</a></li>
-                <li class="conditions__item"><a href="#" class="conditions__link">Условия оплаты</a></li>
+                <li class="conditions__item">
+                  <a href="#" class="conditions__link">Условия доставки</a>
+                </li>
+                <li class="conditions__item">
+                  <a href="#" class="conditions__link">Условия оплаты</a>
+                </li>
+                <li class="conditions__item">
+                  <a href="reviews.html" class="conditions__link">Отзывы</a>
+                </li>
               </ul>
             </div><!-- end conditions -->
             <a href="tel:8 800 707-86-30" class="phone header__phone" itemprop="telephone">8 800 707-86-30</a>
@@ -959,6 +966,49 @@
         </div>
       </div>
       <!-- end auth-form -->
+      <!-- begin form-suggestions -->
+      <div class="modal fade" id="form-suggestions">
+        <div class="modal-dialog modal-dialog--sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Ваши предложения или жалобы</h5>
+              <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form">
+                <div class="form__inner">
+                  <form class="review-form">
+                    <div class="input form__input">
+                      <input type='text' class="input__field" placeholder="Имя">
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
+                    <div class="input form__input">
+                      <input type='tel' class="input__field" placeholder="Телефон" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
+                    <div class="input form__input">
+                      <input type='email' class="input__field" placeholder="E-mail">
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
+                    <textarea class="review-form__text" placeholder="Текст сообщения"></textarea>
+                    <div class="form__buttons mt-30">
+                      <button class="button button--default form__btn">Отправить</button>
+                    </div>
+                    <div class="form-success">
+                      <div class="form-success__center">
+                        <h3 class="form-success__title">Спасибо ваше сообщение отправленно!</h3>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end form-suggestions -->
       <!-- begin change-city -->
       <div class="modal fade change-city" id="change-city">
         <div class="modal-dialog modal-dialog--md">

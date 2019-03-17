@@ -16,6 +16,16 @@
         margin-bottom: $base-indent;
     } //.form__input
 
+    &__text {
+        min-height: 120px;
+        max-height: 220px;
+        resize: none;
+    } //.form__text
+
+    &__info {
+        font-size: 14px;
+    } //.form__info
+
     &__box {
         @include flexCenter;
 
@@ -47,6 +57,10 @@
         font-size: 15px;
         letter-spacing: 0.5px;
         width: 100%;
+
+        &--small {
+            max-width: 375px;
+        } //.form__btn--small
     } //.form__btn
 
     &__devider {
@@ -55,6 +69,10 @@
             margin: 25px 0 20px;
         }
     } //.form__devider
+
+    &__captcha {
+        border-radius: $border-radius;
+    } //.form__captcha
 
     .social {
 
@@ -129,19 +147,19 @@
                 }
             }
         }
-    }
+    } //.form .social
 
     &.is-success {
 
         .form-success {
             @include trfY(0);
         }
-    } //form.is-success
+    } //.form.is-success
 
     .cart__box {
         padding: 0;
-    }
-} //form
+    } //.form .cart__box
+} //.form
 
 .form-success {
     background-color: #fff;

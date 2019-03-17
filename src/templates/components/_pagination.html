@@ -1,6 +1,8 @@
 <!-- begin pagination -->
 <div class="pagination pagination--right">
-	<span class="pagination__title">страница 2 из 88</span>
+	{% if paginationTitle %}
+		<span class="pagination__title">страница 2 из 88</span>
+	{% endif %}
 	<ul class="pagination__list js-toggle-list">
 		<li class="pagination__item">
 			<a class="pagination__link" href="#">

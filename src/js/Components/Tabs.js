@@ -9,6 +9,7 @@
     </div>
 </div>
 */
+
 class Tabs {
     constructor(o) {
         this.element = o.selector;
@@ -22,20 +23,16 @@ class Tabs {
 
             $content.not(':first').hide();
 
-            if (!$(this).hasClass('tab--transform')) {
-                if ($(window).width() >= 768) {
-                    $title.on('click', function() {
-                        let tabId = $(this).attr('data-tab');
+            if ($(window).width() >= 768) {
+                $title.on('click', function() {
+                    let tabId = $(this).attr('data-tab');
 
-                        $title.removeClass('is-active');
-                        $(this).addClass('is-active');
+                    $title.removeClass('is-active');
+                    $(this).addClass('is-active');
 
-                        $content.hide();
-                        $content
-                            .filter('[data-tab-content=' + tabId + ']')
-                            .show();
-                    });
-                }
+                    $content.hide();
+                    $content.filter('[data-tab-content=' + tabId + ']').show();
+                });
             }
         });
     }

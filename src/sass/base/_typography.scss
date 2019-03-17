@@ -104,3 +104,45 @@ p{margin-bottom: $gutter;}
         }
     }
 }
+
+
+.text-light {
+    color: $color-text--light;
+}//.text-light
+
+.text-italic {
+    font-style: italic;
+}//.text-italic
+
+.text-info {
+    display: inline-block;
+    line-height: 1.4;
+    color: $color-text--light;
+
+    @include xs-block() {
+        font-size: 14px;
+    }
+}//.text-info
+
+.text-up {
+    text-transform: uppercase;
+} //.text-up
+
+.text-center {
+    text-align: center;
+} //.text-center
+
+.text-left {
+    text-align: left;
+}//.text-left
+
+.align-center {
+    align-items: center;
+    justify-content: center;
+} //.align-center
+
+.flex-left {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+} //.align-center

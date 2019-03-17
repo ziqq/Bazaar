@@ -1,0 +1,105 @@
+---
+title: Мой отзыв о магазине Bazaar-tex
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<!-- begin home -->
+<main class="main reviews">
+
+	{% include "partials/_page-banner.html" %}
+
+	<div class="container">
+
+		<div class="section-header section-header--border reviews__title">
+			<h1 class="h1" itemprop="headline">{{ title }}</h1>
+		</div>
+
+		<div class="row">
+			<div class="col-6 col-xs-12 pos-xs-2">
+				<!-- begin reviews__form -->
+				<div class="reviews__form">
+					<div class="form">
+						<div class="form__inner">
+							<form class="review-form">
+
+								<div class="input input--title form__input">
+									<span class="input__title">Оценка</span>
+									<div class="input__field no-border">
+										{% include "components/_star-rating.html" %}
+									</div>
+									<span class="input__error">*Какая-то ошибочка вышла</span>
+								</div>
+
+								<div class="row">
+									<div class="col-6 col-xs-12">
+
+										<div class="input form__input">
+											<input type='text' class="input__field" placeholder="Имя" required>
+											<span class="input__error">*Какая-то ошибочка вышла</span>
+										</div>
+
+									</div>
+									<div class="col-6 col-xs-12">
+
+										<div class="input form__input">
+											<input type='email' class="input__field" placeholder="E-mail">
+											<span class="input__error">*Какая-то ошибочка вышла</span>
+										</div>
+
+									</div>
+								</div>
+
+								<textarea class="form__input form__text" placeholder="Текст сообщения" required></textarea>
+
+								<div class="form__input form__info">* - Поля обязательные для заполнения</div>
+
+								<div class="form__input form__captcha">
+									<!-- Тут будет каптча -->
+									<div class="bg-color--gray" style="min-height: 78px; max-width: 300px; color: #fff; display: flex; align-items: center; justify-content: center; border-radius: 3px; text-transform: uppercase;">
+										КАПТЧА
+									</div>
+									<!-- Тут будет каптча -->
+								</div>
+
+								<div class="form__buttons mt-30">
+									{{item.btn('Оставить отзыв', 'button--default form__btn form__btn--small')}}
+								</div>
+
+								<div class="form-success">
+									<div class="form-success__center">
+										<h3 class="form-success__title">Спасибо ваш отзыв опубликован!</h3>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div><!-- end reviews__form -->
+			</div>
+			<div class="col-6 col-xs-12">
+				<!-- begin disclamer -->
+				<div class="disclamer" data-container>
+				   <span class="disclamer__title">В отзывах запрещено:</span>
+				   <ul class="disclamer__list">
+					   <li>Использовать нецензурные выражения, оскорбления и угрозы</li>
+					   <li>Публиковать адреса, телефоны и ссылки, содержащие прямую рекламу</li>
+					   <li>Писать отвлеченные от темы и бессмысленные комментарии</li>
+				   </ul>
+				   <button
+						class="disclamer__btn-close"
+						onclick="App.Utils.slideUp.call(this);"
+						title="Закрыть"
+					>
+					   {{ mixin.icon('close') }}
+				   </button>
+				</div><!-- end disclamer -->
+			</div>
+		</div>
+
+	</div>
+</main>
+<!-- end home -->
+
+{% endblock %}

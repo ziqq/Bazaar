@@ -199,23 +199,37 @@ App.define = function(namespace) {
     return parent;
 };
 
-App.Utils = {
-    init() {
-        this.transformAccordeon(480);
+App.Utils = (function() {
+    function _init() {
+        _lazyLoadImage();
+        _transformAccordeon(480);
 
         $window.on('resize', () => {
-            this.transformAccordeon(480);
-        });
-        new LazyLoad({
-            elements_selector: '.lazy'
+            _transformAccordeon(480);
         });
 
         if ($(window).width() <= 480) {
-            this.setFixedBlcok();
+            _setFixedBlcok();
+        } else {
+            setTimeout(() => {
+                _setHeight();
+            }, 300);
         }
-    },
-    lazyLoadImage() {},
-    transformAccordeon(width) {
+    }
+
+    function _lazyLoadImage() {
+        new LazyLoad({
+            elements_selector: '.lazy-img'
+        });
+    }
+
+    function _slideUp() {
+        $(this)
+            .closest('[data-container]')
+            .slideUp();
+    }
+
+    function _transformAccordeon(width) {
         let $accordeon = $('[data-accordeon]');
 
         let $accordeonItem = $('[data-accordeon-item]');
@@ -235,8 +249,9 @@ App.Utils = {
                 .removeAttr('style');
             $accordeonTitle.removeClass('accordeon__title');
         }
-    },
-    setFixedBlcok() {
+    }
+
+    function _setFixedBlcok() {
         let $fixBlock = $('.js-fixed-block');
         let $relBlock = $('.js-relative-block');
         let relBlockHeight = $relBlock.outerHeight(true);
@@ -253,7 +268,92 @@ App.Utils = {
             }
         });
     }
-};
+
+    function _setHeight() {
+        _heightses($('.js-qualheight-reviews-comment'));
+
+        function _heightses(selector) {
+            selector.equalHeights();
+        }
+    }
+
+    return {
+        init: _init,
+        lazyLoadImage: _lazyLoadImage,
+        slideUp: _slideUp,
+        transformAccordeon: _transformAccordeon,
+        setFixedBlcok: _setFixedBlcok,
+        setHeight: _setHeight
+    };
+})();
+
+// App.Utils = {
+//     init() {
+//         this.transformAccordeon(480);
+
+//         new LazyLoad({
+//             elements_selector: '.lazy'
+//         });
+
+//         $window.on('resize', () => {
+//             this.transformAccordeon(480);
+//         });
+
+//         if ($(window).width() <= 480) {
+//             this.setFixedBlcok();
+//         } else {
+//             setTimeout(() => {
+//                 this.setHeight();
+//             }, 300);
+//         }
+//     },
+//     lazyLoadImage() {},
+//     transformAccordeon(width) {
+//         let $accordeon = $('[data-accordeon]');
+
+//         let $accordeonItem = $('[data-accordeon-item]');
+//         let $accordeonContent = $('[data-accordeon-content]');
+//         let $accordeonTitle = $('[data-accordeon-title]');
+
+//         if ($(window).width() <= width) {
+//             $accordeon.addClass('accordeon js-accordeon');
+//             $accordeonItem.addClass('accordeon__item');
+//             $accordeonContent.addClass('accordeon__content').slideUp();
+//             $accordeonTitle.addClass('accordeon__title');
+//         } else {
+//             $accordeon.removeClass('accordeon js-accordeon');
+//             $accordeonItem.removeClass('accordeon__item');
+//             $accordeonContent
+//                 .removeClass('accordeon__content')
+//                 .removeAttr('style');
+//             $accordeonTitle.removeClass('accordeon__title');
+//         }
+//     },
+//     setFixedBlcok() {
+//         let $fixBlock = $('.js-fixed-block');
+//         let $relBlock = $('.js-relative-block');
+//         let relBlockHeight = $relBlock.outerHeight(true);
+//         let relBlockOffsetTop = $relBlock.offset().top;
+//         let wHeight = $(window).height();
+
+//         $(window).scroll(function() {
+//             let scroll = $(this).scrollTop();
+
+//             if (scroll + wHeight - relBlockHeight + 120 <= relBlockOffsetTop) {
+//                 $fixBlock.removeClass('is-hide');
+//             } else {
+//                 $fixBlock.addClass('is-hide');
+//             }
+//         });
+//     },
+//     setHeight() {
+//         _heightses($('.js-qualheight-reviews-comment'));
+
+//         function _heightses(selector) {
+//             selector.equalHeights();
+//         }
+//     }
+// };
 
 App.Menu = {
     open: false,
@@ -577,6 +677,8 @@ App.Conponents = {
             this.gallaryCard();
             this.new();
             this.color();
+            this.reviews();
+
             // this.card();
         },
         gallaryCard() {
@@ -720,6 +822,36 @@ App.Conponents = {
                     navigation: {
                         nextEl: $parent.find('.swiper-button-next')[0],
                         prevEl: $parent.find('.swiper-button-prev')[0]
+                    }
+                });
+            });
+        },
+        reviews() {
+            $('.js-bz-slider-reviews').each(function() {
+                let $parent = $(this).parent();
+
+                new Swiper(this, {
+                    slidesPerView: 4,
+                    slidesToScroll: 1,
+                    spaceBetween: 15,
+                    lazy: true,
+
+                    navigation: {
+                        nextEl: $parent.find('.swiper-button-next')[0],
+                        prevEl: $parent.find('.swiper-button-prev')[0]
+                    },
+
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 5
+                        },
+                        768: {
+                            slidesPerView: 3
+                        },
+                        480: {
+                            slidesPerView: 1,
+                            navigation: false
+                        }
                     }
                 });
             });

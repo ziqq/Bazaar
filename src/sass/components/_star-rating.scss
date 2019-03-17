@@ -18,6 +18,10 @@
         cursor: pointer;
         color: #ffb300;
 
+        &::before {
+            @include fa;
+        }
+
         &:last-child {
             padding-left: 0;
         }
@@ -32,4 +36,175 @@
 .star-rating__ico:hover ~ .star-rating__ico::before,
 .star-rating__input:checked ~ .star-rating__ico::before {
     content: '\f005';
+    @include fa('light');
+}
+
+.rating {
+    float: left;
+    font-family: $f-medium;
+    height: 13px;
+    @include sprite(rating--gray);
+    position: relative;
+    width: 75px;
+
+    &__wrapper {
+        @include flexCenter;
+        flex-grow: 1;
+
+        & + .rating__wrapper {
+            margin-top: 7px;
+        }
+    } //.rating__wrapper
+
+    &__wrap {
+        @include flexCenter;
+        position: relative;
+
+        .rating {
+
+            &__reviews {
+                margin-left: 5px;
+            }
+        }
+
+        &_col,
+        &--column {
+            align-items: flex-start;
+            flex-direction: column;
+
+            .rating {
+
+                &__reviews {
+                    margin-top: 5px;
+                }
+            }
+        } //.rating__wrap_col
+
+        &--column {
+            align-items: center;
+            justify-content: center;
+
+            .rating {
+                margin: auto;
+            }
+        }
+    } //.rating__wrap
+
+    &__inner {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        top: 0;
+        @include sprite(rating);
+    } //.rating__inner
+
+    &__data {
+        @include flexCenter;
+        justify-content: center;
+
+        strong {
+            color: #000;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 1;
+            margin-bottom: 10px;
+            margin-right: 7px;
+        }
+
+        span {
+            color: $gray--lighten;
+            font-size: 18px;
+        }
+    } //.rating__data
+
+    &__reviews {
+        color: #000;
+        display: block;
+        font-family: roboto-300, sans-serif;
+        font-size: 13px;
+        font-style: italic;
+    } //.rating__reviews
+
+    &__rev-count {
+        color: #000;
+        font-size: 12px;
+        line-height: 1;
+        position: absolute;
+        right: -30px;
+        top: -1px;
+    } //.rating__rev-count
+
+    &--big {
+        height: 25px;
+        margin: auto;
+        width: 130px;
+        @include sprite(rating_big--gray);
+
+        // @include respond-to(sm) {
+        //     width: 90px;
+        //     height: 13px;
+        //     @include sprite(rating--gray);
+        // }
+
+        .rating {
+
+            &__inner {
+                @include sprite(rating_big);
+
+                // @include respond-to(sm) {
+                //     @include sprite(rating);
+                // }
+            } //.rating--big .rating__inner
+        } //.rating--big .rating
+    } //.rating--big
+
+    &__meter {
+        // margin-left: 85px;
+        flex-grow: 1;
+    } //.rating__meter
+} //.rating
+
+.awesome-star-rating {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: none;
+    @include clr;
+
+    & > input {
+        display: none;
+    }
+
+    & > label {
+        color: #ddd;
+        float: right;
+
+        &::before {
+            margin: 5px;
+            font-size: 1.25em;
+            font-family: FontAwesome;
+            display: inline-block;
+            content: '\f005';
+        }
+    }
+
+    & > .half::before {
+        content: '\f089';
+        position: absolute;
+    }
+}//.awesome-star-rating
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.awesome-star-rating > input:checked ~ label,
+.awesome-star-rating:not(:checked) > label:hover,
+.awesome-star-rating:not(:checked) > label:hover ~ label {
+    color: #ffd700;
+} /* hover previous stars in list */
+
+.awesome-star-rating > input:checked + label:hover,
+.awesome-star-rating > input:checked ~ label:hover,
+.awesome-star-rating > label:hover ~ input:checked ~ label,
+.awesome-star-rating > input:checked ~ label:hover ~ label {
+    color: #ffed85;
 }

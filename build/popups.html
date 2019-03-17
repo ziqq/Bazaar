@@ -33,8 +33,15 @@
             <!-- begin conditions -->
             <div class="conditions header__conditions">
               <ul class="conditions__list">
-                <li class="conditions__item"><a href="#" class="conditions__link">Условия доставки</a></li>
-                <li class="conditions__item"><a href="#" class="conditions__link">Условия оплаты</a></li>
+                <li class="conditions__item">
+                  <a href="#" class="conditions__link">Условия доставки</a>
+                </li>
+                <li class="conditions__item">
+                  <a href="#" class="conditions__link">Условия оплаты</a>
+                </li>
+                <li class="conditions__item">
+                  <a href="reviews.html" class="conditions__link">Отзывы</a>
+                </li>
               </ul>
             </div><!-- end conditions -->
             <a href="tel:8 800 707-86-30" class="phone header__phone" itemprop="telephone">8 800 707-86-30</a>
@@ -276,14 +283,34 @@
           </nav><!-- end nav-main -->
         </div><!-- end header-main -->
       </header><!-- end header -->
-      <style> main{padding: 100px 50px;}
-		h1{margin-bottom: 50px;}
-		.popup__list a{display: inline-block; margin-right: 30px; margin-bottom: 15px; color: #2d6cb4;}
-		.popup__list a:hover{color: #2d6cb4;text-decoration: underline;}
-		@media screen and (max-width: 480px){
-			main{margin: 10px;}
-		}
-	</style>
+      <style>
+        main {
+          padding: 100px 50px;
+        }
+
+        h1 {
+          margin-bottom: 50px;
+        }
+
+        .popup__list a {
+          display: inline-block;
+          margin-right: 30px;
+          margin-bottom: 15px;
+          color: #2d6cb4;
+        }
+
+        .popup__list a:hover {
+          color: #2d6cb4;
+          text-decoration: underline;
+        }
+
+        @media screen and (max-width: 480px) {
+          main {
+            margin: 10px;
+          }
+        }
+
+      </style>
       <!-- begin home -->
       <main class="main">
         <h1 style="margin-top: 40px;">Попап окна на сайте</h1>
@@ -578,7 +605,7 @@
                           <div class="tab__title" data-tab="2">Описание</div>
                         </div>
                         <div class="tab__contentes">
-                          <div class="tab__content" data-tab-content="0" style="display: block;">
+                          <div class="tab__content" data-tab-content="0" style="display: block;" data-simplebar>
                             <div class="item-select--free item-select--count">
                               <div class="item-select__list">
                                 <div class="item-select__item item-select__item--header js-item-select-item">
@@ -606,7 +633,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="tab__content" data-tab-content="1">
+                          <div class="tab__content" data-tab-content="1" data-simplebar>
                             <div class="bz-table bz-table--dot">
                               <ul class="bz-table__list">
                                 <li class="bz-table__item">
@@ -644,7 +671,7 @@
                               </ul>
                             </div>
                           </div>
-                          <div class="tab__content tab__content--scroll js-scroll" data-tab-content="2">
+                          <div class="tab__content tab__content--scroll js-scroll" data-tab-content="2" data-simplebar>
                             <p>Плотная ткань с гладкокрашенной отделкой. Лицевая сторона гладкая, с мягким атласным блеском. Изнаночная - матовая, с зернистой поверхностью. Материал прочный, эластичный, хорошо драпирующийся. Атлас широко применяется для изготовления праздничных и концертных нарядов, свадебных платьев.</p>
                             <p>Плотная ткань с гладкокрашенной отделкой. Лицевая сторона гладкая, с мягким атласным блеском. Изнаночная - матовая, с зернистой поверхностью. Материал прочный, эластичный, хорошо драпирующийся. Атлас широко применяется для изготовления праздничных и концертных нарядов, свадебных платьев.</p>
                             <p>Плотная ткань с гладкокрашенной отделкой. Лицевая сторона гладкая, с мягким атласным блеском. Изнаночная - матовая, с зернистой поверхностью. Материал прочный, эластичный, хорошо драпирующийся. Атлас широко применяется для изготовления праздничных и концертных нарядов, свадебных платьев.</p>
@@ -1652,6 +1679,49 @@
         </div>
       </div>
       <!-- end auth-form -->
+      <!-- begin form-suggestions -->
+      <div class="modal fade" id="form-suggestions">
+        <div class="modal-dialog modal-dialog--sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Ваши предложения или жалобы</h5>
+              <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form">
+                <div class="form__inner">
+                  <form class="review-form">
+                    <div class="input form__input">
+                      <input type='text' class="input__field" placeholder="Имя">
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
+                    <div class="input form__input">
+                      <input type='tel' class="input__field" placeholder="Телефон" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
+                    <div class="input form__input">
+                      <input type='email' class="input__field" placeholder="E-mail">
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
+                    <textarea class="review-form__text" placeholder="Текст сообщения"></textarea>
+                    <div class="form__buttons mt-30">
+                      <button class="button button--default form__btn">Отправить</button>
+                    </div>
+                    <div class="form-success">
+                      <div class="form-success__center">
+                        <h3 class="form-success__title">Спасибо ваше сообщение отправленно!</h3>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end form-suggestions -->
       <!-- begin change-city -->
       <div class="modal fade change-city" id="change-city">
         <div class="modal-dialog modal-dialog--md">

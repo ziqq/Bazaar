@@ -13,6 +13,10 @@ PageList:
   ready: 50
   desc : Подробная карточа
 
+- file: reviews.html
+  ready: 50
+  desc : Отзывы
+
 - file: contacts.html
   ready: 50
   desc : Контакты
