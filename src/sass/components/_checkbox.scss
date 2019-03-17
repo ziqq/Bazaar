@@ -438,7 +438,7 @@ $checkbox-color-border: $color-border !default;
         border: 1px solid transparent;
         cursor: pointer;
         position: relative;
-        display: flex;
+        @include flexColumn;
         // @include flexCenter;
 
         @include xs-block() {
