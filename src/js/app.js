@@ -26,7 +26,7 @@ $(function() {
 
 const App = {
     init() {
-        this.scrollBar();
+        // this.scrollBar();
         this.btnFavorite();
         this.goTop();
         this.goTo();
@@ -46,7 +46,7 @@ const App = {
         });
 
         $window.on('resize', () => {
-            this.scrollBar();
+            // this.scrollBar();
             this.offsetMainBlock();
         });
 
@@ -64,10 +64,10 @@ const App = {
         //SimpleBar https://github.com/Grsmto/simplebar
 
         if ($(window).width() > 768) {
-            console.log('---', 1);
             let $scrollBar = $('.js-scroll');
             if ($scrollBar.length) {
-                new SimpleBar($scrollBar[0]);
+                // new SimpleBar($scrollBar[0]);
+                $scrollBar.each($(this), new SimpleBar());
             }
         } else {
             $document.find('.js-scroll').removeClass('js-scroll');
@@ -181,11 +181,11 @@ const App = {
 
 App.define = function(namespace) {
     var parts = namespace.split('.'),
-        parent = Crm,
+        parent = App,
         i;
 
     //Убрать  начальный префикс если это являетсся глобальной переменной
-    if (parts[0] == 'Crm') {
+    if (parts[0] == 'App') {
         parts = parts.slice(1);
     }
 

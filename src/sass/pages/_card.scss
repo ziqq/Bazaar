@@ -114,15 +114,11 @@ $card-indent: $gutter * 2;
     } //.card__slider
 
     &__desc {
-        width: 100%;
+        width: calc(100% - 610px - 30px);
         padding-top: 22px;
 
         @include md-block() {
-            width: 50%;
-        }
-
-        @include sm-block() {
-            width: 50%;
+            width: calc(50% - 610px - 30px);
         }
 
         @include xs-block() {
