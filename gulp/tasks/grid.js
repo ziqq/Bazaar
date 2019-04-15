@@ -32,6 +32,9 @@ var settings = {
         i7: {
             width: '375px'
         },
+        s5: {
+            width: '360px'
+        },
         i5: {
             width: '320px'
         }

@@ -154,8 +154,9 @@
 
     &__price {
         font-family: $f2;
-        font-size: 20px;
+        font-size: 18px;
         text-align: center;
+        color: #787878;
 
         & + .product-item__price {
             margin-left: 10px;
@@ -332,6 +333,16 @@
 
         .product-item {
 
+            &__title {
+                line-height: 1.5;
+                font-size: 15px;
+                @include xs-block() {
+                    margin-bottom: 10px;
+                    margin-right: 23px;
+                    text-align: left;
+                }
+            } //.product-item--wide .product-item__title
+
             &__img {
                 border-color: $color-border--light;
                 margin-bottom: 0;
@@ -352,15 +363,6 @@
                     padding: 0;
                 }
             } //.product-item--wide .product-item__desc
-
-            &__title {
-                font-size: 15px;
-                @include xs-block() {
-                    margin-bottom: 10px;
-                    margin-right: 23px;
-                    text-align: left;
-                }
-            }
 
             &__articul {
                 font-size: 15px;
@@ -434,10 +436,17 @@
                 top: 15px;
 
                 @include xs-block() {
-                    right: auto;
-                    top: auto;
-                    bottom: 18px;
-                    left: 42px;
+                    width: 40px;
+                    height: 40px;
+                    padding: 0;
+                    top: 0;
+                    @include flexCenter;
+                    justify-content: center;
+
+                    .icon {
+                        width: 18px;
+                        height: 18px;
+                    }
                 }
             } //.product-item--wide .product-item__del
         } //.product-item--wide
@@ -451,6 +460,8 @@
             position: relative;
 
             @include xs-block() {
+                max-width: 100%;
+                margin-right: 0;
                 margin-left: 0;
                 order: 3;
             }
@@ -482,7 +493,7 @@
             &__list {
                 top: 97%;
             }
-        }
+        } //.product-item--wide .item-select
     } //.product-item--wide
 } //.product-item
 
@@ -577,7 +588,7 @@
         background-size: cover;
         bottom: 0;
         display: flex;
-        height: 223px;
+        height: 236px;
         left: 10px;
         overflow: hidden;
         position: absolute;

@@ -58,7 +58,9 @@ const App = {
         }
     },
     offsetMainBlock() {
-        $main.css('padding-top', $header.outerHeight(true));
+        setTimeout(() => {
+            $main.css('padding-top', $header.height());
+        }, 300);
     },
     scrollBar() {
         //SimpleBar https://github.com/Grsmto/simplebar

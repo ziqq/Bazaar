@@ -114,6 +114,7 @@
                 // padding: 0 35px 0;
                 padding: 0;
                 @include flexColumn;
+                flex-shrink: 0;
 
                 & + .tab__title {
                     // margin-left: 55px;

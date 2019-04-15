@@ -18,6 +18,10 @@
 
     &__social {
         margin-top: 20px;
+
+        @include xs-block() {
+            padding: 0 10px;
+        }
     } //.footer__social
 
     .container {

@@ -1,0 +1,21 @@
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 8726 8660"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#5B5B5B;stroke-width:353.204}
+    .str1 {stroke:#5B5B5B;stroke-width:353.204;stroke-linecap:round;stroke-linejoin:round}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <ellipse class="fil0 str0" cx="4363" cy="4330" rx="4186" ry="4154"/>
+  <line class="fil0 str0" x1="1129" y1="6888" x2="3476" y2= "4169" />
+  <path class="fil0 str1" d="M3709 7110c577,-205 1135,-451 1577,-795 1229,-956 1284,-3107 40,-3985 -369,-260 -1100,-424 -1412,-36 -700,869 1443,3050 3625,-45"/>
+  <path class="fil0 str0" d="M3459 4191c-17,-502 110,-869 368,-1109 863,-803 1095,72 665,640 -190,252 -536,408 -1033,469z"/>
+ </g>
+</svg>
