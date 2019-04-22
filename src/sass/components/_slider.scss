@@ -356,6 +356,7 @@
     &--card {
         // height: 500px;
         display: flex;
+        align-items: flex-start;
 
         @include sm-block() {
             max-height: 334px;
