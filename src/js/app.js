@@ -365,7 +365,7 @@ App.Menu = {
         hamburger: $('.js-hamburger'),
         menu: $('.js-nav-main'),
         linkForward: $('.js-main-nav-link--forward'),
-        overlay: $overlay,
+        overlay: $('.js-overlay'),
         class: {
             active: 'is-active'
         }
@@ -459,7 +459,9 @@ App.Menu = {
         } else {
             this.el.hamburger.removeClass(this.el.class.active);
             this.el.menu.removeClass(this.el.class.active);
-            this.el.overlay.removeClass(this.el.class.active);
+            this.el.overlay
+                .removeClass(this.el.class.active)
+                .removeClass('overlay--menu');
 
             document.documentElement.style.overflow =
                 document.documentElement.style.overflow === '' ? 'hidden' : '';
@@ -469,7 +471,10 @@ App.Menu = {
     },
 
     mobileMenuWrap() {
-        App.Menu.el.menu.wrapInner('<div class="nav-main__inner">');
+        App.Menu.el.menu.wrapInner(
+            '<div class="nav-main__inner"><div class="nav-main__scroll"></div></div>'
+        );
+        $('.nav-main__btn--close').insertBefore('.nav-main__scroll');
     }
 };
 

@@ -307,6 +307,7 @@
     &--wide {
         margin-bottom: 0;
         padding: 10px;
+        z-index: initial;
         @include flexCenter;
 
         @include sm-block() {

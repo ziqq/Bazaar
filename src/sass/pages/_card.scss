@@ -29,6 +29,7 @@ $card-indent: $gutter * 2;
         max-width: 700px;
         margin-right: 30px;
         position: relative;
+        flex-shrink: 0;
 
         @include md-block() {
             width: 50%;

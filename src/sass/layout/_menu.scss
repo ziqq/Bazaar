@@ -61,13 +61,13 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
         } //.nav-main.is-active .hamburger
     } //.nav-main.is-active
 
-    &__inner {
+    &__scroll {
         @include xs-block() {
             display: block;
             height: 100%;
             @include scroll;
         }
-    }
+    }//.nav-main__scroll
 
     &__list {
         height: 95px;
@@ -372,8 +372,10 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
             position: absolute;
             right: -50px;
             top: 0;
+            z-index: 333;
             @include flexColumn;
             width: 50px;
+            cursor: pointer;
 
             span {
                 font-size: 10px;
@@ -680,7 +682,7 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
     }
 
     span {
-        backface-visibility: hidden;
+        // backface-visibility: hidden;
         background-color: $color-text;
         border-radius: 2px;
         display: block;

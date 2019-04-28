@@ -137,6 +137,10 @@ select {
         display: block;
         background-color: rgba(#fff, 0);
     } //.overlay--transparent
+
+    &.overlay--menu {
+        display: block;
+    } //.overlay.overlay--menu
 } //.overlay
 
 .text-color {
