@@ -61,7 +61,7 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
         } //.nav-main.is-active .hamburger
     } //.nav-main.is-active
 
-    &__scroll {
+    &__scroll, &__inner {
         @include xs-block() {
             display: block;
             height: 100%;

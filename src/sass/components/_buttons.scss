@@ -125,6 +125,94 @@
     } //.button--back
 } //.button
 
+.btn-animate {
+    min-width: 180px;
+    height: 42px;
+    padding: 0;
+    overflow: hidden;
+    line-height: 43px;
+    text-align: center;
+
+    @include xs-block() {
+        padding: 0;
+    }
+
+    &:not(.is-ready) {
+
+        &.is-error,
+        &.is-success {
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -10px;
+                margin-left: -11px;
+                animation: btsStatusAnimation ease-in 0.3s forwards;
+                color: #fff;
+                font-size: 22px;
+                line-height: 1;
+                text-align: center;
+                @include fa('light');
+            }
+
+            .btn {
+
+                &__title {
+                    @include trfY(-150%);
+                }
+            }
+        }
+
+        &.is-success {
+
+            &::before {
+                content: '\f00c';
+            }
+        }
+
+        &.is-error {
+            background-color: $color-danger;
+
+            &::before {
+                content: '\f06a';
+            }
+        }
+
+        .btn {
+
+            &__title {
+                display: none;
+            }
+        }
+    }
+
+    &.is-animate {
+
+        &::before {
+            content: '';
+            display: block;
+            background-color: transparent;
+            background-image: url('../img/general/loader-3.gif');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            @include coverdiv;
+        }
+
+        .btn {
+
+            &__title {
+                display: none;
+            }
+        }
+    }
+
+    &.is-invalid {
+        overflow: hidden;
+    }
+} //.btn-animate
+
 .button-icon {
     background-color: transparent;
     border: 0;

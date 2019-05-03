@@ -289,74 +289,6 @@ App.Utils = (function() {
     };
 })();
 
-// App.Utils = {
-//     init() {
-//         this.transformAccordeon(480);
-
-//         new LazyLoad({
-//             elements_selector: '.lazy'
-//         });
-
-//         $window.on('resize', () => {
-//             this.transformAccordeon(480);
-//         });
-
-//         if ($(window).width() <= 480) {
-//             this.setFixedBlcok();
-//         } else {
-//             setTimeout(() => {
-//                 this.setHeight();
-//             }, 300);
-//         }
-//     },
-//     lazyLoadImage() {},
-//     transformAccordeon(width) {
-//         let $accordeon = $('[data-accordeon]');
-
-//         let $accordeonItem = $('[data-accordeon-item]');
-//         let $accordeonContent = $('[data-accordeon-content]');
-//         let $accordeonTitle = $('[data-accordeon-title]');
-
-//         if ($(window).width() <= width) {
-//             $accordeon.addClass('accordeon js-accordeon');
-//             $accordeonItem.addClass('accordeon__item');
-//             $accordeonContent.addClass('accordeon__content').slideUp();
-//             $accordeonTitle.addClass('accordeon__title');
-//         } else {
-//             $accordeon.removeClass('accordeon js-accordeon');
-//             $accordeonItem.removeClass('accordeon__item');
-//             $accordeonContent
-//                 .removeClass('accordeon__content')
-//                 .removeAttr('style');
-//             $accordeonTitle.removeClass('accordeon__title');
-//         }
-//     },
-//     setFixedBlcok() {
-//         let $fixBlock = $('.js-fixed-block');
-//         let $relBlock = $('.js-relative-block');
-//         let relBlockHeight = $relBlock.outerHeight(true);
-//         let relBlockOffsetTop = $relBlock.offset().top;
-//         let wHeight = $(window).height();
-
-//         $(window).scroll(function() {
-//             let scroll = $(this).scrollTop();
-
-//             if (scroll + wHeight - relBlockHeight + 120 <= relBlockOffsetTop) {
-//                 $fixBlock.removeClass('is-hide');
-//             } else {
-//                 $fixBlock.addClass('is-hide');
-//             }
-//         });
-//     },
-//     setHeight() {
-//         _heightses($('.js-qualheight-reviews-comment'));
-
-//         function _heightses(selector) {
-//             selector.equalHeights();
-//         }
-//     }
-// };
-
 App.Menu = {
     open: false,
     ACTIVE_ClASS: 'is-active',
@@ -471,10 +403,7 @@ App.Menu = {
     },
 
     mobileMenuWrap() {
-        App.Menu.el.menu.wrapInner(
-            '<div class="nav-main__inner"><div class="nav-main__scroll"></div></div>'
-        );
-        $('.nav-main__btn--close').insertBefore('.nav-main__scroll');
+        App.Menu.el.menu.wrapInner('<div class="nav-main__inner"></div>');
     }
 };
 
@@ -485,6 +414,7 @@ App.Conponents = {
         this.Slider.init();
         this.checkBtn();
         this.tabs();
+        this.btnAnimate();
 
         $window.on('resize', () => {
             this.Select.native();
@@ -900,6 +830,25 @@ App.Conponents = {
         });
 
         $tab.find('.tab__contentes').remove();
+    },
+    btnAnimate() {
+        let run = true;
+        $document.on('click', '.btn-animate', function(e) {
+            if (run) {
+                run = false;
+                $(this).addClass('is-animate is-ready');
+
+                setTimeout(() => {
+                    $(this).removeClass('is-animate is-ready');
+                    run = true;
+                }, 2500);
+                setTimeout(() => {
+                    $(this).addClass('is-ready');
+                }, 5000);
+            }
+
+            e.preventDefault();
+        });
     }
 };
 
