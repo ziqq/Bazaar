@@ -123,6 +123,23 @@
             @include rotate(180);
         }
     } //.button--back
+
+    &.is-disabled {
+        transform: none;
+        border-color: transparent;
+        background-color: #f6f6f6;
+        box-shadow: none;
+        color: #565656;
+        cursor: not-allowed;
+
+        &:hover {
+            transform: none;
+            border-color: transparent;
+            background-color: #f6f6f6;
+            box-shadow: none;
+            color: #565656;
+        }
+    }
 } //.button
 
 .btn-animate {

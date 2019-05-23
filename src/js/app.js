@@ -298,6 +298,7 @@ App.Menu = {
         menu: $('.js-nav-main'),
         linkForward: $('.js-main-nav-link--forward'),
         overlay: $('.js-overlay'),
+        btnNavClose: $('.nav-main__btn--close'),
         class: {
             active: 'is-active'
         }
@@ -403,7 +404,8 @@ App.Menu = {
     },
 
     mobileMenuWrap() {
-        App.Menu.el.menu.wrapInner('<div class="nav-main__inner"></div>');
+        this.el.menu.wrapInner('<div class="nav-main__inner"></div>');
+        this.el.btnNavClose.insertBefore('.nav-main__inner');
     }
 };
 
