@@ -1,33 +1,33 @@
 $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
 
 @mixin listPosition {
-    background-color: #fff;
     bottom: 0;
-    display: block;
     left: 0;
+    display: block;
+    width: 100%;
     padding: 0;
     transition: $trsMenu;
+    background-color: #fff;
     @include trfX(-100vw);
-    width: 100%;
 }
 
 .nav-main {
-    background-color: #fff;
-    border-bottom: 1px solid $color-border--light;
     position: relative;
     transition: $trsMenu;
+    border-bottom: 1px solid $color-border--light;
+    background-color: #fff;
 
     @include sm-block() {
-        background-color: #949494;
-        bottom: 0;
-        left: 0;
         position: fixed;
         top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: z(modal-overlay);
         width: 300px;
+        background-color: #949494;
         will-change: transform;
         @include trfX(-300px);
         @include trans(transform);
-        z-index: z(modal-overlay);
     }
 
     @include i5-block() {
@@ -35,63 +35,37 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
         @include trfX(-270px);
     }
 
-    &.is-active {
-        box-shadow: 0 10px 20px rgba(#000, 0.5);
-        @include trfX(0);
-
-        .nav-main__btn--close {
-            background-color: $color-accent;
-            box-shadow: 20px 0 25px rgba(0, 0, 0, 0.3);
-
-            span {
-                color: #fff;
-            }
-        } //.nav-main.is-active .nav-main__btn--close
-
-        .hamburger {
-            background-color: $color-accent;
-
-            span {
-
-                &::before,
-                &::after {
-                    background-color: #fff;
-                }
-            }
-        } //.nav-main.is-active .hamburger
-    } //.nav-main.is-active
-
-    &__scroll, &__inner {
+    &__scroll,
+    &__inner {
         @include xs-block() {
             display: block;
             height: 100%;
             @include scroll;
         }
-    }//.nav-main__scroll
+    } //.nav-main__scroll
 
     &__list {
         height: 95px;
-        @include container;
         transition: height 0.5s linear;
+        @include container;
         // position: relative;
         @include flex;
 
         @include sm-block() {
-            background-color: #fff;
             flex-direction: column;
             height: auto;
             padding: 0;
+            background-color: #fff;
         }
 
         &--sub {
             display: none;
 
             @include sm-block() {
-                background-color: #949494;
                 display: block;
+                background-color: #949494;
 
                 .nav-main {
-
                     &__item {
                         border-color: $color-border--dark;
 
@@ -116,48 +90,18 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
 
     &__item {
         justify-content: center;
-        @include flexCenter;
         min-width: 125px;
+        @include flexCenter;
 
         @include sm-block() {
-            border-bottom: 1px solid $color-border--lighten;
             display: block;
             padding: 0;
-        }
-
-        &.is-active {
-
-            .nav-main {
-
-                &__dropdown {
-                    @include trfX(0);
-                }
-
-                &__text {
-                    color: $color-accent;
-                }
-
-                &__icon {
-                    fill: $color-accent;
-                }
-            }
-        }
-
-        &.is-open {
-
-            .nav-main__link {
-
-                &::before {
-                    content: '\f068';
-                }
-            }
+            border-bottom: 1px solid $color-border--lighten;
         }
 
         &:hover {
             @include min-screen(769) {
-
                 .nav-main {
-
                     &__dropdown {
                         display: block;
                     }
@@ -180,15 +124,35 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
             }
         }
 
-        &--dropdown {
+        &.is-active {
+            .nav-main {
+                &__dropdown {
+                    @include trfX(0);
+                }
 
+                &__text {
+                    color: $color-accent;
+                }
+
+                &__icon {
+                    fill: $color-accent;
+                }
+            }
+        }
+
+        &.is-open {
+            .nav-main__link {
+                &::before {
+                    content: '\f068';
+                }
+            }
+        }
+
+        &--dropdown {
             &:hover {
                 @include min-screen(769) {
-
                     .nav-main {
-
                         &__link {
-
                             &::before {
                                 display: block;
                             }
@@ -202,7 +166,6 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
             // background-color: $color-accent;
 
             .nav-main {
-
                 &__icon {
                     fill: #fff;
                 }
@@ -215,11 +178,11 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
                     font-family: $f-light;
 
                     .fal {
-                        align-items: center;
-                        color: #fff;
                         display: flex;
+                        align-items: center;
                         justify-content: center;
                         margin-left: 1px;
+                        color: #fff;
                     }
 
                     .fa-angle-right {
@@ -235,43 +198,40 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
     } //.nav-main__item
 
     &__link {
-        align-items: center;
-        height: 100%;
-        justify-content: center;
-        @include flexColumn;
         position: relative;
+        align-items: center;
+        justify-content: center;
         width: 100%;
+        height: 100%;
+        @include flexColumn;
 
         @include sm-block() {
-            align-items: center;
             display: flex;
             flex-direction: row;
+            align-items: center;
             justify-content: flex-start;
             padding: 10px 15px;
         }
 
         @include xs-block() {
-
             &[data-accordeon-title] {
-
                 &::before {
-                    border: 0;
-                    bottom: auto;
-                    color: $gray;
                     content: '\f067';
-                    @include fa('light');
-                    display: block;
-                    font-size: 16px;
-                    height: auto;
-                    @include centre('y');
-                    left: auto;
                     right: 15px;
+                    bottom: auto;
+                    left: auto;
+                    display: block;
                     width: auto;
+                    height: auto;
+                    border: 0;
+                    color: $gray;
+                    font-size: 16px;
+                    @include fa('light');
+                    @include centre('y');
                 }
             }
 
             &.bg-color--accent {
-
                 &::before {
                     color: #fff;
                 }
@@ -279,11 +239,11 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
         }
 
         &::before {
-            bottom: 0;
             content: '';
+            bottom: 0;
+            display: none;
             @include arr(20, 10, $color-bg--lighten, t);
             @include vx;
-            display: none;
         }
 
         .fal {
@@ -295,13 +255,13 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
     } //.nav-main__link
 
     &__text {
+        position: relative;
+        top: 0;
         display: block;
+        transition: top 0.35s linear;
         font-family: $f-bold;
         font-size: 14px;
-        position: relative;
         text-transform: uppercase;
-        top: 0;
-        transition: top 0.35s linear;
 
         @include sm-block() {
             font-family: $f;
@@ -315,44 +275,44 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
     } //.nav-main__text
 
     &__icon {
+        width: 45px;
         height: 45px;
         margin-bottom: 5px;
         transition: fill 0.35s ease, opacity 0.2s linear, visibility 0.2s linear;
-        width: 45px;
 
         @include sm-block() {
-            height: 30px;
-            margin-bottom: 0;
-            margin-right: 10px;
             width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            margin-bottom: 0;
         }
     } //.nav-main__icon
 
     &__dropdown {
-        display: none;
-        left: 0;
         position: absolute;
         top: 100%;
+        left: 0;
+        display: none;
         width: 100%;
 
         @include sm-block() {
-            @include listPosition;
             top: 100px;
+            @include listPosition;
         }
 
         @include xs-block() {
-            display: block;
             position: static;
+            display: block;
             transform: none;
             transition: none;
         }
     } //.nav-main__dropdown
 
     &__top-line {
-        background-color: $color-bg--lighten;
+        position: relative;
         height: 50px;
         padding: 0 15px;
-        position: relative;
+        background-color: $color-bg--lighten;
         @include flexCenter;
 
         @include min-screen(769) {
@@ -361,21 +321,20 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
     } //.nav-main__top-line
 
     &__btn {
-
         &--close {
-            align-items: center;
-            background-color: $gray--lightest;
-            border: 0;
-            height: 50px;
-            min-width: auto;
-            padding-top: 5px;
             position: absolute;
-            right: -50px;
             top: 0;
+            right: -50px;
             z-index: 333;
-            @include flexColumn;
+            align-items: center;
             width: 50px;
+            min-width: auto;
+            height: 50px;
+            padding-top: 5px;
+            border: 0;
+            background-color: $gray--lightest;
             cursor: pointer;
+            @include flexColumn;
 
             span {
                 font-size: 10px;
@@ -384,35 +343,59 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
         } //.nav-main__btn--close
 
         &_icon {
-            fill: #fff;
+            width: 20px;
             height: 20px;
             margin: auto;
-            width: 20px;
+            fill: #fff;
         } //.nav-main__btn_icon
     } //.nav-main__btn
+
+    &.is-active {
+        box-shadow: 0 10px 20px rgba(#000, 0.5);
+        @include trfX(0);
+
+        .nav-main__btn--close {
+            background-color: $color-accent;
+            box-shadow: 20px 0 25px rgba(0, 0, 0, 0.3);
+
+            span {
+                color: #fff;
+            }
+        } //.nav-main.is-active .nav-main__btn--close
+
+        .hamburger {
+            background-color: $color-accent;
+
+            span {
+                &::before,
+                &::after {
+                    background-color: #fff;
+                }
+            }
+        } //.nav-main.is-active .hamburger
+    } //.nav-main.is-active
 
     .city {
         color: $color-text;
         font-size: 15px;
 
         &__link {
+            max-width: 150px;
             border-bottom: 1px dashed $color-border;
             color: $color-text;
             font-family: $f-medium;
             font-size: 15px;
-            max-width: 150px;
             @include text-overflow();
         }
     } //.nav-main__city
 
     .phone {
+        margin-left: auto;
         font-family: $f-medium;
         font-size: 15px;
-        margin-left: auto;
     } //.nav-main__phone
 
     [data-accordeon-title] {
-
         &:hover,
         &:focus {
             color: $color-text;
@@ -421,9 +404,9 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
 } //.nav-main
 
 .nav-dropdown {
-    background-color: $color-bg--lighten;
-    padding: 30px 0;
     z-index: z(dropdown);
+    padding: 30px 0;
+    background-color: $color-bg--lighten;
 
     &__items {
         height: auto;
@@ -440,75 +423,53 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
     } //.nav-dropdown__items
 
     &__columns {
-        // columns: auto 5;
-        // display: block;
+        display: block;
+        columns: auto 6;
 
-        @include row-flex;
+        // @include row-flex;
 
         @include xs-block() {
-            background-color: #ececec;
-            border-radius: $border-radius * 2;
-            margin-left: 0;
             margin-right: 0;
-        }
-
-        .nav-dropdown__item {
-            @include col;
-            @include size(2);
-
-            @include xs-block() {
-                margin-left: 0;
-                margin-right: 0;
-                width: 100%;
-            }
+            margin-left: 0;
+            border-radius: $border-radius * 2;
+            background-color: #ececec;
         }
 
         @include sm-block() {
-            background-color: #fff;
             columns: auto;
+            background-color: #fff;
         }
 
         @include xs-block() {
             columns: auto;
+        }
+
+        .nav-dropdown__item {
+            display: inline-block;
+            width: 100%;
+            padding: 0 0 20px 15px;
+            vertical-align: top;
+
+            @include xs-block() {
+                padding: 0;
+            }
+
+            // @include col;
+            // @include size(2);
+
+            // @include xs-block() {
+            //     margin-left: 0;
+            //     margin-right: 0;
+            //     width: 100%;
+            // }
         }
     } //.nav-dropdown__columns
 
     &__item {
+        position: relative;
         display: inline-block;
         padding: 0 0 15px;
-        position: relative;
         vertical-align: top;
-
-        &:not(&:first-child) {
-
-            &::before {
-                background-color: $gray--light;
-                content: '';
-                display: block;
-                height: 100%;
-                left: -10px;
-                position: absolute;
-                top: 0;
-                width: 1px;
-            }
-        }
-
-        &.is-active {
-
-            .nav-dropdown--sub {
-                @include trfX(0);
-            }
-        }
-
-        &.is-open {
-
-            .nav-dropdown__title {
-
-                &::before {
-                    content: '\f068';
-                }
-            }
-        }
 
         @include sm-block() {
             display: block;
@@ -516,63 +477,60 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
         }
 
         @include xs-block() {
-
             & + .nav-dropdown__item {
                 border-top: 1px solid #fff;
+            }
+        }
+
+        &:not(&:first-child) {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -10px;
+                display: block;
+                width: 1px;
+                height: 100%;
+                background-color: $gray--light;
+            }
+        }
+
+        &.is-active {
+            .nav-dropdown--sub {
+                @include trfX(0);
+            }
+        }
+
+        &.is-open {
+            .nav-dropdown__title {
+                &::before {
+                    content: '\f068';
+                }
             }
         }
     } //.nav-dropdown__item
 
     &__title {
         display: inline-block;
+        margin-bottom: 5px;
         font-family: $f-bold;
         font-size: 14px;
-        margin-bottom: 5px;
-
-        &::after {
-            font-family: fal;
-            font-size: 16px;
-            @include vy;
-            left: 23px;
-        }
 
         @each $theme, $icon in $nav-lk-icons {
-
             &--#{$theme} {
-
                 &::after {
                     content: $icon;
                 }
             }
         }
 
-        &--order {
-
-            &::after {
-                left: 20px;
-            }
-        }
-
         @include sm-block() {
-            display: block;
-            font-family: $f;
-            margin-bottom: 0;
-            padding: 15px 15px 15px 55px;
             // border-bottom: 1px solid $color-border--lighten;
             position: relative;
-
-            &[data-accordeon-title] {
-
-                &::before {
-                    border: 0;
-                    @include fa('light');
-                    content: '\f067';
-                    font-size: 16px;
-                    @include vy;
-                    left: auto;
-                    right: 15px;
-                }
-            }
+            display: block;
+            margin-bottom: 0;
+            padding: 15px 15px 15px 55px;
+            font-family: $f;
 
             &:not(.nav-dropdown__title--link, .nav-dropdown__title--back) {
                 font-size: 16px;
@@ -582,26 +540,51 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
                     right: 10px;
                 }
             }
+
+            &[data-accordeon-title] {
+                &::before {
+                    content: '\f067';
+                    right: 15px;
+                    left: auto;
+                    border: 0;
+                    font-size: 16px;
+                    @include fa('light');
+                    @include vy;
+                }
+            }
+        }
+
+        &::after {
+            left: 23px;
+            font-family: fal;
+            font-size: 16px;
+            @include vy;
+        }
+
+        &--order {
+            &::after {
+                left: 20px;
+            }
         }
 
         &--link,
         &--back {
             border-bottom: 1px solid $color-border--lighten;
+            @include min-screen(769) {
+                display: none;
+            }
 
             &::before {
                 content: '\f104';
                 left: 10px;
-            }
-            @include min-screen(769) {
-                display: none;
             }
         }
 
         &--temp {
             display: none;
             @include sm-block() {
-                background-color: $color-bg--light;
                 display: block;
+                background-color: $color-bg--light;
                 text-transform: uppercase;
 
                 &::before {
@@ -613,12 +596,12 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
 
     &--sub {
         @include sm-block() {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
             // position: absolute;
             // @include listPosition;
             // top: 107px;
             // z-index: z(absolute);
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         & + & {
@@ -626,17 +609,17 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
         }
 
         li {
-            font-size: 13px;
             min-width: 120px;
+            font-size: 13px;
 
             @include sm-block() {
-                display: block;
-                font-family: $f;
-                font-size: 15px;
-                margin-bottom: 0;
-                padding-left: 30px;
                 // text-align: center;
                 position: relative;
+                display: block;
+                margin-bottom: 0;
+                padding-left: 30px;
+                font-family: $f;
+                font-size: 15px;
 
                 // &::before {
                 //     content: '\f067';
@@ -661,49 +644,49 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
 
         &[data-accordeon-content] {
             @include sm-block() {
-                background-color: #e1e1e1;
                 border-radius: $border-radius * 2;
+                background-color: #e1e1e1;
             }
         }
     } //.nav-dropdown--sub
 } //.nav-dropdown
 
 .hamburger {
-    background-color: $gray--lightest;
-    border: 0;
     display: none;
-    height: 28px;
-    outline: none;
-    padding: 0;
     width: 32px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background-color: $gray--lightest;
 
     @include sm-block() {
         display: block;
     }
 
     span {
-        // backface-visibility: hidden;
-        background-color: $color-text;
-        border-radius: 2px;
-        display: block;
-        height: 2px;
         position: relative;
         top: -9px;
-        transition: all 0.3s;
+        display: block;
         width: 100%;
+        height: 2px;
+        transition: all 0.3s;
+        border-radius: 2px;
+        // backface-visibility: hidden;
+        background-color: $color-text;
 
         &::after,
         &::before {
-            backface-visibility: hidden;
-            background-color: $color-text;
-            border-radius: 2px;
             content: ' ';
-            height: 2px;
-            left: 0;
             position: absolute;
             top: 9px;
-            transition: all 0.35s ease;
+            left: 0;
             width: 100%;
+            height: 2px;
+            backface-visibility: hidden;
+            transition: all 0.35s ease;
+            border-radius: 2px;
+            background-color: $color-text;
         }
 
         &::after {
@@ -715,7 +698,6 @@ $trsMenu: all 0.35s cubic-bezier(0.25, 0.8, 0.4, 0.95);
     }
 
     &.is-active {
-
         span {
             background-color: transparent;
 

@@ -1,5 +1,4 @@
 .page-cart {
-
     .header__bottom,
     .nav-main__btn--close,
     .hamburger {
@@ -11,8 +10,8 @@
 
 .cart {
     padding-bottom: 60px;
-    background-color: $color-bg--lighten;
     border-top: 1px solid $color-border--light;
+    background-color: $color-bg--lighten;
 
     @include xs-block() {
         padding-bottom: 30px;
@@ -29,9 +28,9 @@
     &__left {
         width: calc(100% - 300px);
         margin-right: 30px;
-        background-color: #fff;
+        // background-color: #fff;
         border-radius: $border-radius * 3;
-        overflow: hidden;
+        // overflow: hidden;
 
         @include sm-block() {
             width: 100%;
@@ -41,6 +40,20 @@
         &--transparent {
             background-color: transparent;
         } //.cart__left--transparent
+
+        .product-item {
+            &:first-child {
+                border-radius: $border-radius * 3 $border-radius * 3 0 0;
+            }
+
+            &:last-child {
+                border-radius: 0 0 $border-radius * 3 $border-radius * 3;
+            }
+
+            &:only-child {
+                border-radius: $border-radius * 3;
+            }
+        }
     } //.cart__left
 
     &__right {
@@ -58,9 +71,9 @@
     } //.cart__item
 
     &__title {
+        position: relative;
         margin-bottom: 40px;
         overflow: initial;
-        position: relative;
 
         @include xs-block() {
             margin-bottom: 20px;
@@ -71,17 +84,17 @@
         }
 
         .button--back {
-            @include centre('y');
             left: 0;
+            @include centre('y');
 
             @include xs-block() {
-                transform: none;
                 top: auto;
-                left: auto;
                 right: 0;
                 bottom: -44px;
+                left: auto;
+                transform: none;
             }
-        }//.cart__title .button--back
+        } //.cart__title .button--back
     } //.cart__title
 
     &__items {
@@ -108,16 +121,16 @@
         display: none;
 
         @include xs-block() {
-            display: block;
-            padding: 10px;
-            font-size: 16px;
-            background-color: rgba(#fff, 0.9);
-            width: 100%;
             position: fixed;
+            right: 0;
             bottom: 0;
             left: 0;
-            right: 0;
             z-index: z(absolute);
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(#fff, 0.9);
+            font-size: 16px;
             @include tr;
 
             &.is-hide {
@@ -167,11 +180,6 @@
 } //.cart
 
 .box-cart {
-
-    & + .box-cart {
-        margin-top: 40px;
-    }
-
     &__header {
         margin-bottom: 15px;
         @include flexCenter;
@@ -183,37 +191,47 @@
     &__counter {
         width: 25px;
         height: 25px;
-        line-height: 25px;
         margin-right: 10px;
-        font-family: $f-bold;
-        font-size: 15px;
-        color: #fff;
-        text-align: center;
         border-radius: 50%;
         background-color: $color-bg--dark;
+        color: #fff;
+        font-family: $f-bold;
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
     } //.box-cart__counter
 
     &__title {
+        position: relative;
         font-family: $f-bold;
         font-size: 21px;
         letter-spacing: 1px;
-        position: relative;
     } //.box-cart__title
 
     &__inner {
         padding: 10px;
         border-radius: $border-radius * 3;
     } //.box-cart__inner
+
+    & + .box-cart {
+        margin-top: 40px;
+    }
 } //.box-cart
 
 .sum-cart {
-    font-family: $f-medium;
     margin-left: auto;
+    font-family: $f-medium;
+
+    @include respond-to(xs) {
+        width: 100%;
+        margin-bottom: 0;
+        text-align: left;
+    }
 
     &__inner {
         padding: 20px;
-        background-color: #fff;
         border-radius: $border-radius * 3;
+        background-color: #fff;
 
         @include xs-block() {
             padding: 10px 15px 15px;
@@ -228,10 +246,10 @@
     &__info {
         display: block;
         margin-top: 15px;
+        color: $color-text--light;
         font-family: $f;
         font-size: 15px;
         line-height: 1.4;
-        color: $color-text--light;
     }
 
     &__item {
@@ -246,8 +264,8 @@
         }
 
         span {
-            margin-left: auto;
             margin-right: 5px;
+            margin-left: auto;
             color: $color-accent;
             font-family: $f2-bold;
             font-size: 18px;
@@ -264,9 +282,9 @@
 
         &--itog {
             padding-top: 15px;
+            border-top: 1px solid $color-border;
             font-family: $f-bold;
             font-size: 22px;
-            border-top: 1px solid $color-border;
 
             span {
                 font-size: 22px;
@@ -274,16 +292,10 @@
         } //.sum-cart__item--itog
     } //.sum-cart__item
 
-    @include respond-to(xs) {
-        margin-bottom: 0;
-        text-align: left;
-        width: 100%;
-    }
-
     &_sale {
         @include respond-to(xs) {
-            align-items: center;
             display: flex;
+            align-items: center;
 
             span {
                 margin-left: auto;
@@ -302,17 +314,17 @@
 } //.sum-cart
 
 .cart-success {
+    align-items: center;
+    justify-content: center;
     margin: auto;
     padding: 50px 0;
     text-align: center;
     @include flexColumn;
-    align-items: center;
-    justify-content: center;
 
     &__title {
+        margin-bottom: $gutter;
         font-family: $f-bold;
         font-size: 23px;
-        margin-bottom: $gutter;
     } //.cart-success__title
 
     &__subtitle {
