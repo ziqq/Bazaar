@@ -6,4 +6,4 @@ src/sass/_lib/**/*.*
 src/sass/base/**/*.*
 src/sass/helpers/**/*.*
 src/sass/generated/**/*.*
-src/sass/custom/**/*.*
+src/sass/custom/*.*
